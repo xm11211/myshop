@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Basic Styles-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <link href="assets/css/googlefonts1.css" rel="stylesheet" type="text/css">
+    <link href='assets/css/googlefonts2.css' rel='stylesheet' type='text/css'>
+    <!--Beyond styles-->
+    <link id="beyond-link" href="assets/css/beyond.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/demo.min.css" rel="stylesheet" />
+    <link href="assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+    <!--myadmin styles-->
+    <link href="assets/css/admin.css" rel="stylesheet" />
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="assets/js/skins.min.js"></script>
+</head>
+<body>
+<!--快捷操作-->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-sky">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快捷操作</font></font></span>
+            </div><!--Widget Header-->
+            <div class="widget-body">
+                <button type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增博文</font>
+                    </font>
+                </button>
+                <button type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增博文</font>
+                    </font>
+                </button>
+                <button type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增博文</font>
+                    </font>
+                </button>
+                <button type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增博文</font>
+                    </font>
+                </button>
+                <button type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增博文</font>
+                    </font>
+                </button>
+                <button type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增博文</font>
+                    </font>
+                </button>
+            </div><!--Widget Body-->
+        </div><!--Widget-->
+    </div>
+</div>
+<!--系统信息-->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="well with-header  with-footer">
+            <div class="header mybg-sky">
+                系统信息
+            </div>
+            <table class="table table-hover table-striped table-bordered table-condensed">
+                <tbody>
+                <tr>
+                    <td>
+                        操作系统
+                    </td>
+                    <td>
+                        linux
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        运行环境
+                    </td>
+                    <td>
+                        Apache/2.2.21 (Win64) PHP/5.3.10
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        PHP运行方式
+                    </td>
+                    <td>
+                        apache2handler
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        静静设计-版本
+                    </td>
+                    <td>
+                        v-0.1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        北京时间
+                    </td>
+                    <td>
+                        2014年3月18日 21:08:24
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        服务器域名/IP
+                    </td>
+                    <td>
+                        v-0.1
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--Basic Scripts-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
+<!--Beyond Scripts-->
+<script src="assets/js/beyond.js"></script>
+<script>
+    // If you want to draw your charts with Theme colors you must run initiating charts after that current skin is loaded
+    $(window).bind("load", function () {
+
+        /*Sets Themed Colors Based on Themes*/
+        themeprimary = getThemeColorFromCss('themeprimary');
+        themesecondary = getThemeColorFromCss('themesecondary');
+        themethirdcolor = getThemeColorFromCss('themethirdcolor');
+        themefourthcolor = getThemeColorFromCss('themefourthcolor');
+        themefifthcolor = getThemeColorFromCss('themefifthcolor');
+        //Sets The Hidden Chart Width
+        $('#dashboard-bandwidth-chart')
+            .data('width', $('.box-tabbs')
+                .width() - 20);
+    });
+</script></body>
+</html>

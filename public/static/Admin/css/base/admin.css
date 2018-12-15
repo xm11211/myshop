@@ -1,0 +1,48 @@
+.mybg-sky{
+    background:#11a9cc !important;
+}
+/*天气字体*/
+@media only screen and (min-width: 1200px){
+    .myweather{
+        /*margin-top:-448px;*/
+        margin-top:-123px;
+    }
+}
+@media only screen and (min-width:1571px){
+    .myweather .mytext{
+        font-size:20px;
+        margin-top:20px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:1570px){
+    .myweather .mytext{
+        font-size:16px;
+        margin-top:10px;
+    }
+}
+@media only screen and (min-width: 512px) and (max-width:1199px){
+    .myweather .mytext{
+        font-size:20px;
+        margin-top:20px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width:511px){
+    .myweather .mytext{
+        font-size:15px;
+        margin-top:10px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width:355px){
+    .myweather .mytext2{
+        font-size:14px;
+    }
+    .myweather .databox .databox-cell.cell-4{
+        width:auto;
+    }
+}
+.margin-top-8{
+    margin-top:8px !important;
+}
+.margin-top-15{
+    margin-top:15px !important;
+}
