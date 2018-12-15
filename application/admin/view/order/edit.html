@@ -1,0 +1,360 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">订单管理</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">订单修改</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$orderData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">订单号</label>
+                                    <div class="col-lg-8">
+                                        <div class="radio">
+                                            <span class="text">{$orderData.outTradeNo}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">下单时间</label>
+                                    <div class="col-lg-8">
+                                        <div class="radio">
+                                            <span class="text">{$orderData.orderTime|date='Y/m/d H:i:s',###}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">下单用户</label>
+                                    <div class="col-lg-8">
+                                        <div class="radio">
+                                            <span class="text">{$orderData.userName}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品总额</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.goodsTotalPrice}" class="form-control" name="goodsTotalPrice" data-bv-field="goodsTotalPrice"><i class="form-control-feedback" data-bv-icon-for="goodsTotalPrice" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsTotalPrice" data-bv-result="NOT_VALIDATED" style="display: none;">商品总额不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">订单总额</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.orderTotalPrice}" class="form-control" name="orderTotalPrice" data-bv-field="orderTotalPrice"><i class="form-control-feedback" data-bv-icon-for="orderTotalPrice" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="orderTotalPrice" data-bv-result="NOT_VALIDATED" style="display: none;">订单总额不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">支付方式</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="payment" type="radio" value="1" {if condition="$orderData.payment eq 1"}checked{/if} class="colored-blue">
+                                                <span class="text"> 支付宝</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="payment" type="radio" value="2" {if condition="$orderData.payment eq 2"}checked{/if} class="colored-blue">
+                                                <span class="text"> 微信</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="payment" type="radio" value="3" {if condition="$orderData.payment eq 3"}checked{/if} class="colored-blue">
+                                                <span class="text"> 微信第三方</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="payment" type="radio" value="4" {if condition="$orderData.payment eq 4"}checked{/if} class="colored-blue">
+                                                <span class="text"> 余额</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">配送方式</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="distribution" type="radio" value="申通" {if condition="$orderData.distribution eq '申通'"}checked{/if} class="colored-blue">
+                                                <span class="text"> 申通</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="distribution" type="radio" value="圆通" {if condition="$orderData.distribution eq '圆通'"}checked{/if} class="colored-blue">
+                                                <span class="text"> 圆通</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="distribution" type="radio" value="顺丰" {if condition="$orderData.distribution eq '顺丰'"}checked{/if} class="colored-blue">
+                                                <span class="text"> 顺丰</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">订单状态</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="orderStatus" type="radio" value="0" {if condition="$orderData.orderStatus eq 0"}checked{/if} class="colored-blue">
+                                                <span class="text"> 未确认</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="orderStatus" type="radio" value="1" {if condition="$orderData.orderStatus eq 1"}checked{/if} class="colored-blue">
+                                                <span class="text"> 已确认</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="orderStatus" type="radio" value="2" {if condition="$orderData.orderStatus eq 2"}checked{/if} checked class="colored-blue">
+                                                <span class="text"> 申请退款</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="orderStatus" type="radio" value="3" {if condition="$orderData.orderStatus eq 3"}checked{/if} checked class="colored-blue">
+                                                <span class="text"> 退款成功</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">支付状态</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="payStatus" type="radio" value="0" {if condition="$orderData.payStatus eq 0"}checked{/if} class="colored-blue">
+                                                <span class="text"> 未支付</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="payStatus" type="radio" value="1" {if condition="$orderData.payStatus eq 1"}checked{/if} class="colored-blue">
+                                                <span class="text"> 已支付</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">配送状态</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="postStatus" type="radio" value="0" {if condition="$orderData.postStatus eq 0"}checked{/if} class="colored-blue">
+                                                <span class="text"> 未发货</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="postStatus" type="radio" value="1" {if condition="$orderData.postStatus eq 1"}checked{/if} class="colored-blue">
+                                                <span class="text"> 已发货</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="postStatus" type="radio" value="2" {if condition="$orderData.postStatus eq 2"}checked{/if} class="colored-blue">
+                                                <span class="text"> 已收货</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">运费</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.postSpant}" class="form-control" name="postSpant">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">订单备注</label>
+                                    <div class="col-lg-8">
+                                        <textarea class="form-control" style="resize: none;height: 200px;" name="remark" data-bv-field="remark">{$orderData.remark}</textarea><i class="form-control-feedback" data-bv-icon-for="remark" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="remark" data-bv-result="NOT_VALIDATED" style="display: none;">订单备注不要超过300位字符！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">收货人姓名</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.name}" class="form-control" name="name" data-bv-field="name"><i class="form-control-feedback" data-bv-icon-for="name" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">收货人姓名不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">省份</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.province}" class="form-control" name="province" data-bv-field="province"><i class="form-control-feedback" data-bv-icon-for="province" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="province" data-bv-result="NOT_VALIDATED" style="display: none;">省份不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">市</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.city}" class="form-control" name="city" data-bv-field="city"><i class="form-control-feedback" data-bv-icon-for="city" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="city" data-bv-result="NOT_VALIDATED" style="display: none;">市不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">区</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.county}" class="form-control" name="county" data-bv-field="county"><i class="form-control-feedback" data-bv-icon-for="county" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="county" data-bv-result="NOT_VALIDATED" style="display: none;">市不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">具体地址</label>
+                                    <div class="col-lg-8">
+                                        <textarea class="form-control"  style="resize: none;height: 200px;" name="address" data-bv-field="address">{$orderData.address}</textarea><i class="form-control-feedback" data-bv-icon-for="address" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="address" data-bv-result="NOT_VALIDATED" style="display: none;">具体地址不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">手机号</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$orderData.phone}" class="form-control" name="phone" data-bv-field="phone"><i class="form-control-feedback" data-bv-icon-for="phone" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="phone" data-bv-result="NOT_VALIDATED" style="display: none;">手机号不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-8 col-lg-offset-4">
+                                        <button type="submit" class="btn btn-azure">提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                goodsTotalPrice: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品总额不能为空！'
+                        }
+                    }
+                },
+                orderTotalPrice: {
+                    validators: {
+                        notEmpty: {
+                            message: '订单总额不能为空！'
+                        }
+                    }
+                },
+                remark: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 300,
+                            message: '订单备注不要超过300位字符！'
+                        }
+                    }
+                },
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: '收货人姓名不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '收货人姓名不要超过60位字符！'
+                        },
+                    }
+                },
+                province: {
+                    validators: {
+                        notEmpty: {
+                            message: '省份不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '省份不要超过60位字符！'
+                        }
+                    }
+                },
+                city: {
+                    validators: {
+                        notEmpty: {
+                            message: '市不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '市不要超过60位字符！'
+                        }
+                    }
+                },
+                county: {
+                    validators: {
+                        notEmpty: {
+                            message: '区不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '区不要超过60位字符！'
+                        },
+                    }
+                },
+                address: {
+                    validators: {
+                        notEmpty: {
+                            message: '具体地址不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 300,
+                            message: '具体地址不要超过300位字符！'
+                        }
+                    }
+                },
+                phone: {
+                    validators: {
+                        notEmpty: {
+                            message: '手机号不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 300,
+                            message: '手机号不要超过11位字符！'
+                        }
+                    }
+                }
+            }
+        });
+        $("#sidebar-menu a[href*=order" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

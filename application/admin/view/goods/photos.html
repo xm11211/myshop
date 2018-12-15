@@ -1,0 +1,182 @@
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">商品相册</span>
+            </div>
+            <div class="widget-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="well with-header">
+                            <div class="header bordered-blueberry">添加图片</div>
+                            <form action="" id="goodsPhotos" class="dropzone dz-clickable">
+                                <div class="dz-default dz-message">
+                                    <span>单击或拖拽</span>
+                                </div>
+                                {if condition="$gpData"}
+                                    {php}echo '<script>$("#goodsPhotos").addClass("dz-started")</script>';{/php}
+                                    {volist name="gpData" id="vo" key="k"}
+                                        <div class="dz-preview dz-processing dz-image-preview dz-complete" name="{$vo.randString}">
+                                            <div class="dz-image"><img data-dz-thumbnail=""  src="__UPLOADS__/{$vo.smPhoto}" width="120"></div>
+                                            <div class="dz-success-mark" style="opacity: 1;">
+                                                <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="../www.bohemiancoding.com/sketch/ns">      <title>Check</title>      <defs></defs>      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">        <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>      </g>    </svg>
+                                            </div>
+                                            <a style="margin-right:11px;margin-top:10px;cursor:pointer;" randString="{$vo.randString}" imgPath="{$vo.photo}" name="check1" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-check"></i> 查看</a>
+                                            <a style="margin-top:10px;cursor:pointer;" randString="{$vo.randString}" name="del1" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> 删除</a></div>
+                                    {/volist}
+                                {/if}
+                                <input type="hidden" name="id" value="{$id}">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal modal-primary fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title"><!--js来添加模态框标题--></h4>
+            </div>
+            <div class="modal-body">
+                <!--js来添加模态框内容-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" id="myCancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="myOk" data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!--Dropzone-->
+<script src="__JS__/dropzone/dropzone.min.js"></script>
+<!--商品相册-->
+<script>
+    $(function () {
+        var myOk = $("#myOk");
+        var myCancel = $("#myCancel");
+        var events = null;
+        Dropzone.autoDiscover = false;
+        var id = $("input[name=id]").val();
+        var goodsPhotos = new Dropzone("#goodsPhotos", {
+            url: "admin/goods/photos/id/" + id,
+            method: 'post',
+            maxFilesize: 10,//文件最大容量
+            acceptedFiles:".jpg,.png,.jpeg,.gif",
+            parallelUploads:1,
+            filesizeBase: 1024,
+            success: function (file, response, e) {
+                response = JSON.parse(response);
+                if(response.success == 1){
+                    $(".dz-success-mark").css('opacity', 1);
+                    $(".dz-details").remove();
+                    $(".dz-progress").remove();
+                    $(".dz-error-message").remove();
+                    $(".dz-error-mark").remove();
+                    var str = response.randString;
+                    var a = '<a style="margin-right:11px;margin-top:10px;cursor:pointer;" id="'+ str +'check" class="btn btn-primary btn-xs"  data-toggle="modal" data-target="#myModal">' +
+                        '<i class="fa fa-check"></i> 查看' +
+                        '</a>';
+                    var a2 = '<a style="margin-top:10px;cursor:pointer;" id="'+ str +'del" class="btn btn-danger btn-xs"  data-toggle="modal" data-target="#myModal">' +
+                        '<i class="fa fa-times"></i> 删除' +
+                        '</a>';
+                    $(".dz-preview:last").attr("name",str);
+                    $(".dz-preview:last").append(a);
+                    $(".dz-preview:last").append(a2);
+                    $("#"+str+"check").on('click',function () {
+                        var img = '<img src="__UPLOADS__/'+response.imgPath+'" width="300" height="auto">';
+                        $("#myModal .modal-body").html(img);
+                        $("#myModal .modal-title").html("相册图片");
+                        myCancel.removeClass('btn-warning').addClass('btn-primary').html("确认");
+                        myOk.remove();
+                    });
+
+                    $("#"+str+"del").on('click',function () {
+                        $("#myModal .modal-body").html('确认删除吗？');
+                        $("#myModal .modal-title").html("提示信息");
+                        myCancel.removeClass('btn-primary').addClass('btn-warning').html("取消");
+                        $("#myModal .modal-footer").append(myOk);
+                        events = $._data(myOk[0],"events");
+                        if(events && events["click"]){
+                            myOk.off("click");
+                            ajaxDelPhotos(myOk,str);
+                        }else {
+                            ajaxDelPhotos(myOk,str);
+                        }
+                    });
+                }else{
+                    alert('上传失败！错误原因：'+response.errormessage);
+                    $(".dz-preview:last").remove();
+                }
+            },
+            error: function (file,errormessage,xhr){
+                alert('上传失败！错误原因：'+errormessage);
+                $(".dz-preview:last").remove();
+            },
+            uploadprogress:function(file, progress, bytesSent) {
+                $(".dz-upload").css('opacity',0.3);
+                $(".dz-upload").css('width',progress+'%');
+            }
+        });
+        <!--刷新相册页面，如果有图片，显示图片以及绑定相应事件的操作-->
+        $("a[name=check1]").each(function (k, v) {
+            $(v).on('click',function () {
+                var imgPath = $(this).attr("imgPath");
+                var img = '<img src="__UPLOADS__/'+ imgPath +'" width="300" height="auto">';
+                $("#myModal .modal-body").html(img);
+                $("#myModal .modal-title").html("相册图片");
+                myCancel.removeClass('btn-warning').addClass('btn-primary').html("确认");
+                myOk.remove();
+            })
+        });
+        $("a[name=del1]").each(function (k, v) {
+            $(v).on('click',function () {
+                $("#myModal .modal-body").html('确认删除吗？');
+                $("#myModal .modal-title").html("提示信息");
+                myCancel.removeClass('btn-primary').addClass('btn-warning').html("取消");
+                $("#myModal .modal-footer").append(myOk);
+                var str = $(this).attr("randString");
+                events = $._data(myOk[0],"events");
+                if(events && events["click"]){
+                    myOk.off("click");
+                    ajaxDelPhotos(myOk,str);
+                }else {
+                    ajaxDelPhotos(myOk,str);
+                }
+            })
+        });
+        function ajaxDelPhotos(myOk,str) {
+            myOk.on('click', function () {
+                $.ajax({
+                    url: "{:url('delPhotos')}",
+                    method: 'get',
+                    data: {randString: "" + str + ""},
+                    cache: false,
+                    success: function (data) {
+                        if (data == 1) {
+                            $(".dz-preview[name=" + str + "]").remove();
+                            <!--判断是否显示区域文字-->
+                            if($(".dz-preview").length == 0) {
+                                $("#goodsPhotos").removeClass("dz-started");
+                            }
+                        } else {
+                            alert("删除失败！");
+                        }
+                    }
+                });
+
+            });
+        }
+        $("#sidebar-menu a[href*=goods" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>
+
+
+
+
+

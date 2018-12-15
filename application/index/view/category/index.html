@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$confArr.siteName}</title>
+<meta name="Keywords" content="{$confArr.keywords}" />
+<meta name="Description" content="{$confArr.desc}" />
+<link rel="stylesheet" type="text/css" href="__CSS__/base.css" />
+<link rel="stylesheet" type="text/css" href="__CSS__/style.css" />
+<link rel="stylesheet" type="text/css" href="__CSS__/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="__CSS__/purebox.css" />
+<link rel="stylesheet" type="text/css" href="__CSS__/quickLinks.css" />
+<script type="text/javascript" src="__JS__/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="__JS__/jquery.json.js"></script>
+<script type="text/javascript" src="__JS__/transport_jquery.js"></script>
+<script type="text/javascript">
+var json_languages = {"ok":"\u786e\u5b9a","determine":"\u786e\u5b9a","cancel":"\u53d6\u6d88","drop":"\u5220\u9664","edit":"\u7f16\u8f91","remove":"\u79fb\u9664","follow":"\u5173\u6ce8","pb_title":"\u63d0\u793a","Prompt_information":"\u63d0\u793a\u4fe1\u606f","title":"\u63d0\u793a","not_login":"\u60a8\u5c1a\u672a\u767b\u5f55","close":"\u5173\u95ed","cart":"\u8d2d\u7269\u8f66","js_cart":"\u8d2d\u7269\u8f66","all":"\u5168\u90e8","go_login":"\u53bb\u767b\u9646","select_city":"\u8bf7\u9009\u62e9\u5e02","comment_goods":"\u8bc4\u8bba\u5546\u54c1","submit_order":"\u63d0\u4ea4\u8ba2\u5355","sys_msg":"\u7cfb\u7edf\u63d0\u793a","no_keywords":"\u8bf7\u8f93\u5165\u641c\u7d22\u5173\u952e\u8bcd\uff01","adv_packup_one":"\u8bf7\u53bb\u540e\u53f0\u5e7f\u544a\u4f4d\u7f6e","adv_packup_two":"\u91cc\u9762\u8bbe\u7f6e\u5e7f\u544a\uff01","more":"\u66f4\u591a","Please":"\u8bf7\u53bb","set_up":"\u8bbe\u7f6e\uff01","login_phone_packup_one":"\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u7801","more_options":"\u66f4\u591a\u9009\u9879","Pack_up":"\u6536\u8d77","no_attr":"\u6ca1\u6709\u66f4\u591a\u5c5e\u6027\u4e86","search_Prompt":"\u53ef\u8f93\u5165\u6c49\u5b57,\u62fc\u97f3\u67e5\u627e\u54c1\u724c","most_input":"\u6700\u591a\u53ea\u80fd\u9009\u62e95\u9879","multi_select":"\u591a\u9009","checkbox_Packup":"\u8bf7\u6536\u8d77\u5168\u90e8\u591a\u9009","radio_Packup":"\u8bf7\u6536\u8d77\u5168\u90e8\u5355\u9009","contrast":"\u5bf9\u6bd4","empty_contrast":"\u6e05\u7a7a\u5bf9\u6bd4\u680f","Prompt_add_one":"\u6700\u591a\u53ea\u80fd\u6dfb\u52a04\u4e2a\u54e6^_^","Prompt_add_two":"\u60a8\u8fd8\u53ef\u4ee5\u7ee7\u7eed\u6dfb\u52a0","button_compare":"\u6bd4\u8f83\u9009\u5b9a\u5546\u54c1","exist":"\u60a8\u5df2\u7ecf\u9009\u62e9\u4e86%s","count_limit":"\u6700\u591a\u53ea\u80fd\u9009\u62e94\u4e2a\u5546\u54c1\u8fdb\u884c\u5bf9\u6bd4","goods_type_different":"%s\u548c\u5df2\u9009\u62e9\u5546\u54c1\u7c7b\u578b\u4e0d\u540c\u65e0\u6cd5\u8fdb\u884c\u5bf9\u6bd4","compare_no_goods":"\u60a8\u6ca1\u6709\u9009\u5b9a\u4efb\u4f55\u9700\u8981\u6bd4\u8f83\u7684\u5546\u54c1\u6216\u8005\u6bd4\u8f83\u7684\u5546\u54c1\u6570\u5c11\u4e8e 2 \u4e2a\u3002","btn_buy":"\u8d2d\u4e70","is_cancel":"\u53d6\u6d88","select_spe":"\u8bf7\u9009\u62e9\u5546\u54c1\u5c5e\u6027","Province":"\u8bf7\u9009\u62e9\u6240\u5728\u7701\u4efd","City":"\u8bf7\u9009\u62e9\u6240\u5728\u5e02","District":"\u8bf7\u9009\u62e9\u6240\u5728\u533a\u57df","Street":"\u8bf7\u9009\u62e9\u6240\u5728\u8857\u9053","Detailed_address_null":"\u8be6\u7ec6\u5730\u5740\u4e0d\u80fd\u4e3a\u7a7a","Select_attr":"\u8bf7\u9009\u62e9\u5c5e\u6027","Focus_prompt_one":"\u60a8\u5df2\u5173\u6ce8\u8be5\u5e97\u94fa\uff01","Focus_prompt_login":"\u60a8\u5c1a\u672a\u767b\u5f55\u5546\u57ce\u4f1a\u5458\uff0c\u4e0d\u80fd\u5173\u6ce8\uff01","Focus_prompt_two":"\u767b\u5f55\u5546\u57ce\u4f1a\u5458\u3002","store_focus":"\u5e97\u94fa\u5173\u6ce8\u3002","Focus_prompt_three":"\u60a8\u786e\u5b9e\u8981\u5173\u6ce8\u6240\u9009\u5e97\u94fa\u5417\uff1f","Focus_prompt_four":"\u60a8\u786e\u5b9e\u8981\u53d6\u6d88\u5173\u6ce8\u5e97\u94fa\u5417\uff1f","Focus_prompt_five":"\u60a8\u8981\u5173\u6ce8\u8be5\u5e97\u94fa\u5417\uff1f","Purchase_quantity":"\u8d85\u8fc7\u9650\u8d2d\u6570\u91cf.","My_collection":"\u6211\u7684\u6536\u85cf","shiping_prompt":"\u8be5\u5730\u533a\u6682\u4e0d\u652f\u6301\u914d\u9001","Have_goods":"\u6709\u8d27","No_goods":"\u65e0\u8d27","No_shipping":"\u65e0\u6cd5\u914d\u9001","Deliver_back_order":"\u4e0b\u5355\u540e\u7acb\u5373\u53d1\u8d27","Time_delivery":" \u65f6\u53d1\u8d27","goods_over":"\u6b64\u5546\u54c1\u6682\u65f6\u552e\u5b8c","Stock_goods_null":"\u5546\u54c1\u5e93\u5b58\u4e0d\u8db3","purchasing_prompt_two":"\u5bf9\u4e0d\u8d77\uff0c\u8be5\u5546\u54c1\u5df2\u7ecf\u7d2f\u8ba1\u8d85\u8fc7\u9650\u8d2d\u6570\u91cf","day_not_available":"\u5f53\u65e5\u65e0\u8d27","day_yes_available":"\u5f53\u65e5\u6709\u8d27","Already_buy":"\u5df2\u8d2d\u4e70","Already_buy_two":"\u4ef6\u5546\u54c1\u8fbe\u5230\u9650\u8d2d\u6761\u4ef6,\u65e0\u6cd5\u518d\u8d2d\u4e70","Already_buy_three":"\u4ef6\u8be5\u5546\u54c1,\u53ea\u80fd\u518d\u8d2d\u4e70","goods_buy_empty_p":"\u5546\u54c1\u6570\u91cf\u4e0d\u80fd\u5c11\u4e8e1\u4ef6","goods_number_p":"\u5546\u54c1\u6570\u91cf\u5fc5\u987b\u4e3a\u6570\u5b57","search_one":"\u8bf7\u586b\u5199\u7b5b\u9009\u4ef7\u683c","search_two":"\u8bf7\u586b\u5199\u7b5b\u9009\u5de6\u8fb9\u4ef7\u683c","search_three":"\u8bf7\u586b\u5199\u7b5b\u9009\u53f3\u8fb9\u4ef7\u683c","search_four":"\u5de6\u8fb9\u4ef7\u683c\u4e0d\u80fd\u5927\u4e8e\u6216\u7b49\u4e8e\u53f3\u8fb9\u4ef7\u683c","jian":"\u4ef6","letter":"\u4ef6","inventory":"\u5b58\u8d27","move_collection":"\u79fb\u81f3\u6211\u7684\u6536\u85cf","select_shop":"\u8bf7\u9009\u62e9\u5957\u9910\u5546\u54c1","Parameter_error":"\u53c2\u6570\u9519\u8bef","screen_price":"\u8bf7\u586b\u5199\u7b5b\u9009\u4ef7\u683c","screen_price_left":"\u8bf7\u586b\u5199\u7b5b\u9009\u5de6\u8fb9\u4ef7\u683c","screen_price_right":"\u8bf7\u586b\u5199\u7b5b\u9009\u53f3\u8fb9\u4ef7\u683c","screen_price_dy":"\u5de6\u8fb9\u4ef7\u683c\u4e0d\u80fd\u5927\u4e8e\u6216\u7b49\u4e8e\u53f3\u8fb9\u4ef7\u683c","invoice_ok":"\u4fdd\u5b58\u53d1\u7968\u4fe1\u606f","invoice_desc_null":"\u8f93\u5165\u5185\u5bb9\u4e0d\u80fd\u4e3a\u7a7a\uff01","invoice_desc_number":"\u60a8\u6700\u591a\u53ef\u4ee5\u6dfb\u52a03\u4e2a\u516c\u53f8\u53d1\u7968\uff01","invoice_packup":"\u8bf7\u9009\u62e9\u6216\u586b\u5199\u53d1\u7968\u62ac\u5934\u90e8\u5206\uff01","invoice_tax_null":"\u8bf7\u586b\u5199\u7eb3\u7a0e\u4eba\u8bc6\u522b\u7801","add_address_10":"\u6700\u591a\u53ea\u80fd\u6dfb\u52a010\u4e2a\u6536\u8d27\u5730\u5740","msg_phone_not":"\u624b\u673a\u53f7\u7801\u4e0d\u6b63\u786e","captcha_not":"\u9a8c\u8bc1\u7801\u4e0d\u80fd\u4e3a\u7a7a","captcha_xz":"\u8bf7\u8f93\u51654\u4f4d\u6570\u7684\u9a8c\u8bc1\u7801","captcha_cw":"\u9a8c\u8bc1\u7801\u9519\u8bef","Detailed_map":"\u8be6\u7ec6\u5730\u56fe","email_error":"\u90ae\u7bb1\u683c\u5f0f\u4e0d\u6b63\u786e\uff01","bid_prompt_null":"\u4ef7\u683c\u4e0d\u80fd\u4e3a\u7a7a!","bid_prompt_error":"\u4ef7\u683c\u8f93\u5165\u683c\u5f0f\u4e0d\u6b63\u786e\uff01","mobile_error_goods":"\u624b\u673a\u683c\u5f0f\u4e0d\u6b63\u786e\uff01","null_email_goods":"\u90ae\u7bb1\u4e0d\u80fd\u4e3a\u7a7a","select_store":"\u8bf7\u9009\u62e9\u95e8\u5e97\uff01","Product_spec_prompt":"\u8bf7\u9009\u62e9\u5546\u54c1\u89c4\u683c\u7c7b\u578b","reply_desc_one":"\u56de\u590d\u5e16\u5b50\u5185\u5bb9\u4e0d\u80fd\u4e3a\u7a7a","go_shoping":"\u53bb\u8d2d\u7269","highest_price":"\u5df2\u662f\u6700\u9ad8\u4ef7\uff01","lowest_price":"\u5df2\u662f\u6700\u4f4e\u4ef7\uff01","no_history":"\u60a8\u5df2\u6e05\u7a7a\u6700\u8fd1\u6d4f\u89c8\u8fc7\u7684\u5546\u54c1","receive_coupons":"\u9886\u53d6\u4f18\u60e0\u5238","Immediate_use":"\u7acb\u5373\u4f7f\u7528","no_enabled":"\u5173\u95ed"};
+//加载效果
+var load_cart_info = '<img src="__IMG__/loadGoods.gif" height="108" class="ml100">';
+var load_icon = '<img src="__IMG__/load.gif" width="200" height="200">';
+</script><link rel="stylesheet" type="text/css" href="__CSS__/suggest.css" />
+<link rel="stylesheet" type="text/css" href="__CSS__/select.css" />
+<link rel="stylesheet" type="text/css" href="js/perfect-scrollbar/perfect-scrollbar.min.css" />
+</head>
+<body>
+{include file="common/header" /}
+    
+<div class="hot-sales">
+    <div class="hotsale w1390 w">
+        <div class="hatsale-mt">热门推荐</div>
+        <div class="bd">
+            <ul>
+            	    <li>
+                    <div class="item">
+                        <div class="p-img"><a href="#" target="_blank"><img src="__IMG__/0_thumb_G_1489100550574.jpg" /></a></div>
+                        <div class="p-name"><a href="#" target="_blank">法国DK正品文胸套装女内衣性感蕾丝聚拢深V调整型小胸品牌收副乳 法国正品 蕾丝性感 原装包装 送女神必备</a></div>
+                        <div class="p-price">
+                        	    <em>¥</em>258.00                        </div>
+                        <div class="p-btn"><a class="btn sc-redBg-btn" href="goods.php?id=630">立即购买</a></div>
+                    </div>
+                </li>
+        <li>
+                    <div class="item">
+                        <div class="p-img"><a href="#" target="_blank"><img src="__IMG__/0_thumb_G_1490169030833.jpg" /></a></div>
+                        <div class="p-name"><a href="#" title='韩都衣舍2017韩版女装夏装新款时尚修身显瘦圆领条纹T恤OGY7711娋 显瘦版型 舒适面料 条纹元素' target="_blank">韩都衣舍2017韩版女装夏装新款时尚修身显瘦圆领条纹T恤OGY7711娋 显瘦版型 舒适面料 条纹元素</a></div>
+                        <div class="p-price">
+                        	    <em>¥</em>88.00                        </div>
+                        <div class="p-btn"><a class="btn sc-redBg-btn" href="goods.php?id=768">立即购买</a></div>
+                    </div>
+                </li>
+        <li>
+                    <div class="item">
+                        <div class="p-img"><a href="#" target="_blank"><img src="__IMG__/0_thumb_G_1490169216444.jpg" /></a></div>
+                        <div class="p-name"><a href="#" title='韩都衣舍2016新款秋冬款长袖连衣裙宽松学生冬季内搭打底裙子韩版 领券下单立减/单件包邮/先拍先发货！' target="_blank">韩都衣舍2016新款秋冬款长袖连衣裙宽松学生冬季内搭打底裙子韩版 领券下单立减/单件包邮/先拍先发货！</a></div>
+                        <div class="p-price">
+                        	    <em>¥</em>159.00                        </div>
+                        <div class="p-btn"><a class="btn sc-redBg-btn" href="goods.php?id=773">立即购买</a></div>
+                    </div>
+                </li>
+        <li class="last">
+                    <div class="item">
+                        <div class="p-img"><a href="#" target="_blank"><img src="__IMG__/0_thumb_G_1490169250846.jpg" /></a></div>
+                        <div class="p-name"><a href="#" title='韩都衣舍秋冬喇叭长袖针织衫毛衣女套头宽松纯色百搭学生韩版打底 领券下单立减/单件包邮/先拍先发货！' target="_blank">韩都衣舍秋冬喇叭长袖针织衫毛衣女套头宽松纯色百搭学生韩版打底 领券下单立减/单件包邮/先拍先发货！</a></div>
+                        <div class="p-price">
+                        	    <em>¥</em>159.00                        </div>
+                        <div class="p-btn"><a class="btn sc-redBg-btn" href="goods.php?id=774">立即购买</a></div>
+                    </div>
+                </li>
+                        </ul>
+            <a href="#" class="prev"></a>
+            <a href="#" class="next"></a>
+        </div>
+    </div>
+</div>
+	<div class="w w1390">
+    	<div class="crumbs-nav">
+	<div class="crumbs-nav-main clearfix">
+				<div class="crumbs-nav-item">
+			<div class="menu-drop">
+				<div class="trigger">
+					<a href="#"><span>男装、女装、内衣</span></a>
+					<i class="iconfont icon-down"></i>
+				</div>
+                				<div class="menu-drop-main">
+					<ul>
+			<li><a href="#">女装</a></li>
+			<li><a href="#">男装</a></li>
+			<li><a href="#">内衣</a></li>
+			<li><a href="#">服饰配件</a></li>
+			<li><a href="#">运动户外</a></li>
+		</ul>
+				</div>
+                			</div>
+			<i class="iconfont icon-right"></i>		</div>
+				<div class="crumbs-nav-item">
+			<div class="menu-drop">
+				<div class="trigger">
+					<a href="#"><span>女装</span></a>
+					<i class="iconfont icon-down"></i>
+				</div>
+                				<div class="menu-drop-main">
+					<ul>
+			<li><a href="#">连衣裙</a></li>
+			<li><a href="#">蕾丝/雪纺衫</a></li>
+			<li><a href="#">衬衫</a></li>
+			<li><a href="#">T恤</a></li>
+			<li><a href="#">半身裙</a></li>
+			<li><a href="#">休闲裤</a></li>
+			<li><a href="#">短裤</a></li>
+			<li><a href="#">牛仔裤</a></li>
+			<li><a href="#">针织衫</a></li>
+			<li><a href="#">吊带/背心</a></li>
+			<li><a href="#">打底衫</a></li>
+			<li><a href="#">打底裤</a></li>
+			<li><a href="#">正装裤</a></li>
+			<li><a href="#">小西服</a></li>
+			<li><a href="#">马甲</a></li>
+			<li><a href="#">风衣</a></li>
+			<li><a href="#">羊毛衫</a></li>
+			<li><a href="#">羊绒衫</a></li>
+			<li><a href="#">短外套</a></li>
+			<li><a href="#">棉服</a></li>
+			<li><a href="#">毛呢大衣</a></li>
+			<li><a href="#">加绒裤</a></li>
+			<li><a href="#">羽绒服</a></li>
+			<li><a href="#">皮草</a></li>
+			<li><a href="#">真皮皮衣</a></li>
+			<li><a href="#">仿皮皮衣</a></li>
+			<li><a href="#">旗袍/唐装</a></li>
+			<li><a href="#">礼服</a></li>
+			<li><a href="#">婚纱</a></li>
+			<li><a href="#">中老年女装</a></li>
+			<li><a href="#">大码女装</a></li>
+		</ul>
+				</div>
+                			</div>
+					</div>
+					</div>
+</div>
+    </div>
+    <div class="container">
+    	<div class="w w1390">
+            <div class="selector">
+
+<div class="right-extra" rewrite=0>
+    <div class="u_cloose">
+        <dl>
+            <dt>已选条件：</dt>
+            <dd>
+    &nbsp;
+
+
+
+
+
+
+
+</dd>
+        </dl>
+    </div>
+	<div class="goods_list">
+        <a href="" id="search"></a>
+		<ul class="attr_father">
+            {if condition="$brandData"}
+                        <li class="s-line">
+                <div class="s-l-wrap brand_img attr_list">
+                    <div class="s-l-tit brand_name_l">品牌：</div>
+                    <div class="s-l-value attr_son">
+                        <div class="price_auto fl">
+                            <div class="price_range"><a {if condition="!input('brandId')"}class="btn sc-redBg-btn"{/if}
+                                href="<?php
+                                    $urlArr = [];
+                                    $urlArr['id'] = $categoryId;
+                                    input('price') ? $urlArr['price'] = input('price') : '';
+                                    if($filters) {
+                                        echo url('index/category/index',$urlArr,'').'?filterAttr='.$filters;
+                                    }else {
+                                        echo url('index/category/index',$urlArr,'');
+                                    }
+                                ?>">不限</a></div>
+                            {volist name="brandData" id="vo"}
+                            <div class="price_range"><a {if condition="input('brandId') eq $vo['id']"}class="btn sc-redBg-btn"{/if}
+                                href="<?php
+                                $urlArr = [];
+                                 $urlArr['id'] = $categoryId;
+                                 $urlArr['brandId'] = $vo['id'];
+                                 input('price') ? $urlArr['price'] = input('price') : '';
+                                        if($filters) {
+                                            echo url('index/category/index',$urlArr,'').'?filterAttr='.$filters;
+                                        }else {
+                                            echo url('index/category/index',$urlArr,'');
+                                        }
+                                      ?>
+                            ">{$vo.brandName}</a></div>
+                            {/volist}
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {/if}
+
+            {if condition="$priceSection"}
+                        <li class="s-line">
+                <dl class="s-l-wrap">
+                    <div class="s-l-tit filter_attr_name">价格：</div>
+                    <div class="s-l-value attr_son">
+                        <div class="price_auto fl">
+                            <div class="price_range">
+                                <a {if condition="!input('price')"}class="btn sc-redBg-btn"{/if}
+                                href="<?php
+                                 $urlArr = [];
+                                 $urlArr['id'] = $categoryId;
+                                 input('brandId') ? $urlArr['brandId'] = input('brandId') : '';
+                                if($filters) {
+                                    echo url('index/category/index',$urlArr,'').'?filterAttr='.$filters;
+                                }else {
+                                    echo url('index/category/index',$urlArr,'');
+                                }
+                                ?>">不限</a>
+                            </div>
+                            {volist name="priceSection" id="vo"}
+                            <div class="price_range">
+                                <a {if condition="input('price') eq $vo"}class="btn sc-redBg-btn"{/if}
+                                href="<?php
+                                 $urlArr = [];
+                                 $urlArr['id'] = $categoryId;
+                                 $urlArr['price'] = $vo;
+                                 input('brandId') ? $urlArr['brandId'] = input('brandId') : '';
+                                if($filters) {
+                                     echo url('index/category/index',$urlArr,'').'?filterAttr='.$filters;;
+                                }else {
+                                     echo url('index/category/index',$urlArr,'');
+                                }
+                                ?>">{$vo}</a>
+                            </div>
+                            {/volist}
+                        </div>
+                        <div class="price_auto price_bottom fl">
+<input type="text" title="最低价" name="price_min" class="price_class price_min">
+<span class="price_class span_price_class">-</span>
+<input type="text" title="最高价" name="price_max" class="price_class price_max">
+<button class="price_ok price_class">确定</button>
+                        </div>
+                    </div>
+                </dl>
+            </li>
+            {/if}
+
+            <?php
+            $attrCount = count($attrData);
+            if(!$attrCount) {
+               $attrCount = 1;
+            }
+            $filterAttr = input('filterAttr');
+            if($filterAttr) {
+                $attrArr = explode('.',$filterAttr);
+
+            }else {
+                $attrArr = array_fill(0,$attrCount,0);
+            }
+            foreach($attrData as $k => $v):?>
+                <li class="s-line">
+                    <dl class="s-l-wrap">
+                        <div class="s-l-tit filter_attr_name"><?=$v['attrName']?>：</div>
+                        <div class="s-l-value attr_son">
+                            <div class="price_auto fl">
+                                <?php
+                                    $tempAttrArr = $attrArr;
+                                    $str1 = '0-'.$v['attrId'];
+                                    if($tempAttrArr[$k] == '0') {
+                                        $bool1 = true;
+                                    }else if($tempAttrArr[$k] == $str1) {
+                                        $bool1 = true;
+                                    }else {
+                                        $bool1 = false;
+                                    }
+                                    $tempAttrArr[$k] = $str1;
+                                    $attrStr = implode('.',$tempAttrArr);
+                                ?>
+                                <div class="price_range"><a <?php if($bool1):?>class="btn sc-redBg-btn"<?php endif; ?>
+                                    href="<?php
+                                            $urlArr = [];
+                                            $urlArr['id'] = $categoryId;
+                                            input('price') ? $urlArr['price'] = input('price') : '';
+                                            input('brandId') ? $urlArr['brandId'] = input('brandId') : '';
+                                            echo url('index/category/index',$urlArr,'').'?filterAttr='.$attrStr;
+                                            ?>
+                                    ">不限</a></div>
+                                <?php foreach($v['attrValues'] as $k1 => $v1):
+                                    $tempAttrArr = $attrArr;
+                                    $str2 = $v1.'-'.$v['attrId'];
+                                    if($tempAttrArr[$k] === $str2) {
+                                        $bool2 = true;
+                                    }else {
+                                        $bool2 = false;
+                                    }
+                                    $tempAttrArr[$k] = $str2;
+                                    $attrStr = implode('.',$tempAttrArr);
+                                ?>
+                                    <div class="price_range"><a <?php if($bool2):?>class="btn sc-redBg-btn"<?php endif; ?>
+                                        href="<?php
+                                                $urlArr = [];
+                                                $urlArr['id'] = $categoryId;
+                                                input('price') ? $urlArr['price'] = input('price') : '';
+                                                input('brandId') ? $urlArr['brandId'] = input('brandId') : '';
+                                                echo url('index/category/index',$urlArr,'').'?filterAttr='.$attrStr;
+                                            ?>
+                                        "><?=$v1?></a></div>
+                                <?php endforeach;?>
+                            </div>
+                        </div>
+                    </dl>
+                </li>
+            <?php endforeach;?>
+
+
+
+
+            		</ul>
+    </div>
+</div>
+            </div>
+            <div class="filter">
+        <div class="filter-wrap">
+    <div class="filter-sort">
+        {if condition="$ob eq 'xl' && $ow eq 'desc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'xl', 'ow' => 'asc'],'')}#search" class="curr">销量<i class="iconfont icon-arrow-down"></i></a>
+        {elseif condition="$ob eq 'xl' && $ow eq 'asc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'xl', 'ow' => 'desc'],'')}#search" class="curr">销量<i class="iconfont icon-arrow-up"></i></a>
+        {else}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'xl', 'ow' => 'asc'],'')}#search" class="">销量<i class="iconfont icon-arrow-down"></i></a>
+        {/if}
+
+        {if condition="$ob eq 'addTime' && $ow eq 'desc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'addTime', 'ow' => 'asc'],'')}#search" class="curr">新品<i class="iconfont icon-arrow-down"></i></a>
+        {elseif condition="$ob eq 'addTime' && $ow eq 'asc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'addTime', 'ow' => 'desc'],'')}#search" class="curr">新品<i class="iconfont icon-arrow-up"></i></a>
+        {else}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'addTime', 'ow' => 'asc'],'')}#search" class="">新品<i class="iconfont icon-arrow-down"></i></a>
+        {/if}
+
+        {if condition="$ob eq 'pl' && $ow eq 'desc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'pl', 'ow' => 'asc'],'')}#search" class="curr">评论数<i class="iconfont icon-arrow-down"></i></a>
+        {elseif condition="$ob eq 'pl' && $ow eq 'asc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'pl', 'ow' => 'desc'],'')}#search" class="curr">评论数<i class="iconfont icon-arrow-up"></i></a>
+        {else}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'pl', 'ow' => 'asc'],'')}#search" class="">评论数<i class="iconfont icon-arrow-down"></i></a>
+        {/if}
+
+        {if condition="$ob eq 'price' && $ow eq 'desc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'price', 'ow' => 'asc'],'')}#search" class="curr">价格<i class="iconfont icon-arrow-down"></i></a>
+        {elseif condition="$ob eq 'price' && $ow eq 'asc'"}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'price', 'ow' => 'desc'],'')}#search" class="curr">价格<i class="iconfont icon-arrow-up"></i></a>
+        {else}
+        <a href="{:url('index/category/index',['id' => $categoryId,'ob' => 'price', 'ow' => 'asc'],'')}#search" class="">价格<i class="iconfont icon-arrow-down"></i></a>
+        {/if}
+
+
+    </div>
+</div>    </div>
+<div class="g-view w">
+    <div class="goods-list" ectype="gMain">
+                <div class="gl-warp gl-warp-large">
+        	            <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);" class="goodslistForm" data-state="0">
+                            <ul>
+                                {if condition="$goodsRes"}
+                                {volist name="$goodsRes" id="vo"}
+                                <li class="gl-item">
+                                    <div class="gl-i-wrap">
+                                        <div class="p-img"><a href="#" target="_blank">{if condition="$vo.mdPic"}{$vo.mdPic|showImage=###}{else /}图片暂缺{/if}</a></div>
+                                        <div class="sider">
+                                            <ul>
+                                                <li class="curr">{$vo.mdPic|showImage=###,26,26}</li>
+                                                {volist name="$vo.photos" id="vo1"}
+                                                {if condition="$vo1"}
+                                                <li>{$vo1|showImage=###,26,26}</li>
+                                                {/if}
+                                                {/volist}
+                                            </ul>
+                                        </div>
+                                        <div class="p-lie">
+                                            <div class="p-price"><em>¥</em>{$vo.shopPrice}</div>
+                                            <div class="p-num">已售<em>{$vo.xl}</em>件<em> {$vo.pl}</em>评论</div>
+                                        </div>
+                                        <div class="p-name"><a href="#" target="_blank" title="{$vo.goodsName}">{$vo.goodsName}</a></div>
+                                        <div class="p-store">
+                                            <a href="http://wpa.qq.com/msgrd?v=3&uin=980172892&site=qq&menu=yes" title="联系客服" class="store">联系客服</a>
+                                            <a href="http://wpa.qq.com/msgrd?v=3&uin=980172892&site=qq&menu=yes" class="p-kefu p-c-violet"><i class="iconfont icon-kefu"></i></a>
+                                        </div>
+                                        <div class="p-activity">
+                                            {volist name="$vo.recName" id="vo1"}
+                                                {switch name="$vo1"}
+                                                    {case value="热卖商品"}<span class="tag tac-mh"><i class="i-left"></i>热卖<i class="i-right"></i></span>{/case}
+                                                    {case value="新品推荐"}<span class="tag tac-mn"><i class="i-left"></i>新品<i class="i-right"></i></span>{/case}
+                                                    {case value="精品推荐"}<span class="tag tac-mb"><i class="i-left"></i>精品<i class="i-right"></i></span>{/case}
+                                                    {case value="限时抢购"}<span class="tag tac-sr"><i class="i-left"></i>限时<i class="i-right"></i></span>{/case}
+                                                    {default /}<span class="tag tac-mn"><i class="i-left"></i>精品<i class="i-right"></i></span>
+                                                {/switch}
+                                            {/volist}
+                                        </div>
+                                    </div>
+                                </li>
+                                {/volist}
+                                {else /}
+                                 <span>暂无商品！</span>
+                                {/if}
+                            </ul>
+                        </form>
+                        <div id="flyItem" class="fly_item"><img src="" width="40" height="40"></div>
+        </div>
+
+    </div>
+    <div class="goods-spread">
+    <a href="#" class="g-stop" ectype="gstop"><i class="iconfont icon-right"></i></a>
+    <div class="gs-warp">
+        <div class="gs-tit">推广商品</div>
+        <ul class="gs-list">
+<li class="opacity_img">
+                <div class="">
+                        <div class="p-img"><a href="#" target="_blank"><img src="__IMG__/0_thumb_G_1489100550574.jpg" width="190" height="190"></a></div>
+                        <div class="p-price">
+                        <em>¥</em>258.00                    </div>
+                    <div class="p-name"><a href="#" target="_blank" title='法国DK正品文胸套装女内衣性感蕾丝聚拢深V调整型小胸品牌收副乳 法国正品 蕾丝性感 原装包装 送女神必备'>法国DK正品文胸套装女内衣性感蕾丝聚拢深V调整型小胸品牌收副乳 法国正品 蕾丝性感 原装包装 送女神必备</a></div>
+                    <div class="p-num">已售<em>0</em>件</div>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</div>
+</div>            
+            <div class="p-panel-main guess-love">
+            	<div class="ftit ftit-delr"><h3>猜你喜欢</h3></div>
+                <div class="gl-list clearfix">
+                	<ul class="clearfix">
+            	<li class="opacity_img">
+                        	<div class="p-img"><a href="#" target="_blank"><img src="__IMG__/0_thumb_G_1489109583798.jpg" width="190" height="190"></a></div>
+<div class="p-price">
+            <em>¥</em>555.00    </div>
+<div class="p-name"><a href="#" target="_blank">【情侣款】Camel骆驼男靴 时尚潮流英伦风马丁靴高帮皮靴 爆卖1万双！ 情侣马丁靴 好评如潮</a></div>
+                        	<div class="p-num">已售<em>35</em>件</div>
+                        </li>
+            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{include file="common/right" /}
+<div class="email_sub">
+	<div class="attached_bg"></div>
+	<div class="w1200">
+        <div class="email_sub_btn">
+            <input type="input" id="user_email" name="user_email" autocomplete="off" placeholder="请输入您的邮箱帐号">
+            <a href="#" onClick="add_email_list();" class="emp_btn">订阅</a>
+        </div>
+    </div>
+</div>    	 
+
+    
+    {include file="common/footer"/}
+    <script type="text/javascript" src="__JS__/suggest.js"></script>
+    <script type="text/javascript" src="__JS__/scroll_city.js"></script>
+    <script type="text/javascript" src="__JS__/utils.js"></script>
+    <script type="text/javascript" src="__JS__/warehouse.js"></script>
+    <script type="text/javascript" src="__JS__/warehouse_area.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="__JS__/common.js"></script>
+
+    <script type="text/javascript" src="__JS__/cart_common.js"></script>
+    <script type="text/javascript" src="__JS__/parabola.js"></script>
+    <script type="text/javascript" src="__JS__/shopping_flow.js"></script>
+    <script type="text/javascript" src="__JS__/cart_quick_links.js"></script>
+
+    <script type="text/javascript" src="__JS__/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript" src="__JS__/dsc-common.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.purebox.js"></script>
+</body>
+</html>

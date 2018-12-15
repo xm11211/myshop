@@ -1,0 +1,47 @@
+<div class="article-side">
+    <dl class="article-menu">
+        <dt class="am-t"><a href="#">文章分类列表</a></dt>
+        <dd class="am-c">
+            <div class="menu-item active">
+                <div class="item-hd"><a href="/cate/5">系统分类</a><i class="iconfont icon-down"></i></div>
+                <ul class="item-bd">
+                </ul>
+                {if condition="$helpCates"}
+                <ul class="item-bd"
+                    {if condition="$activeCate eq '系统'"}
+                    style="display: block;"
+                    {else /}
+                style="display: none;"
+                {/if}
+                >
+                    {volist name="helpCates" id="vo"}
+                    <li><a href="/cate/{$vo.id}">{$vo.cateName} </a></li>
+                    {/volist}
+                </ul>
+                {/if}
+            </div>
+        </dd>
+        <dd class="am-c">
+            {volist name="comCates" id="vo"}
+            <div class="menu-item active">
+                <div class="item-hd"><a href="/cate/{$vo.id}">{$vo.cateName}</a><i class="iconfont icon-down"></i></div>
+                {if condition="$vo['children']"}
+                <ul class="item-bd"
+                    {if condition="$activeCate neq '系统' and $activeCate eq $vo['cateName']"}
+                    style="display: block;"
+                    {else /}
+                style="display: none;"
+                {/if}
+                >
+                    {volist name="vo.children" id="vo1"}
+                    <li><a href="/cate/{$vo1.id}">{$vo1.cateName}</a></li>
+                    {/volist}
+                </ul>
+                {else}
+                <ul class="item-bd"></ul>
+                {/if}
+            </div>
+            {/volist}
+        </dd>
+    </dl>
+</div>

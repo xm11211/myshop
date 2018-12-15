@@ -1,0 +1,84 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图片列表</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="buttons-preview">
+                    <button class="btn btn-danger btn-xs" id="delInBat"><i class="fa fa-trash-o"></i>批量删除</button>
+                </div>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                <label>
+                                    <input type="checkbox" id="thCheck">
+                                    <span class="text"></span>
+                                </label>
+                            </th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                图片
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                相关操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="imageArr" id="vo"}
+                        <tr>
+                            <td class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                <label>
+                                    <input type="checkbox" name="delPic" value="{$vo}">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo eq ''"}
+                                    暂无
+                                    {else /}
+                                <img src="{$vo}" height="56">
+                                {/if}
+                            </font></font></td>
+                            <td>
+                                <button value="{$vo}" flag="del" name="bootbox-confirm" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+       //单个删除
+       delUrl = "{:url('del')}";
+       ajaxDelete('button[flag=del]',delUrl,'#secMsg');
+       //批量点击
+       clickBatch('#thCheck','input:checkbox[name=delPic]');
+       //批量删除
+       delBat('#delInBat','input:checkbox[name=delPic]:checked','#secMsg', delUrl);
+       $("#sidebar-menu a[href*=picture" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

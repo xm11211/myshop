@@ -1,0 +1,250 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">商品分类</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">上级分类</label>
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="pid">
+                                            <option value="0" selected="selected">顶级分类</option>
+                                            {empty name="allCates"}
+                                            {else /}
+                                            {volist name="allCates" id="vo"}
+                                            <option value="{$vo.id}">{$vo.level|str_repeat='-',### * 4}{$vo.cateName}</option>
+                                            {/volist}
+                                            {/empty}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">分类名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="cateName" data-bv-field="cateName"><i class="form-control-feedback" data-bv-icon-for="cateName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="cateName" data-bv-result="NOT_VALIDATED" style="display: none;">分类名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">图标名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="iconName" data-bv-field="iconName"><i class="form-control-feedback" data-bv-icon-for="iconName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="iconName" data-bv-result="NOT_VALIDATED" style="display: none;">图标名称不要超过30位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">banner图</label>
+                                    <div class="col-lg-1">
+                                        <span class="file-input btn btn-azure btn-file">
+                                            选择文件<input type="file" name="cateImg">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">关键词</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="keywords" placeholder="多个关键词用逗号分隔" data-bv-field="keywords"><i class="form-control-feedback" data-bv-icon-for="keywords" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="keywords" data-bv-result="NOT_VALIDATED" style="display: none;">关键词不要超过150位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">是否显示</label>
+                                    <div class="col-xs-4">
+                                        <label>
+                                            <input class="checkbox-slider slider-icon yesno" name="status" value="1" checked type="checkbox">
+                                            <span class="text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">设置推荐位</label>
+                                    <div class="col-lg-9">
+                                        {volist name="recpData" id="vo"}
+                                        <div class="checkbox col-lg-2">
+                                            <label>
+                                                <input name="recpId[]" type="checkbox" value="{$vo.id}" class="colored-blue">
+                                                <span class="text"> {$vo.recName}</span>
+                                            </label>
+                                        </div>
+                                        {/volist}
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">价格区间数</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="psNum" data-bv-field="psNum"><i class="form-control-feedback" data-bv-icon-for="psNum" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="regexp" data-bv-for="psNum" data-bv-result="NOT_VALIDATED" style="display: none;">只能是正整数！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">筛选属性</label>
+                                    <div class="col-lg-2 type">
+                                        <select class="form-control" name="typeId[]">
+                                            <option value="0">请选择</option>
+                                            {empty name="typeData"}
+                                            {else /}
+                                            {volist name="typeData" id="vo"}
+                                            <option value="{$vo.id}">{$vo.typeName}</option>
+                                            {/volist}
+                                            {/empty}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">描述</label>
+                                    <div class="col-lg-8">
+                                        <textarea name="desc" style="resize: none;height:100px;" class="form-control" data-bv-field="desc"></textarea><i class="form-control-feedback" data-bv-icon-for="desc" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="desc" data-bv-result="NOT_VALIDATED" style="display: none;">描述不要超过255位字符！</small></div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <button type="submit" class="btn btn-azure">提交</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                cateName: {
+                    validators: {
+                        notEmpty: {
+                            message: '分类名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '分类名称不要超过30位字符！'
+                        }
+                    }
+                },
+                keywords: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 150,
+                            message: '关键词不要超过150位字符！'
+                        }
+                    }
+                },
+                desc: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 255,
+                            message: '描述不要超过255位字符！'
+                        }
+                    }
+                },
+                iconName: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '图标名称不要超过30位字符！'
+                        }
+                    }
+                },
+                psNum: {
+                    validators: {
+                        regexp: {
+                            regexp: '[0-9]+',
+                            message: '只能是正整数！'
+                        },
+                        stringLength: {
+                            min: 0,
+                            max: 2,
+                            message: '长度不要超过2位字符！'
+                        },
+                        between: {
+                            min: 0,
+                            max: 20,
+                            message: '区间数在0-20个之间'
+                        }
+                    }
+                }
+            }
+        });
+
+        //商品属性
+        $("select[name=typeId"+  "\\[" + "\\]" +"]").on('change',chooseType);
+        function chooseType() {
+            var val = $(this).val();
+            var parent = $(this).parent().parent();
+            var typeEle = parent.find('.type');
+            if(val != 0) {
+                $.ajax({
+                    url: "{:url('getAttr')}",
+                    method: 'post',
+                    data: {typeId: "" + val + ""},
+                    success: function (data) {
+                        typeEle.nextAll().remove();
+                        if(data.length != 0) {
+                            var str = '<div class="col-lg-2 attrId"><select class="form-control" name="attrId[]"><option value="0">请选择</option>';
+                            for(var a = 0; a < data.length; ++ a) {
+                                str += '<option value="' + data[a].id + '">' + data[a].attrName + '</option>';
+                            }
+                            str +=  '</select></div>';
+                            typeEle.after(str);
+                            if($('.type').length > 1) {
+                                var a = '<a class="btn btn-default btn-xs shiny icon-only blue" href="javascript:void(0);" name="addThis"><i class="fa fa-minus"></i></a>';
+                            }else {
+                                var a = '<a class="btn btn-default btn-xs shiny icon-only blue" href="javascript:void(0);" name="addThis"><i class="fa fa-plus"></i></a>';
+                            }
+                            parent.find(".attrId").after(a);
+                            parent.find("a[name=addThis]").on('click',function () {
+                                addNewAttr(this);
+                            })
+                        }
+                    }
+                });
+            }else {
+                typeEle.nextAll().remove();
+            }
+        }
+
+        //点击按钮
+        function addNewAttr(a) {
+            var div = $(a).parent();
+            if($(a).find("i").hasClass("fa-plus")) {
+                var newDiv = div.clone();
+                newDiv.find("a[name=addThis]").remove();
+                newDiv.find(".attrId").remove();
+                newDiv.find("select").val("0");
+                newDiv.find("select[name=typeId"+  "\\[" + "\\]" +"]").on('change',chooseType);
+                newDiv.find("a").on('click',function () {
+                    $(this).parent().remove();
+                });
+                div.after(newDiv);
+            }else {
+                div.remove();
+            }
+        }
+        $("#sidebar-menu a[href*=category" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

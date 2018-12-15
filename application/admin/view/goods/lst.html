@@ -1,0 +1,301 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">商品列表</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <form action="" method="get" name="searchForm">
+                    <div class="buttons-preview ">
+                        <select class="input-xs" name="brandId">
+                            <option value="" selected="selected">不限品牌</option>
+                                <?php $brandId = input('get.brandId');?>
+                                <?php foreach($bdData as $k => $v):
+                                ?>
+                                <option value="<?=$v['id']?>" <?php if($brandId == $v['id']){echo 'selected';}?>><?=$v['brandName']?></option>
+                                <?php endforeach; ?>
+                        </select>
+                        <select class="input-xs" name="catId">
+                            <option value="" selected="selected">不限分类</option>
+                            <?php $catId = input('get.catId'); ?>
+                            <?php foreach($catData as $k => $v):
+                            if($catId == $v['id']) {
+                                $sel = 'selected="selected"';
+                            }else{
+                                $sel = '';
+                            }
+                            ?>
+                            <option value="<?=$v['id']?>" <?=$sel?>><?=str_repeat('-',$v['level']*8).$v['cateName']?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <div class="widget-buttons no-padding">
+                            <?php $goodsName = input('get.goodsName');?>
+                            <input type="text" value="<?=$goodsName?>" class=" input-xs widget-buttons" name="goodsName" placeholder="商品名称">
+                        </div>
+                    </div>
+                    <div class="buttons-preview">
+                        <div class="widget-buttons no-padding">
+                            <input type="text" name="fp" value="<?=input('get.fp')?>" class=" input-xs widget-buttons" placeholder="最低价">
+                            <input type="text" name="tp" value="<?=input('get.tp')?>" class=" input-xs widget-buttons" placeholder="最高价">
+                        </div>
+                    </div>
+                    <div class="buttons-preview">
+                        <div class="widget-buttons no-padding">
+                            <?php $ft = strtotime(input('get.ft'));$tt = strtotime(input('get.tt')); ?>
+                            <input type="text" name="ft" value="<?php if($ft){echo date('Y/m/d h:i:s',$ft);}?>" class=" input-xs widget-buttons" placeholder="开始(年/月/日 时:分:秒)">
+                            <input type="text" name="tt" value="<?php if($tt){echo date('Y/m/d h:i:s',$tt);}?>" class=" input-xs widget-buttons" placeholder="结束">
+                        </div>
+                    </div>
+                    <div class="buttons-preview">
+                        <span>是否上架：</span>
+                        <label>
+                            <input name="os" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="0" <?php if(input('get.os') == 0) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 全部</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="os" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="1" <?php if(input('get.os') == 1) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 上架</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="os" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="2" <?php if(input('get.os') == 2) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 下架</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                    </div>
+                    <div class="buttons-preview">
+                        <span>排序方式：</span>
+                        <?php $odby = input('get.odby','id')?>
+                        <label>
+                            <input name="odby" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="id" <?php if($odby === 'id') echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 已添加时间降序</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="odby" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="ia" <?php if($odby === 'ia') echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 已添加时间升序</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="odby" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="pd" <?php if($odby === 'pd') echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 以价格降序</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="odby" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="pa" <?php if($odby === 'pa') echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 以价格升序</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                    </div>
+                    <div class="buttons-preview">
+                    <button class="btn btn-info btn-xs" onclick="javascript:document.searchForm.submit();" ><i class="fa fa-search"></i> 点击查询</button>
+                    <button class="btn btn-success btn-xs" id="reset" ><i class="fa fa-backward"></i> 点击重置</button>
+                    </div>
+                </form>
+                <div class="buttons-preview">
+                    <button class="btn btn-info btn-xs " id="linkAdd"><i class="fa fa-plus"></i> 添加商品</button>
+                    <button class="btn btn-danger btn-xs" id="delInBat"><i class="fa fa-trash-o"></i>批量删除</button>
+                </div>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                <label>
+                                    <input type="checkbox" id="thCheck">
+                                    <span class="text"></span>
+                                </label>
+                            </th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                id
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                名称
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                品牌
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                主分类
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                扩展分类
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                缩略图
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                市场价
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                门店价
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                库存
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                状态
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                相关操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                <label>
+                                    <input type="checkbox" name="delId" value="{$vo.id}">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.id}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.goodsName}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.brandName eq ''"}
+                                暂无
+                                {else /}
+                                {$vo.brandName}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.cateName eq ''"}
+                                暂无
+                                {else /}
+                                {$vo.cateName}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.extCates eq ''"}
+                                暂无
+                                {else /}
+                                {$vo.extCates}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.pic eq ''"}暂无
+                                {else /}
+                                {$vo.pic|showImage=###,56,56}
+                                {/if}
+                            </font></font></td>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.marketPrice}
+                            </font></font></td>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.shopPrice}
+                            </font></font></td>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.goodsNum neq ''"}{$vo.goodsNum}{else}暂无{/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo['onSale'] eq 1"}
+                                <a class="btn btn-darkorange btn-sm" value="0" field="onSale" goodsId="{$vo.id}" name="off" href="javascript:void(0);">点击下架</a>
+                                <a class="btn btn-success btn-sm" style="display:none" field="onSale" value="1" goodsId="{$vo.id}" name="on" href="javascript:void(0);">点击上架</a>
+                                {else /}
+                                <a class="btn btn-success btn-sm" value="1" field="onSale" goodsId="{$vo.id}" name="on" href="javascript:void(0);">点击上架</a>
+                                <a class="btn btn-darkorange btn-sm" style="display:none" field="onSale" value="0" goodsId="{$vo.id}" name="off" href="javascript:void(0);">点击下架</a>
+                                {/if}
+                            </font></font></td>
+                            <td>
+                                <a href="{:url('goodsNum',array('id' => $vo.id))}" class="btn btn-success btn-xs"><i class="fa fa-plus"></i> 库存</a>
+                                <a href="{:url('photos',array('id' => $vo.id))}" class="btn btn-darkorange btn-xs"><i class="glyphicon glyphicon-camera"></i> 商品相册</a>
+                                <a href="{:url('edit',array('id' => $vo.id))}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i> 修改</a>
+                                <button value="{$vo.id}" flag="del" name="bootbox-confirm" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        {if condition="$list->render() neq ''"}
+                        <tr class="mypage" style="background:#fff;">
+                            <td colspan="">{$list->render()}</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       //为按钮添加链接
+       addBind('#linkAdd','{:url('add')}');
+       //表格数据行数
+       var rowsLen = $("tr").length - 2;
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+       //重置按钮
+       $("#reset").on('click',function (e) {
+           e.preventDefault();
+           $("select").val($("option:first").val());
+           $("input").val('');
+       });
+       //单个删除
+       delUrl = "{:url('del')}";
+       ajaxDelete('button[flag=del]',delUrl,'#secMsg');
+       //批量点击
+       clickBatch('#thCheck','input:checkbox[name=delId]');
+       //批量删除
+       delBat('#delInBat','input:checkbox[name=delId]:checked','#secMsg', delUrl);
+       $("a[name=off]").each(function (k,v) {
+           $(v).on('click',function () {
+               var val = $(this).attr('value');
+               var goodsId = $(this).attr('goodsId');
+               var field = $(this).attr('field');
+               var that = $(this);
+               $.ajax({
+                   method:'post',
+                   url:"{:url('status')}",
+                   data:{value:"" + val +"",goodsId:"" + goodsId + "",field:"" + field + ""},
+                   success:function (data) {
+                       if(data.msg == undefined) {
+                           $par = that.parent();
+                           that.css("display","none");
+                           $par.children("a[name=on]").css("display","inline-block");
+                           judgeEvents("#secMsg",'click','操作成功！','success','fa-check');
+                       }else{
+                           judgeEvents("#secMsg",'click',data.msg,'danger','fa-bolt');
+                       }
+                   }
+               });
+           })
+       });
+       $("a[name=on]").each(function (k,v) {
+           $(v).on('click',function () {
+               var val = $(this).attr('value');
+               var goodsId = $(this).attr('goodsId');
+               var field = $(this).attr('field');
+               var that = $(this);
+               $.ajax({
+                   method:'post',
+                   url:"{:url('status')}",
+                   data:{value:"" + val +"",goodsId:"" + goodsId + "",field:"" + field + ""},
+                   success:function (data) {
+                       if(data.msg == undefined) {
+                           $par = that.parent();
+                           that.css("display","none");
+                           $par.children("a[name=off]").css("display","inline-block");
+                           judgeEvents("#secMsg",'click','操作成功！','success','fa-check');
+                       }else{
+                           judgeEvents("#secMsg",'click',data.msg,'danger','fa-bolt');
+                       }
+                   }
+               });
+           })
+       });
+       $("#sidebar-menu a[href*=goods" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

@@ -1,0 +1,114 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">商品属性</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">所属类型</label>
+                                    <?=buildSelect('type','typeId','id','typeName');?>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">属性名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="attrName" data-bv-field="attrName"><i class="form-control-feedback" data-bv-icon-for="attrName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="attrName" data-bv-result="NOT_VALIDATED" style="display: none;">属性名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">属性类型</label>
+                                    <div class="col-lg-9" id="radioType">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="attrType" type="radio" value="1" checked class="colored-blue">
+                                                <span class="text"> 单选</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="attrType" type="radio" value="2" class="colored-blue">
+                                                <span class="text"> 唯一</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">属性值</label>
+                                    <div class="col-lg-8">
+                                        <textarea id="attrValues" name="attrValues" placeholder="多个值用逗号分隔" style="resize: none;height:100px;" class="form-control" data-bv-field="attrValues"></textarea><i class="form-control-feedback" data-bv-icon-for="attrValues" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="attrValues" data-bv-result="NOT_VALIDATED" style="display: none;">描述不要超过255位字符！</small></div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <button type="submit" class="btn btn-azure">提交</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                attrName: {
+                    validators: {
+                        notEmpty: {
+                            message: '属性名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '属性名称不要超过30位字符！'
+                        }
+                    }
+                },
+                attrValues: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 255,
+                            message: '属性值不要超过255位字符！'
+                        }
+                    }
+                },
+            }
+        });
+        $("#radioType input[name=attrType]").each(function (k, v) {
+            $(v).on('click',function () {
+                var val = $(this).val();
+                if(val == 1) {
+                    $("#attrValues").val("").removeAttr("disabled");
+                }else {
+                    $("#attrValues").val("").attr("disabled","disabled");
+                }
+            })
+        });
+        $("#sidebar-menu a[href*=type" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

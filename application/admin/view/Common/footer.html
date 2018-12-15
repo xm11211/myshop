@@ -1,0 +1,92 @@
+</section>
+</div>
+<!-- /Page Body -->
+</div>
+<!-- /Page Content -->
+
+</div>
+<!-- /Page Container -->
+<!-- Main Container -->
+
+</div>
+
+<!--Basic Scripts-->
+<script>var adminUrl = "__PUBLIC__/Admin/";</script>
+<script src="__JS__/bootstrap.min.js"></script>
+<script src="__JS__/slimscroll/jquery.slimscroll.min.js"></script>
+<!--Beyond Scripts-->
+<script src="__JS__/beyond.js"></script>
+<!--Page Related Scripts-->
+<script src="__JS__/bootbox/bootbox.js"></script>
+<script src="__JS__/toastr/toastr.js"></script>
+<!--myadmin js-->
+<script src="__JS__/base/admin.js"></script>
+<script>
+    // If you want to draw your charts with Theme colors you must run initiating charts after that current skin is loaded
+    $(window).bind("load", function () {
+
+        /*Sets Themed Colors Based on Themes*/
+        themeprimary = getThemeColorFromCss('themeprimary');
+        themesecondary = getThemeColorFromCss('themesecondary');
+        themethirdcolor = getThemeColorFromCss('themethirdcolor');
+        themefourthcolor = getThemeColorFromCss('themefourthcolor');
+        themefifthcolor = getThemeColorFromCss('themefifthcolor');
+        //Sets The Hidden Chart Width
+        $('#dashboard-bandwidth-chart')
+            .data('width', $('.box-tabbs')
+                .width() - 20);
+    });
+
+    // $(function () {
+    //     var url = location.href;
+    //     var str = /Admin/;
+    //     var num = url.match(str).index + 6;
+    //     var str2 = url.substring(num);
+    //     var arr = str2.split('/');
+    //     var controller = arr[0];
+    //     var action = arr[1];
+    //     if(controller.toLowerCase() == action.toLowerCase()){
+    //         $("li[name=Index]").addClass("active");
+    //         window.sessionStorage.removeItem('num');
+    //     }
+    //     var lis = [];
+    //     var parLis = $(".sidebar-menu").children().eq(0).nextAll();
+    //     parLis.each(function (k,v) {
+    //         var lis1 = $(v).find('ul').find('li');
+    //         lis1.each(function (k1,v1) {
+    //             lis.push(v1);
+    //         });
+    //     });
+    //     var lisLen = lis.length;
+    //     var index = window.sessionStorage.getItem('num');
+    //     if(index){
+    //         $(lis[index]).addClass("active")
+    //             .parent().css("display","block")
+    //             .parent().addClass("active open");
+    //         for(var a = 0; a < lisLen; ++ a) {
+    //             lis[a].index = a;
+    //             $(lis[a]).on('click',function (e) {
+    //                 e.preventDefault();
+    //                 window.sessionStorage.removeItem('num');
+    //                 window.sessionStorage.setItem('num',this.index);
+    //                 location.href = $(this).find("a").attr("href");
+    //             })
+    //         }
+    //     }else{
+    //         for(var a1 = 0; a1 < lisLen; ++ a1) {
+    //             lis[a1].index = a1;
+    //             $(lis[a1]).on('click',function (e) {
+    //                 e.preventDefault();
+    //                 window.sessionStorage.setItem('num',this.index);
+    //                 location.href = $(this).find("a").attr("href");
+    //             })
+    //         }
+    //     }
+    //
+    // });
+</script>
+
+
+</body>
+<!--  /Body -->
+</html>

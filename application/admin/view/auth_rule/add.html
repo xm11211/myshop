@@ -1,0 +1,113 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">权限规则</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">权限名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="title" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">权限名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">规则名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="name" data-bv-field="name"><i class="form-control-feedback" data-bv-icon-for="name" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">规则名称不要超过80位字符！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">图标名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="iconName" data-bv-field="iconName"><i class="form-control-feedback" data-bv-icon-for="iconName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="iconName" data-bv-result="NOT_VALIDATED" style="display: none;">图标名称不要超过30位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">上级权限</label>
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="pid">
+                                            <option value="0" selected="selected">顶级权限</option>
+                                            {empty name="arData"}
+                                            {else /}
+                                            {volist name="arData" id="vo"}
+                                            <option value="{$vo.id}">{$vo.level|str_repeat='-',### * 4}{$vo.title}</option>
+                                            {/volist}
+                                            {/empty}
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <button type="submit" class="btn btn-azure">提交</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                title: {
+                    validators: {
+                        notEmpty: {
+                            message: '权限名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 20,
+                            message: '权限名称不要超过20位字符！'
+                        }
+                    }
+                },
+                name: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 80,
+                            message: '规则名称不要超过80位字符！'
+                        }
+                    }
+                },
+                iconName: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '图标名称不要超过30位字符！'
+                        }
+                    }
+                },
+            }
+        });
+        $("#sidebar-menu a[href*=auth_rule" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

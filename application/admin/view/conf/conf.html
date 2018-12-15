@@ -1,0 +1,118 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">系统配置</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <form action="" enctype="multipart/form-data" method="post">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                配置名称
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                配置值
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($confData as $k => $v):?>
+                        <tr>
+                            <td align="right"><?php echo $v['cnName'];?></td>
+                            <td align="left">
+                                <?php if($v['type']==1):?>
+                                <input name="<?php echo $v['enName'];?>" type="text" class="form-control" value="<?php echo $v['value'];?>">
+                                <?php elseif($v['type']==2):?>
+                                <textarea  name="<?php echo $v['enName'];?>" style="resize: none;" class="form-control">
+                                                <?php echo $v['value'];?>
+                                            </textarea>
+                                <?php elseif($v['type']==3):
+                                            if($v['values']){
+                                                $arrRadio=explode(',', $v['values']);
+                                            }
+                                            foreach ($arrRadio as $k1 => $v1):
+                                ?>
+                                <label style="margin-right:15px;">
+                                    <input <?php if($v['value']==$v1){echo 'checked="checked"';} ?> name="<?php echo $v['enName'];?>" value="<?php echo $v1;?>" type="radio">
+                                    <span class="text"><?php echo $v1;?></span>
+                                </label>
+                                <?php endforeach;?>
+                                <?php elseif($v['type']==4):
+                                if($v['values']){
+                                                $arrCheck=explode(',', $v['values']);
+                                                $arrValues = explode(',',$v['value']);
+                                            }
+                                            foreach ($arrCheck as $k2 => $v2):
+                                ?>
+                                <label>
+                                    <input <?php if(in_array($v2,$arrValues)){echo 'checked="checked"';} ?> name="<?php echo $v['enName'];?>[]" class="colored-success" value="<?php echo $v2;?>" type="checkbox">
+                                    <span class="text"><?php echo $v2;?></span>
+                                </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <?php endforeach;?>
+                                <?php elseif($v['type']==5):
+                                            if($v['values']){
+                                                $arrSelect=explode(',', $v['values']);
+                                            }
+                                        ?>
+                                <select name="<?php echo $v['enName'];?>">
+                                    <?php foreach ($arrSelect as $k2 => $v2):?>
+                                    <option <?php if($v['value']==$v2){echo 'selected="selected"';} ?> value="<?php echo $v2;?>"><?php echo $v2;?></option>
+                                    <?php endforeach;?>
+                                </select>
+                                <?php elseif($v['type']==6):?>
+                                        <span class="file-input btn btn-azure btn-file">
+                                            选择文件<input type="file" name="<?=$v['enName']?>">
+                                        </span>
+                                        <?php if($v['value'] != ''){
+                                            showImage($v['value'],56);
+                                        };?>
+                                <?php endif;?>
+                            </td>
+                        </tr>
+                        <?php endforeach;?>
+                        <tr class="mypage">
+                            <td>
+                                <div class="form-group">
+                                    <div class="col-lg-8 col-lg-offset-4">
+                                        <button type="submit" class="btn btn-azure">提交</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       // //表格数据行数
+       var rowsLen = $("tr").length - 2;
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+        $("textarea").each(function (k,v) {
+            $(v).text($.trim($(v).text()));
+        });
+       $("#sidebar-menu a[href*=conf" + "\\/"+ "conf]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

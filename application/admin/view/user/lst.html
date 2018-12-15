@@ -1,0 +1,159 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">会员列表</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="buttons-preview">
+                    <button class="btn btn-info btn-xs " id="adminAdd"><i class="fa fa-plus"></i> 添加会员</button>
+                </div>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                id
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                用户名
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                头像
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                积分
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                会员级别
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                邮箱
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                手机号
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                验证标识
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                验证状态
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                注册时间
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                相关操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.id}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.userName}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.avator"}
+                                {$vo.avator|showImage=###,56}
+                                {else /}
+                                暂无
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.points}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.levelName eq ''"}
+                                暂无
+                                {else /}
+                                {$vo.levelName}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.email eq ''"}
+                                暂无
+                                {else /}
+                                {$vo.email}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.tel eq ''"}
+                                暂无
+                                {else /}
+                                {$vo.tel}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {switch name="vo.regType"}
+                                    {case value="0"}邮箱{/case}
+                                    {case value="1"}手机{/case}
+                                    {case value="2"}全部{/case}
+                                    {case value="3"}暂无{/case}
+                                {/switch}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.eChecked eq 1"}
+                                邮箱已验证
+                                {elseif condition="$vo.tChecked eq 1"}
+                                手机已验证
+                                {elseif condition="($vo.eChecked eq 1) and ($vo.tChecked eq 1)"}
+                                全部已验证
+                                {else /}
+                                未验证
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.regTime|date='Y/m/d h:i:s',###}
+                            </font></font></td>
+                            <td>
+                                <a href="{:url('edit',array('id' => $vo.id))}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i> 修改</a>
+                                {if condition="$vo.id neq 5"}
+                                <button value="{$vo.id}" flag="del" name="bootbox-confirm" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>删除</button>
+                                {/if}
+                            </td>
+                        </tr>
+                        {/volist}
+                        {if condition="$list->render() neq ''"}
+                        <tr class="mypage" style="background:#fff;">
+                            <td colspan="">{$list->render()}</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       //为按钮添加链接
+       addBind('#adminAdd','{:url('add')}');
+       // //表格数据行数
+       var rowsLen = $("tr").length - 2;
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+       //单个删除
+       delUrl = "{:url('del')}";
+       ajaxDelete('button[flag=del]',delUrl,'#secMsg');
+       $("#sidebar-menu a[href*=user" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

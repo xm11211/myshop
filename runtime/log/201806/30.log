@@ -1,0 +1,676 @@
+---------------------------------------------------------------
+[ 2018-06-30T01:02:17+08:00 ] 203.209.234.228 GET /paySuccess.html
+[ info ] www.xxjdxl.xyz/paySuccess.html [运行时间：0.044621s][吞吐率：22.41req/s] [内存消耗：4,313.02kb] [文件加载：63]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'paySuccess',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4',
+  'host' => 'www.xxjdxl.xyz',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->paySuccess[ /www/wwwroot/www.xxjdxl.xyz/application/index/controller/Flow.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: out_trade_no[/www/wwwroot/www.xxjdxl.xyz/application/index/controller/Flow.php:219]
+---------------------------------------------------------------
+[ 2018-06-30T01:02:17+08:00 ] 203.209.234.60 GET /aliNotify
+[ info ] www.xxjdxl.xyz/aliNotify [运行时间：0.042893s][吞吐率：23.31req/s] [内存消耗：4,273.92kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'aliNotify',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4',
+  'host' => 'www.xxjdxl.xyz',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->aliNotify[ /www/wwwroot/www.xxjdxl.xyz/application/index/controller/Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-30T03:37:28+08:00 ] 207.46.13.0 GET /
+[ info ] www.xxjdxl.xyz/ [运行时间：0.053603s][吞吐率：18.66req/s] [内存消耗：4,911.76kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'pragma' => 'no-cache',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'www.xxjdxl.xyz',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/www.xxjdxl.xyz/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/www.xxjdxl.xyz/public/../application/index/view/index/index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000611s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.001244s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000417s ]
+---------------------------------------------------------------
+[ 2018-06-30T03:37:37+08:00 ] 40.77.188.195 GET /checkLogin.html
+[ info ] www.xxjdxl.xyz/checkLogin.html [运行时间：0.043061s][吞吐率：23.22req/s] [内存消耗：4,371.33kb] [文件加载：62]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'pragma' => 'no-cache',
+  'accept' => '*/*',
+  'accept-encoding' => '',
+  'host' => 'www.xxjdxl.xyz',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ /www/wwwroot/www.xxjdxl.xyz/application/member/controller/Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_a70t0c2nvv97a7sjdkgt7qhuq6' AND session_expire > '1530301057' [ RunTime:0.000671s ]
+---------------------------------------------------------------
+[ 2018-06-30T03:37:38+08:00 ] 40.77.189.16 GET /getCartNum.html
+[ info ] www.xxjdxl.xyz/getCartNum.html [运行时间：0.036991s][吞吐率：27.03req/s] [内存消耗：4,230.69kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'pragma' => 'no-cache',
+  'accept' => '*/*',
+  'accept-encoding' => '',
+  'host' => 'www.xxjdxl.xyz',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ /www/wwwroot/www.xxjdxl.xyz/application/index/controller/Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-30T07:00:11+08:00 ] 106.11.226.232 GET /
+[ info ] www.xxjdxl.xyz/ [运行时间：0.057192s][吞吐率：17.48req/s] [内存消耗：4,911.48kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'www.xxjdxl.xyz',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/www.xxjdxl.xyz/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/www.xxjdxl.xyz/public/../application/index/view/index/index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000575s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.001607s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.001171s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000451s ]
+---------------------------------------------------------------
+[ 2018-06-30T07:57:27+08:00 ] 106.120.160.114 GET /login
+[ info ] www.xxjdxl.xyz/login [运行时间：0.039903s][吞吐率：25.06req/s] [内存消耗：4,438.07kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'referer' => 'http://www.xxjdxl.xyz/login',
+  'host' => 'www.xxjdxl.xyz',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->login[ /www/wwwroot/www.xxjdxl.xyz/application/member/controller/Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.xxjdxl.xyz/public/../application/member/view/account/login.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000578s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_d1qk75l4dq0r01lfgkf62oc2n4' AND session_expire > '1530316647' [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:00:56+08:00 ] 101.199.112.53 GET /login
+[ info ] www.xxjdxl.xyz/login [运行时间：0.042279s][吞吐率：23.65req/s] [内存消耗：4,438.09kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xxjdxl.xyz',
+  'connection' => 'keep-alive',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'iso-8859-1,*,utf-8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->login[ /www/wwwroot/www.xxjdxl.xyz/application/member/controller/Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.xxjdxl.xyz/public/../application/member/view/account/login.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000510s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_9hot8071j5e2sr4ffhoneoq242' AND session_expire > '1530316856' [ RunTime:0.000570s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:14:01+08:00 ] 106.120.160.114 GET /xm112112102
+[ info ] www.xxjdxl.xyz/xm112112102 [运行时间：0.030268s][吞吐率：33.04req/s] [内存消耗：2,823.87kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'referer' => 'http://www.xxjdxl.xyz/xm112112102',
+  'host' => 'www.xxjdxl.xyz',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2102',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_bpmcltvj1qibt2mg1abeak5uf1' AND session_expire > '1530317641' [ RunTime:0.000535s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:14:53+08:00 ] 220.181.132.194 GET /xm112112102
+[ info ] www.xxjdxl.xyz/xm112112102 [运行时间：0.031882s][吞吐率：31.37req/s] [内存消耗：2,823.78kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xxjdxl.xyz',
+  'connection' => 'keep-alive',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'iso-8859-1,*,utf-8',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2102',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000550s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_bihiifmtvkuumg8uesh5utjva2' AND session_expire > '1530317693' [ RunTime:0.000488s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:15:21+08:00 ] 58.64.185.39 GET /xm112112102
+[ info ] www.xxjdxl.xyz/xm112112102 [运行时间：0.031262s][吞吐率：31.99req/s] [内存消耗：2,824.50kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xxjdxl.xyz',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'iso-8859-1,*,utf-8',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2102',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000550s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_atp6d14vihvidmtvdk4h09hgp2' AND session_expire > '1530317721' [ RunTime:0.000485s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:59:25+08:00 ] 106.120.160.114 GET /xm112112053
+[ info ] www.xxjdxl.xyz/xm112112053 [运行时间：0.031731s][吞吐率：31.52req/s] [内存消耗：2,823.87kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'referer' => 'http://www.xxjdxl.xyz/xm112112053',
+  'host' => 'www.xxjdxl.xyz',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2053',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000628s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_8a505tuf3cfop6e8po0vjdnd07' AND session_expire > '1530320365' [ RunTime:0.000514s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:59:25+08:00 ] 0.0.0.0 GET /xm112112053
+[ info ] www.xxjdxl.xyz/xm112112053 [运行时间：0.037565s][吞吐率：26.62req/s] [内存消耗：2,824.29kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'referer' => 'http://www.xxjdxl.xyz/xm112112053',
+  'host' => 'www.xxjdxl.xyz',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+  'x-forwarded-for' => 'unknown',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2053',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000566s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_gh7i86f654b9rob6nv7nn8scj2' AND session_expire > '1530320365' [ RunTime:0.000520s ]
+---------------------------------------------------------------
+[ 2018-06-30T08:59:26+08:00 ] 0.0.0.0 GET /xm112112053
+[ info ] www.xxjdxl.xyz/xm112112053 [运行时间：0.035125s][吞吐率：28.47req/s] [内存消耗：2,824.29kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'referer' => 'http://www.xxjdxl.xyz/xm112112053',
+  'host' => 'www.xxjdxl.xyz',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+  'x-forwarded-for' => 'unknown',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2053',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000661s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_gn20gfja2sc5m06o6v9vj87uq2' AND session_expire > '1530320366' [ RunTime:0.000742s ]
+---------------------------------------------------------------
+[ 2018-06-30T09:10:38+08:00 ] 101.199.112.49 GET /xm112112053
+[ info ] www.xxjdxl.xyz/xm112112053 [运行时间：0.033594s][吞吐率：29.77req/s] [内存消耗：2,823.78kb] [文件加载：56]
+[ info ] [ LANG ] /www/wwwroot/www.xxjdxl.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xxjdxl.xyz',
+  'connection' => 'keep-alive',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'iso-8859-1,*,utf-8',
+)
+[ info ] [ PARAM ] array (
+  'check' => '2053',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /www/wwwroot/www.xxjdxl.xyz/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'xyz',
+    'username' => 'xyz',
+    'password' => 'hu.12580a',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000555s ] mysql:host=127.0.0.1;port=3306;dbname=xyz;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_g4p80pt00qgj7ed8k95c7bjlu7' AND session_expire > '1530321038' [ RunTime:0.000499s ]

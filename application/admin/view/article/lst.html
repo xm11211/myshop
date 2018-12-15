@@ -1,0 +1,214 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文章列表</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <form action="" method="get" name="searchForm">
+                <div class="buttons-preview ">
+                    <select class="input-xs" name="cateId">
+                        <option value="" selected="selected">不限栏目</option>
+                        <empty name="cateData">
+                            <else />
+                            <?php foreach($cateData as $k => $v):
+                            if($v['id'] == 4 || $v['id'] == 5) {
+                            continue;
+                            }
+                            ?>
+                            <?php $cateId = input('get.cateId');?>
+                            <option value="<?=$v['id']?>" <?php if($cateId == $v['id']){echo 'selected';}?>><?=$v['cateName']?></option>
+                            <?php endforeach; ?>
+                        </empty>
+                    </select>
+                    <div class="widget-buttons ">
+                        <?php $searchText = input('get.searchText');?>
+                        <input type="text" value="<?=$searchText?>" class="form-control input-xs widget-buttons" name="searchText" id="glyphicon-search" placeholder="文章标题">
+                    </div>
+                    <button class="btn btn-info btn-xs" onclick="javascript:document.searchForm.submit();" style="margin-top:8px;"><i class="fa fa-search"></i> 点击查询</button>
+                    <button class="btn btn-success btn-xs" id="reset" style="margin-top:8px;"><i class="fa fa-backward"></i> 点击重置</button>
+                </div>
+                    </form>
+                <div class="buttons-preview">
+                    <button class="btn btn-info btn-xs " id="adminAdd"><i class="fa fa-plus"></i> 添加文章</button>
+                    <button class="btn btn-danger btn-xs" id="delInBat"><i class="fa fa-trash-o"></i>批量删除</button>
+                </div>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                <label>
+                                    <input type="checkbox" id="thCheck">
+                                    <span class="text"></span>
+                                </label>
+                            </th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                id
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                标题
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                缩略图
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                是否置顶
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                显示状态
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                所属栏目
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                相关操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                <label>
+                                    <input type="checkbox" name="delId" value="{$vo.id}">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.id}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.title}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.thumb eq ''"}
+                                    暂无
+                                    {else /}
+                                        {$vo.thumb|showImage=$vo.thumb,56}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo['showTop'] eq 1"}
+                                <a class="btn btn-darkorange btn-sm" value="0" field="showTop" artId="{$vo.id}" name="off" href="javascript:void(0);">点击不置顶</a>
+                                <a class="btn btn-success btn-sm" style="display:none" field="showTop" value="1" artId="{$vo.id}" name="on" href="javascript:void(0);">点击置顶</a>
+                                {else /}
+                                <a class="btn btn-success btn-sm" value="1" field="showTop" artId="{$vo.id}" name="on" href="javascript:void(0);">点击置顶</a>
+                                <a class="btn btn-darkorange btn-sm" style="display:none" field="showTop" value="0" artId="{$vo.id}" name="off" href="javascript:void(0);">点击不置顶</a>
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo['showStatus'] eq 1"}
+                                <a class="btn btn-darkorange btn-sm" value="0" field="showStatus" artId="{$vo.id}" name="off" href="javascript:void(0);">点击隐藏</a>
+                                <a class="btn btn-success btn-sm" style="display:none" value="1" field="showStatus" artId="{$vo.id}" name="on" href="javascript:void(0);">点击显示</a>
+                                {else /}
+                                <a class="btn btn-success btn-sm" value="1" artId="{$vo.id}" field="showStatus" name="on" href="javascript:void(0);">点击显示</a>
+                                <a class="btn btn-darkorange btn-sm" style="display:none" value="0" field="showStatus" artId="{$vo.id}" name="off" href="javascript:void(0);">点击隐藏</a>
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if $vo['cateName'] == ''}请选择栏目{else /}{$vo.cateName}{/if}
+
+                            </font></font></td>
+                            <td>
+                                <a href="{:url('edit',array('id' => $vo.id))}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i> 修改</a>
+                                <button value="{$vo.id}" flag="del" name="bootbox-confirm" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        {if condition="$list->render() neq ''"}
+                        <tr class="mypage" style="background:#fff;">
+                            <td colspan="">{$list->render()}</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       //为按钮添加链接
+       addBind('#adminAdd','{:url('add')}');
+       // //表格数据行数
+       var rowsLen = $("tr").length - 2;
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+       //单个删除
+       delUrl = "{:url('del')}";
+       ajaxDelete('button[flag=del]',delUrl,'#secMsg');
+       //批量点击
+       clickBatch('#thCheck','input:checkbox[name=delId]');
+       //批量删除
+       delBat('#delInBat','input:checkbox[name=delId]:checked','#secMsg', delUrl);
+       $("a[name=off]").each(function (k,v) {
+           $(v).on('click',function () {
+               var val = $(this).attr('value');
+               var artId = $(this).attr('artId');
+               var field = $(this).attr('field');
+               var that = $(this);
+               $.ajax({
+                   method:'post',
+                   url:"{:url('status')}",
+                   data:{value:"" + val +"",artId:"" + artId + "",field:"" + field + ""},
+                   success:function (data) {
+                       if(data.msg == undefined) {
+                           $par = that.parent();
+                           that.css("display","none");
+                           $par.children("a[name=on]").css("display","inline-block");
+                           judgeEvents("#secMsg",'click','操作成功！','success','fa-check');
+                       }else{
+                           judgeEvents("#secMsg",'click',data.msg,'danger','fa-bolt');
+                       }
+                   }
+               });
+           })
+       });
+       $("a[name=on]").each(function (k,v) {
+           $(v).on('click',function () {
+               var val = $(this).attr('value');
+               var artId = $(this).attr('artId');
+               var field = $(this).attr('field');
+               var that = $(this);
+               $.ajax({
+                   method:'post',
+                   url:"{:url('status')}",
+                   data:{value:"" + val +"",artId:"" + artId + "",field:"" + field + ""},
+                   success:function (data) {
+                       if(data.msg == undefined) {
+                           $par = that.parent();
+                           that.css("display","none");
+                           $par.children("a[name=off]").css("display","inline-block");
+                           judgeEvents("#secMsg",'click','操作成功！','success','fa-check');
+                       }else{
+                           judgeEvents("#secMsg",'click',data.msg,'danger','fa-bolt');
+                       }
+                   }
+               });
+           })
+       });
+       //重置按钮
+       $("#reset").on('click',function (e) {
+           e.preventDefault();
+           $("select").val($("option:first").val());
+           $("input").val('');
+       });
+       $("#sidebar-menu a[href*=article" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

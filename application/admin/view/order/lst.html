@@ -1,0 +1,264 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订单列表</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <form action="" method="get" name="searchForm">
+                    <div class="buttons-preview">
+                        <div class="widget-buttons no-padding">
+                            <input type="text" name="outTradeNo" value="<?=input('get.outTradeNo')?>" class=" input-xs widget-buttons" placeholder="订单号">
+                            <input type="text" name="user" value="<?=input('get.user')?>" class=" input-xs widget-buttons" placeholder="用户名或用户id">
+                        </div>
+                    </div>
+                    <div class="buttons-preview">
+                        <span>支付状态：</span>
+                        <label>
+                            <input name="ps" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="0" <?php if(input('get.ps') == 0) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 全部</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="ps" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="1" <?php if(input('get.ps') == 1) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 未支付</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="ps" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="2" <?php if(input('get.ps') == 2) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 已支付</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                    </div>
+                    <div class="buttons-preview">
+                        <span>配送状态：</span>
+                        <label>
+                            <input name="dg" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="0" <?php if(input('get.dg') == 0) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 全部</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="dg" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="1" <?php if(input('get.dg') == 1) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 未发货</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="dg" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="2" <?php if(input('get.dg') == 2) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 已发货</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                        <label>
+                            <input name="dg" onclick="this.parentNode.parentNode.parentNode.submit()" type="radio" value="3" <?php if(input('get.dg') == 3) echo 'checked="checked"'; ?> class="colored-blue">
+                            <span class="text"> 已收货</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </label>
+                    </div>
+                    <div class="buttons-preview">
+                        <button class="btn btn-info btn-xs" onclick="javascript:document.searchForm.submit();" ><i class="fa fa-search"></i> 点击查询</button>
+                        <button class="btn btn-success btn-xs" id="reset" ><i class="fa fa-backward"></i> 点击重置</button>
+                        <a class="btn btn-darkorange btn-xs" href="{:url('Order/exportOrders',array('query' => $_SERVER['QUERY_STRING']))}" ><i class="glyphicon glyphicon-retweet"></i> 导出订单</a>
+                    </div>
+                </form>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                id
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                订单号
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                下单用户
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                订单总额
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                支付方式
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                配送方式
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                订单状态
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                支付状态
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                配送状态
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                收货人
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                手机号
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                下单时间
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                               相关操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.id}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.outTradeNo}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.userName}
+                            </font></font></td>
+                           <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.orderTotalPrice}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {switch name="$vo.payment"}
+                                {case value="1"}支付宝{/case}
+                                {case value="2"}微信{/case}
+                                {case value="3"}微信第三方{/case}
+                                {case value="4"}余额{/case}
+                                {/switch}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.distribution}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {switch name="$vo.orderStatus"}
+                                {case value="0"}未确认{/case}
+                                {case value="1"}已确认{/case}
+                                {case value="2"}申请退款{/case}
+                                {case value="3"}退款成功{/case}
+                                {/switch}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {switch name="$vo.payStatus"}
+                                {case value="0"}未支付{/case}
+                                {case value="1"}<span style="color: red;">已支付</span>{/case}
+                                {/switch}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {switch name="$vo.postStatus"}
+                                {case value="0"}未发货{/case}
+                                {case value="1"}<span style="color: red;">已发货</span>{/case}
+                                {case value="2"}已收货{/case}
+                                {/switch}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.name}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.phone}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.orderTime|date='Y/m/d H:i:s',###}
+                            </font></font></td>
+                            <td>
+                                <button value="{$vo.id}" name="see" data-toggle="modal" data-target="#myModal" class="btn btn-purple btn-xs"><i class="fa fa-search-plus"></i>详情</button>
+                                <a href="{:url('goods',array('id' => $vo.id))}" class="btn btn-warning btn-xs"><i class="fa fa-gift"></i> 订单商品</a>
+                                <a href="{:url('edit',array('id' => $vo.id))}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i> 修改</a>
+                                <button value="{$vo.id}" flag="del" name="bootbox-confirm" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        {if condition="$list->render() neq ''"}
+                        <tr class="mypage" style="background:#fff;">
+                            <td colspan="">{$list->render()}</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal modal-primary fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">订单详情</h4>
+            </div>
+            <div class="modal-body">
+                <!--js来添加模态框内容-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       //为按钮添加链接
+       addBind('#linkAdd','{:url('add')}');
+       // //表格数据行数
+       var rowsLen = $("tr").length - 2;
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+       //单个删除
+       delUrl = "{:url('del')}";
+       ajaxDelete('button[flag=del]',delUrl,'#secMsg');
+       //订单详情
+       ajaxSee('button[name=see]',"{:url('detail')}");
+       function ajaxSee(obj,detailUrl){
+           var but = $(obj);
+           var butLen = but.length;
+           for(var a = 0;a < butLen;++ a) {
+               $(but[a]).on('click',function(){
+                   var id = $(this).val();
+                   $.ajax({
+                       url:detailUrl,
+                       method:"post",
+                       data:{'id':id},
+                       success:function (data) {
+                           if(data != 'null') {
+                               var order = JSON.parse(data);
+                               var str = '';
+                               str += '订单号：' + order.outTradeNo + '<br />';
+                               str += '下单用户：' + order.userName + '<br />';
+                               str += '商品总额：' + order.goodsTotalPrice + '<br />';
+                               str += '订单总额：' + order.orderTotalPrice + '<br />';
+                               str += '支付方式：' + order.payment + '<br />';
+                               str += '配送方式：' + order.distribution + '<br />';
+                               str += '订单状态：' + order.orderStatus + '<br />';
+                               str += '支付状态：' + order.payStatus + '<br />';
+                               str += '配送状态：' + order.postStatus + '<br />';
+                               str += '运费：' + order.postSpant + '<br />';
+                               str += '订单备注：' + order.remark + '<br />';
+                               str += '收货人姓名：' + order.name + '<br />';
+                               str += '收货地址：' + order.province + order.city + order.county + order.address +'<br />';
+                               str += '收货手机号：' + order.phone + '<br />';
+                               str += '下单时间：' + order.orderTime + '<br />';
+                               $("#myModal .modal-body").html(str);
+                           }else {
+                               $("#myModal .modal-body").html('暂无！');
+                           }
+                       }
+                   });
+               });
+           }
+       }
+       //重置按钮
+       $("#reset").on('click',function (e) {
+           e.preventDefault();
+           $("input").val('');
+       });
+       $("#sidebar-menu a[href*=order" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

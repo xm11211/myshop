@@ -1,0 +1,143 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">修改栏目</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息修改</a></li>
+                    </ul>
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$cateData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">栏目名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$cateData.cateName}" class="form-control" name="cateName" data-bv-field="cateName"><i class="form-control-feedback" data-bv-icon-for="cateName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="cateName" data-bv-result="NOT_VALIDATED" style="display: none;">栏目名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">栏目类型</label>
+                                    <div class="col-lg-8">
+                                        <div class="radio">
+                                            <span class="text">
+                                                {switch name="cateData.type"}
+                                                {case value="1"}系统分类{/case}
+                                                {case value="2"}帮助分类{/case}
+                                                {case value="3"}网店帮助{/case}
+                                                {case value="4"}网店信息{/case}
+                                                {case value="5"}普通分类{/case}
+                                                {/switch}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">栏目关键词</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="keywords" value="{$cateData.keywords}" placeholder="多个关键词用英文逗号分隔" data-bv-field="keywords"><i class="form-control-feedback" data-bv-icon-for="keywords" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="keywords" data-bv-result="NOT_VALIDATED" style="display: none;">栏目关键词不要超过255位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">上级栏目</label>
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="pid">
+                                            <option value="0">顶级栏目</option>
+                                            <?php foreach($allCates as $k => $v):
+                                            if($v['id'] == $cateData['id'] || in_array($v['id'],$childCates)) {
+                                            continue;
+                                            }
+                                            if($cateData['pid'] == $v['id']) {
+                                            $sel = 'selected="selected"';
+                                            }else{
+                                            $sel = '';
+                                            }
+                                            ?>
+                                            <option <?php if(in_array($cateData['type'],[1,2,3,4])){echo 'disabled ';}?> <?php if($v['type'] != 5){echo 'disabled';}?> <?=$sel?> value="<?=$v['id']?>"><?=str_repeat('-',$v['level']*4).$v['cateName']?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right">是否显示到导航</label>
+                                <div class="col-xs-4">
+                                    <label>
+                                        <input class="checkbox-slider slider-icon yesno" name="showNav" value="1" {if condition="$cateData.showNav eq 1"}checked{/if} type="checkbox">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="col-lg-2 control-label">栏目描述</label>
+                                <div class="col-lg-8">
+                                    <textarea name="desc" style="resize: none;height:200px;" class="form-control" data-bv-field="desc">{$cateData.desc}</textarea><i class="form-control-feedback" data-bv-icon-for="desc" style="display: none;"></i>
+                                    <small class="help-block" data-bv-validator="stringLength" data-bv-for="desc" data-bv-result="NOT_VALIDATED" style="display: none;">栏目描述不要超过255位字符！</small></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8 col-lg-offset-4">
+                                    <button type="submit" class="btn btn-azure">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                cateName: {
+                    validators: {
+                        notEmpty: {
+                            message: '栏目名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '栏目名称不要超过30位字符！'
+                        }
+                    }
+                },
+                keywords: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 255,
+                            message: '栏目关键词不要超过255位字符！'
+                        }
+                    }
+                },
+                desc: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 255,
+                            message: '栏目描述不要超过255位字符！'
+                        }
+                    }
+                }
+            }
+        })
+        $("#sidebar-menu a[href*=cate" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

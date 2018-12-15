@@ -1,0 +1,86 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">推荐位管理</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$recpData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">推荐位名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="recName" value="{$recpData.recName}" data-bv-field="recName"><i class="form-control-feedback" data-bv-icon-for="recName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="recName" data-bv-result="NOT_VALIDATED" style="display: none;">推荐位名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">推荐位类型</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="recType" type="radio" value="1" {if condition="$recpData.recType eq 1"}checked{/if} class="colored-blue">
+                                                <span class="text"> 商品</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio col-lg-2">
+                                            <label>
+                                                <input name="recType" type="radio" value="2" {if condition="$recpData.recType eq 2"}checked{/if} class="colored-blue">
+                                                <span class="text"> 分类</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8 col-lg-offset-4">
+                                    <button type="submit" class="btn btn-azure">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                recName: {
+                    validators: {
+                        notEmpty: {
+                            message: '推荐位名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '推荐位名称不要超过60位字符！'
+                        }
+                    }
+                },
+            }
+        });
+        $("#sidebar-menu a[href*=rec_pos" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

@@ -1,0 +1,692 @@
+---------------------------------------------------------------
+[ 2018-03-23T05:52:46+08:00 ] 127.0.0.1 GET /
+[ info ] www.myshop.com/ [运行时间：0.096406s][吞吐率：10.37req/s] [内存消耗：6,638.38kb] [文件加载：66]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ K:\AMP\day\myshop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\index\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003707s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.001733s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000323s ]
+---------------------------------------------------------------
+[ 2018-03-23T05:52:47+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com/checkLogin.html [运行时间：0.063301s][吞吐率：15.80req/s] [内存消耗：6,109.78kb] [文件加载：65]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ K:\AMP\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000583s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521755567' [ RunTime:0.003927s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000689s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  ( `userName` = 'root' OR `email` = 'root' OR `tel` = 'root' ) LIMIT 1 [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_level` [ RunTime:0.002924s ]
+[ sql ] [ SQL ] SELECT * FROM `php_member_level` WHERE  `bottom` <= 0  AND `top` >= 0 LIMIT 1 [ RunTime:0.000380s ]
+---------------------------------------------------------------
+[ 2018-03-23T05:52:58+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop.com/get_ajax_content.php [运行时间：0.024987s][吞吐率：40.02req/s] [内存消耗：2,631.08kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-23T05:53:05+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop.com/get_ajax_content.php [运行时间：0.028827s][吞吐率：34.69req/s] [内存消耗：2,631.05kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-23T09:56:46+08:00 ] 127.0.0.1 GET /xm112110956
+[ info ] www.myshop.com/xm112110956 [运行时间：0.051081s][吞吐率：19.58req/s] [内存消耗：3,879.43kb] [文件加载：56]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+  'check' => '0956',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\login\index.html [ array (
+  0 => 'validate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010015s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770206' [ RunTime:0.000389s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:56:47+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.myshop.com/captcha.html [运行时间：0.033025s][吞吐率：30.28req/s] [内存消耗：3,716.21kb] [文件加载：52]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'captcha',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/captcha.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->captcha[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000741s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770207' [ RunTime:0.000351s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:56:49+08:00 ] 127.0.0.1 GET /captcha.html?0.9350459483892646
+[ info ] www.myshop.com/captcha.html?0.9350459483892646 [运行时间：0.034755s][吞吐率：28.77req/s] [内存消耗：3,717.05kb] [文件加载：52]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'captcha',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/captcha.html?0.9350459483892646',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+  '0_9350459483892646' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->captcha[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000704s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770209' [ RunTime:0.000308s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:56:50+08:00 ] 127.0.0.1 GET /captcha.html?0.07731983035815859
+[ info ] www.myshop.com/captcha.html?0.07731983035815859 [运行时间：0.036042s][吞吐率：27.75req/s] [内存消耗：3,717.06kb] [文件加载：52]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'captcha',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/captcha.html?0.07731983035815859',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+  '0_07731983035815859' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->captcha[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000800s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770210' [ RunTime:0.000354s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:56:54+08:00 ] 127.0.0.1 POST /xm11211.html
+[ info ] www.myshop.com/xm11211.html [运行时间：0.046792s][吞吐率：21.37req/s] [内存消耗：5,481.78kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '466',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySkZSQllw8Y8dZRxL',
+  'referer' => 'http://www.myshop.com/xm112110956',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+  'validate' => 'EMaKmcSbNfkYDNg5ab45ededfe48',
+  'adminName' => 'root',
+  'password' => 'hu.12580a',
+  'code' => 'j3mx',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000763s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770214' [ RunTime:0.000324s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000573s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_admin` [ RunTime:0.002941s ]
+[ sql ] [ SQL ] SELECT * FROM `php_admin` WHERE  `adminName` = 'root' LIMIT 1 [ RunTime:0.001649s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000183s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:56:54+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.myshop.com/admin/index/index.html [运行时间：0.512240s][吞吐率：1.95req/s] [内存消耗：3,947.73kb] [文件加载：57]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/xm112110956',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ K:\AMP\day\myshop\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\index\index.html [ array (
+  0 => 'serverTime',
+  1 => 'date',
+  2 => 'rtWeather',
+  3 => 'weaSk',
+  4 => 'weaFu',
+  5 => 'weaTo',
+  6 => 'plName',
+  7 => 'slName',
+  8 => 'plUrl',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000663s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770214' [ RunTime:0.000347s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:56:59+08:00 ] 127.0.0.1 GET /admin/goods/lst.html
+[ info ] www.myshop.com/admin/goods/lst.html [运行时间：0.116447s][吞吐率：8.59req/s] [内存消耗：6,245.52kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->lst[ K:\AMP\day\myshop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\goods\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'bdData',
+  2 => 'catData',
+  3 => 'list',
+  4 => 'plName',
+  5 => 'plUrl',
+  6 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000700s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770219' [ RunTime:0.000332s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000603s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002647s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_brand` `b` ON `a`.`brandId`=`b`.`id` LEFT JOIN `php_category` `c` ON `a`.`cateId`=`c`.`id` LEFT JOIN `php_goods_cat` `d` ON `a`.`id`=`d`.`goodsId` LEFT JOIN `php_category` `e` ON `d`.`catId`=`e`.`id` LEFT JOIN `php_type` `f` ON `a`.`typeId`=`f`.`id` LEFT JOIN `php_goods_num` `g` ON `a`.`id`=`g`.`goodsId` GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.014196s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`brandName`,`c`.`cateName`,`f`.`typeName`,GROUP_CONCAT(DISTINCT e.cateName SEPARATOR "<br>") extCates,FLOOR(SUM(g.num)/COUNT(e.cateName)) goodsNum FROM `php_goods` `a` LEFT JOIN `php_brand` `b` ON `a`.`brandId`=`b`.`id` LEFT JOIN `php_category` `c` ON `a`.`cateId`=`c`.`id` LEFT JOIN `php_goods_cat` `d` ON `a`.`id`=`d`.`goodsId` LEFT JOIN `php_category` `e` ON `d`.`catId`=`e`.`id` LEFT JOIN `php_type` `f` ON `a`.`typeId`=`f`.`id` LEFT JOIN `php_goods_num` `g` ON `a`.`id`=`g`.`goodsId` GROUP BY `a`.`id` ORDER BY a.id desc LIMIT 0,10 [ RunTime:0.002159s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT `id`,`brandName` FROM `php_brand` [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` ORDER BY sort asc [ RunTime:0.000276s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:57:01+08:00 ] 127.0.0.1 GET /admin/goods/add.html
+[ info ] www.myshop.com/admin/goods/add.html [运行时间：0.059033s][吞吐率：16.94req/s] [内存消耗：5,085.80kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/admin/goods/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->add[ K:\AMP\day\myshop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\goods\add.html [ array (
+  0 => 'serverTime',
+  1 => 'cateData',
+  2 => 'mlData',
+  3 => 'recpData',
+  4 => 'plName',
+  5 => 'plUrl',
+  6 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000749s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770221' [ RunTime:0.000359s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_level` [ RunTime:0.002301s ]
+[ sql ] [ SQL ] SELECT * FROM `php_member_level` [ RunTime:0.001193s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_rec_pos` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_pos` WHERE  `recType` = 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT `id`,`brandName` FROM `php_brand` [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_type` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT `id`,`typeName` FROM `php_type` [ RunTime:0.000242s ]
+---------------------------------------------------------------
+[ 2018-03-23T09:59:45+08:00 ] 127.0.0.1 GET /admin/goods/add.html
+[ info ] www.myshop.com/admin/goods/add.html [运行时间：0.061368s][吞吐率：16.30req/s] [内存消耗：5,085.96kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/admin/goods/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; sidebar-fixed=false; breadcrumbs-fixed=false; page-header-fixed=false; navbar-fixed-top=false; username=cU5HbXFKYVhsTWRveVpaTXFDV2dlYXdIQUZtSkFjbm1KUnBuTUpxazhpWm1NV1hsc2VXYnB4b2w1cHBrNWxvbTVkZ3pHcWNrMnM; password=bnRkbFpaU1lhSmFTbXBXTXFDV2dlYXdIQUZtSkFjYmxHcVRtNUdha3A2Wmw1ZklsWmVXbTVhWG1zVnNtV3lYbVpaaHlHV2ZsV2VaYkdhWWxR; thinkphp_show_page_trace=0|0; PHPSESSID=kh5ftru8ievh31lh562l29uq34; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->add[ K:\AMP\day\myshop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\goods\add.html [ array (
+  0 => 'serverTime',
+  1 => 'cateData',
+  2 => 'mlData',
+  3 => 'recpData',
+  4 => 'plName',
+  5 => 'plUrl',
+  6 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000789s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_kh5ftru8ievh31lh562l29uq34' AND session_expire > '1521770385' [ RunTime:0.000408s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000693s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.001062s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_level` [ RunTime:0.002289s ]
+[ sql ] [ SQL ] SELECT * FROM `php_member_level` [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_rec_pos` [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_pos` WHERE  `recType` = 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT `id`,`brandName` FROM `php_brand` [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_type` [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT `id`,`typeName` FROM `php_type` [ RunTime:0.000186s ]

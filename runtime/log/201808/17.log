@@ -1,0 +1,402 @@
+---------------------------------------------------------------
+[ 2018-08-17T15:52:55+08:00 ] 127.0.0.1 GET /
+[ info ] www.myshop2.com/ [运行时间：0.268502s][吞吐率：3.72req/s] [内存消耗：4,151.95kb] [文件加载：67]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ K:\AMP\day\myshop2\application\index\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/index\view\index\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001612s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_nav` [ RunTime:0.002367s ]
+[ sql ] [ SQL ] SELECT * FROM `php_nav` ORDER BY sort desc [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.001194s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000842s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 8 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_conf` [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT `enName`,`value` FROM `php_conf` [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 0 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 4 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 27 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_rec_item` [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 1  AND `recposId` = 8 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.004007s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` IN (40,39,38,37,36,35,34,33,32,31,17,24,25,26,28,29,30,41,42,44,45) ORDER BY id desc LIMIT 20 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 5 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 1  AND `pid` = 0 LIMIT 1 [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 0 LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 0 LIMIT 1 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 27  AND `pid` = 0 LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 1 [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002260s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (2,12,13,14,15,10,16,17,18,11,19,20,21,1) [ RunTime:0.001647s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (17,26,27,28,29,31,32,34,35,36,37,41,44)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (26,17,28,29,31,32,34,35,36,37,41,44) ORDER BY id desc LIMIT 6 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 1 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (16,17,18,19,20,21,22,23,24,25) [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_ad` [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.001310s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000169s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 1 LIMIT 1 [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 1 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 1 LIMIT 1 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 1 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 10 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (16,17,18,10) [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (17,27,29,31,37)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (17,29,31,37) ORDER BY id desc LIMIT 6 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 2 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (12,13,14,15,2) [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (17,28,31,32,34,44)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (17,28,31,32,34,44) ORDER BY id desc LIMIT 6 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 27 [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (28,29,27) [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (45,46)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (45,46) ORDER BY id desc LIMIT 6 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 27 LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (43,44,50) [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 27 LIMIT 1 [ RunTime:0.000175s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 27 LIMIT 1 [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 27 LIMIT 1 [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 27 LIMIT 1 [ RunTime:0.000142s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 4  AND `pid` = 27 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 33 LIMIT 3 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 34 LIMIT 3 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000226s ]
+---------------------------------------------------------------
+[ 2018-08-17T15:52:55+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop2.com/checkLogin.html [运行时间：0.028550s][吞吐率：35.03req/s] [内存消耗：1,768.18kb] [文件加载：43]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot use extend\String as String because 'String' is a special class name[K:\AMP\day\myshop2\application\member\controller\Account.php:5]
+---------------------------------------------------------------
+[ 2018-08-17T15:52:56+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop2.com/getCartNum.html [运行时间：0.040560s][吞吐率：24.65req/s] [内存消耗：3,512.09kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ K:\AMP\day\myshop2\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-17T15:52:58+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop2.com/get_ajax_content.php [运行时间：0.042764s][吞吐率：23.38req/s] [内存消耗：1,582.17kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-17T15:52:58+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop2.com/get_ajax_content.php [运行时间：0.042828s][吞吐率：23.35req/s] [内存消耗：1,582.17kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-17T15:52:59+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=1
+[ info ] www.myshop2.com/getGoodsCates.html?act=getCategoryCallback&cat_id=1 [运行时间：0.053079s][吞吐率：18.84req/s] [内存消耗：3,545.73kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ K:\AMP\day\myshop2\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000808s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_words` [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_words` WHERE  `cateId` = 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 1 LIMIT 1 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (16,17,18,19,20,21,22,23,24,25) [ RunTime:0.000236s ]
+---------------------------------------------------------------
+[ 2018-08-17T15:53:00+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=4
+[ info ] www.myshop2.com/getGoodsCates.html?act=getCategoryCallback&cat_id=4 [运行时间：0.072149s][吞吐率：13.86req/s] [内存消耗：3,545.75kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '4',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ K:\AMP\day\myshop2\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000806s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_words` [ RunTime:0.000745s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_words` WHERE  `cateId` = 4 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 4 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (1,8,7,9,10,11,12,13,14,15) [ RunTime:0.000296s ]
+---------------------------------------------------------------
+[ 2018-08-17T15:53:01+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=27
+[ info ] www.myshop2.com/getGoodsCates.html?act=getCategoryCallback&cat_id=27 [运行时间：0.058819s][吞吐率：17.00req/s] [内存消耗：3,538.24kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '27',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ K:\AMP\day\myshop2\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000822s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_words` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_words` WHERE  `cateId` = 27 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 27 LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (43,44,50) [ RunTime:0.000244s ]
+---------------------------------------------------------------
+[ 2018-08-17T15:53:32+08:00 ] 127.0.0.1 GET /checkLogin.html
+[ info ] www.myshop2.com/checkLogin.html [运行时间：0.030211s][吞吐率：33.10req/s] [内存消耗：1,808.04kb] [文件加载：46]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot use extend\String as String because 'String' is a special class name[K:\AMP\day\myshop2\application\member\controller\Account.php:5]

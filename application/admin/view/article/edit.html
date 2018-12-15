@@ -1,0 +1,217 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">添加文章</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$artData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group">
+                                    <label for="cateid" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+                                    <div class="col-lg-8">
+                                        <select name="cateId" style="width: 100%;">
+                                            {volist name='$cateData' id='vo'}
+                                            {if condition="$vo['id'] eq 4 OR $vo['id'] eq 5"}
+                                            {else /}
+                                            <option value="{$vo.id}" {if condition="$vo.id eq $artData.cateId"}selected="selected"{/if}>{$vo.level|str_repeat='-',### * 4}{$vo.cateName}</option>
+                                            {/if}
+                                            {/volist}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">标题</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$artData.title}" class="form-control" name="title" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">标题不能为空！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">关键词</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$artData.keywords}" class="form-control" name="keywords" placeholder="多个关键词用英文逗号分隔" data-bv-field="keywords"><i class="form-control-feedback" data-bv-icon-for="keywords" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="keywords" data-bv-result="NOT_VALIDATED" style="display: none;">关键词不要超过100位字符！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">作者</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$artData.author}" class="form-control" name="author" data-bv-field="author"><i class="form-control-feedback" data-bv-icon-for="author" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="author" data-bv-result="NOT_VALIDATED" style="display: none;">作者不要超过30位字符！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">邮箱</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$artData.email}" class="form-control" name="email" data-bv-field="email"><i class="form-control-feedback" data-bv-icon-for="email" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">邮箱不要超过60位字符！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">外链地址</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$artData.url}" class="form-control" name="url" data-bv-field="url"><i class="form-control-feedback" data-bv-icon-for="url" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="url" data-bv-result="NOT_VALIDATED" style="display: none;">外链地址不要超过150位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">缩略图</label>
+                                    <div class="col-lg-1">
+                                    <span class="file-input btn btn-azure btn-file">
+                                        选择文件<input type="file" name="thumb">
+                                    </span>
+                                    </div>
+                                    {if condition="$artData.thumb neq ''"}
+                                    <div class="col-lg-2 col-md-2 col-sm-2" >
+                                        {$artData.thumb|showImage=$artData.thumb,65,65}
+                                    </div>
+                                    {/if}
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">是否置顶</label>
+                                    <div class="col-xs-4">
+                                        <label>
+                                            <input class="checkbox-slider slider-icon yesno" name="showTop" value="1" {if condition="$artData.showTop eq 1"}checked{/if} type="checkbox">
+                                            <span class="text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">是否显示</label>
+                                    <div class="col-xs-4">
+                                        <label>
+                                            <input class="checkbox-slider slider-icon yesno" name="showStatus" value="1" {if condition="$artData.showStatus eq 1"}checked{/if} type="checkbox">
+                                            <span class="text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">文章描述</label>
+                                    <div class="col-lg-8">
+                                        <textarea name="desc" style="resize: none;height:200px;" class="form-control" data-bv-field="desc">{$artData.desc}</textarea><i class="form-control-feedback" data-bv-icon-for="desc" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="desc" data-bv-result="NOT_VALIDATED" style="display: none;">文章描述不要超过255位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">文章内容</label>
+                                    <div class="col-lg-8">
+                                        <textarea name="content" id="details" style="resize: none;">{$artData.content}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8 col-lg-offset-4">
+                                    <button type="submit" class="btn btn-azure">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script src="__PLUGINS__/ue/ueditor.config.js"></script>
+<script src="__PLUGINS__/ue/ueditor.all.min.js"></script>
+<script src="__PLUGINS__/ue/lang/zh-cn/zh-cn.js"></script>
+<script>
+    $(document).ready(function () {
+        //在线编辑器
+        UE.getEditor('details',{initialFrameHeight:400,
+            toolbars: [["fullscreen","source","fontfamily","forecolor","fontsize","unlink","link","simpleupload",'insertimage',"emotion","bold","italic","underline","justifyleft","justifycenter","justifyright","removeformat","formatmatch","lineheight","insertorderedlist","insertunorderedlist","cleardoc","searchreplace","preview","|","redo","undo","indent","backcolor"]]
+        });
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                title: {
+                    validators: {
+                        notEmpty: {
+                            message: '标题不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '标题不要超过60位字符！'
+                        }
+                    }
+                },
+                keywords: {
+                    validators: {
+                        notEmpty: {
+                            message: '关键词不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 100,
+                            message: '关键词不要超过100位字符！'
+                        }
+                    }
+                },
+                author: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '作者不要超过30位字符！'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '作者不要超过60位字符！'
+                        }
+                    }
+                },
+                url: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '外链地址不要超过150位字符！'
+                        },
+                        regexp: {
+                            regexp:'^((https|http|ftp|rtsp|mms)?://)'
+                            + '?(([0-9a-z_!~*\'().&=+$%-]+: )?[0-9a-z_!~*\'().&=+$%-]+@)?' //ftp的user@
+                            + '(([0-9]{1,3}\.){3}[0-9]{1,3}' // IP形式的URL- 199.194.52.184
+                            + '|' // 允许IP和DOMAIN（域名）
+                            + '([0-9a-z_!~*\'()-]+\.)*' // 域名- www.
+                            + '([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\.' // 二级域名
+                            + '[a-z]{2,6})' // first level domain- .com or .museum
+                            + '(:[0-9]{1,4})?' // 端口- :80
+                            + '((/?)|' // a slash isn't required if there is no file name
+                            + '(/[0-9a-z_!~*\'().;?:@&=+$,%#-]+)+/?)$',
+                            message: '请输入正确的链接地址！'
+                        }
+                    }
+                },
+                desc: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 255,
+                            message: '文章描述不要超过255位字符！'
+                        }
+                    }
+                }
+            }
+        });
+        $("#sidebar-menu a[href*=article" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

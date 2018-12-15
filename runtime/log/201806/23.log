@@ -1,0 +1,867 @@
+---------------------------------------------------------------
+[ 2018-06-23T19:20:55+08:00 ] 127.0.0.1 GET /
+[ info ] www.myshop.com/ [运行时间：0.092656s][吞吐率：10.79req/s] [内存消耗：6,578.65kb] [文件加载：65]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ K:\AMP\day\myshop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\index\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003584s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.004423s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000345s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:20:55+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com/getCartNum.html [运行时间：0.053915s][吞吐率：18.55req/s] [内存消耗：5,665.13kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-23T19:20:55+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com/checkLogin.html [运行时间：0.061784s][吞吐率：16.19req/s] [内存消耗：5,847.62kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ K:\AMP\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001190s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752855' [ RunTime:0.005356s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:20:58+08:00 ] 127.0.0.1 GET /cart
+[ info ] www.myshop.com/cart [运行时间：0.070447s][吞吐率：14.20req/s] [内存消耗：6,184.84kb] [文件加载：66]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cart',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->cart[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\flow\cart.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'goodsList',
+  6 => 'goodsNum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002343s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000617s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752858' [ RunTime:0.001812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002112s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','44') [ RunTime:0.001179s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('48','43') [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('47','45') [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','45') [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','43') [ RunTime:0.000233s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:20:59+08:00 ] 127.0.0.1 GET /cart
+[ info ] www.myshop.com/cart [运行时间：0.063644s][吞吐率：15.71req/s] [内存消耗：6,184.84kb] [文件加载：66]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cart',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->cart[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\flow\cart.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'goodsList',
+  6 => 'goodsNum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002223s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000636s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752859' [ RunTime:0.001845s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002041s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','44') [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('48','43') [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('47','45') [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','45') [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','43') [ RunTime:0.000237s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:20:59+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com/checkLogin.html [运行时间：0.047635s][吞吐率：20.99req/s] [内存消耗：5,847.87kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'referer' => 'http://www.myshop.com/cart',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ K:\AMP\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000718s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752859' [ RunTime:0.002307s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:20:59+08:00 ] 127.0.0.1 POST /cartGoodsAmount.html
+[ info ] www.myshop.com/cartGoodsAmount.html [运行时间：0.058187s][吞吐率：17.19req/s] [内存消耗：5,961.78kb] [文件加载：63]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartGoodsAmount',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '51',
+  'origin' => 'http://www.myshop.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com/cart',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '45-46,44|45-48,43|45-47,45|45-46,45|45-46,43',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsAmount[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000676s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002102s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000580s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752859' [ RunTime:0.001768s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002074s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','44') [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('48','43') [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('47','45') [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','45') [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','43') [ RunTime:0.000231s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:01+08:00 ] 127.0.0.1 POST /getLoginDialog.html
+[ info ] www.myshop.com/getLoginDialog.html [运行时间：0.034969s][吞吐率：28.60req/s] [内存消耗：5,850.46kb] [文件加载：62]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getLoginDialog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '19',
+  'origin' => 'http://www.myshop.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com/cart',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'back_act' => '/cart.html',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getLoginDialog[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752861' [ RunTime:0.001823s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:03+08:00 ] 127.0.0.1 POST /login.html
+[ info ] www.myshop.com/login.html [运行时间：0.045328s][吞吐率：22.06req/s] [内存消耗：5,935.52kb] [文件加载：62]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '121',
+  'origin' => 'http://www.myshop.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com/cart',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'root',
+  'password' => 'hu.12580a',
+  'dsc_token' => '4b85d84253112b8e62f183d1cba2c878a374b1fd',
+  'captcha' => 'undefined',
+  'back_act' => '/cart.html',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->login[ K:\AMP\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000689s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752863' [ RunTime:0.001916s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000530s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  ( `userName` = 'root' OR `email` = 'root' OR `tel` = 'root' ) LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_level` [ RunTime:0.002144s ]
+[ sql ] [ SQL ] SELECT * FROM `php_member_level` WHERE  `bottom` <= 0  AND `top` >= 0 LIMIT 1 [ RunTime:0.000243s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:03+08:00 ] 127.0.0.1 GET /cart.html
+[ info ] www.myshop.com/cart.html [运行时间：0.078790s][吞吐率：12.69req/s] [内存消耗：6,220.27kb] [文件加载：66]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cart',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cart',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->cart[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\flow\cart.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'goodsList',
+  6 => 'goodsNum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000659s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002150s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000284s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000517s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752863' [ RunTime:0.001609s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_price` [ RunTime:0.002040s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.004328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.001956s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','44') [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002900s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('48','43') [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002872s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('47','45') [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.003062s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','45') [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002901s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','43') [ RunTime:0.000271s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:03+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com/checkLogin.html [运行时间：0.041762s][吞吐率：23.95req/s] [内存消耗：5,809.23kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'referer' => 'http://www.myshop.com/cart.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ K:\AMP\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000747s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752863' [ RunTime:0.001814s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:03+08:00 ] 127.0.0.1 POST /cartGoodsAmount.html
+[ info ] www.myshop.com/cartGoodsAmount.html [运行时间：0.079323s][吞吐率：12.61req/s] [内存消耗：5,992.41kb] [文件加载：63]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartGoodsAmount',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '51',
+  'origin' => 'http://www.myshop.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com/cart.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '45-46,44|45-48,43|45-47,45|45-46,45|45-46,43',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsAmount[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000676s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002297s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000658s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752863' [ RunTime:0.001843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_price` [ RunTime:0.002043s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.003477s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002084s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','44') [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.004302s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('48','43') [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.003013s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('47','45') [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002911s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','45') [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002943s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','43') [ RunTime:0.000492s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:06+08:00 ] 127.0.0.1 POST /cart.html
+[ info ] www.myshop.com/cart.html [运行时间：0.084262s][吞吐率：11.87req/s] [内存消耗：6,233.76kb] [文件加载：66]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cart',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '145',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.myshop.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cart.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '45-46,44|45-48,43|45-47,45|45-46,45|45-46,43',
+  'goods_ru' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->cart[ K:\AMP\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\flow\order2.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'goodsNum',
+  6 => 'goodsShopTotalPrice',
+  7 => 'goodsTotalPrice',
+  8 => 'goodsArr',
+  9 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002182s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000537s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752866' [ RunTime:0.001737s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_member_price` [ RunTime:0.001904s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.003004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.001862s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','44') [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.003137s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('48','43') [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002898s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('47','45') [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002910s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','45') [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT `memPrice` FROM `php_member_price` WHERE  `goodsId` = 45  AND `levelId` = 3 LIMIT 1 [ RunTime:0.002988s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`attrName` FROM `php_goods_attr` `a` LEFT JOIN `php_attr` `b` ON `a`.`attrId`=`b`.`id` WHERE  `a`.`id` IN ('46','43') [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_address` [ RunTime:0.002189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_address` WHERE  `userId` = 6 LIMIT 1 [ RunTime:0.000278s ]
+---------------------------------------------------------------
+[ 2018-06-23T19:21:06+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com/checkLogin.html [运行时间：0.038378s][吞吐率：26.06req/s] [内存消耗：5,809.59kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'referer' => 'http://www.myshop.com/cart.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A5%3A%7Bs%3A8%3A%2245-46%2C44%22%3Bi%3A1%3Bs%3A8%3A%2245-48%2C43%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-47%2C45%22%3Bs%3A1%3A%222%22%3Bs%3A8%3A%2245-46%2C45%22%3Bi%3A1%3Bs%3A8%3A%2245-46%2C43%22%3Bi%3A1%3B%7D; PHPSESSID=c0080pa5eu8tlkp8abp49dkos0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ K:\AMP\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000852s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_c0080pa5eu8tlkp8abp49dkos0' AND session_expire > '1529752866' [ RunTime:0.000332s ]

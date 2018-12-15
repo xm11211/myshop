@@ -1,0 +1,128 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">商品库存</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <form action="" method="post">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <?php foreach($gaData as $k => $v): ?>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                <?=$k ?>
+                            </font></font></th>
+                            <?php endforeach; ?>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                库存量
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php if($gnData): ?>
+                        <?php foreach($gnData as $a => $b):?>
+                        <tr>
+                            <?php foreach($gaData as $k => $v): ?>
+                            <td>
+                                <select class="form-control" name="gaId[]">
+                                <option value="">请选择</option>
+                                <?php foreach($v as $k1 => $v1):
+                                $attrs = explode(',',$b['attrs']);
+                                if(in_array($v1['id'],$attrs)) {
+                                    $select = 'selected="selected"';
+                                }else{
+                                    $select = '';
+                                }
+                                ?>
+                                <option <?=$select?> value="<?=$v1['id'] ?>"><?=$v1['attrVal'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            </td>
+                            <?php endforeach; ?>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                <input class="form-control" placeholder="留空则为0前提已选属性" name="num[]" type="text" value="<?=$b['num']?>">
+                            </font></font></td>
+                            <td>
+                                <a class="btn btn-default btn-xs shiny icon-only blue" name="addThis" href="javascript:void(0);"><i class="fa <?=$a == 0?'fa-plus':'fa-minus' ?>"></i></a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                        <?php else:?>
+                        <tr>
+                            <?php foreach($gaData as $k => $v): ?>
+                            <td>
+                                <select class="form-control" name="gaId[]">
+                                    <option value="">请选择</option>
+                                    <?php foreach($v as $k1 => $v1): ?>
+                                    <option value="<?=$v1['id'] ?>"><?=$v1['attrVal'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </td>
+                            <?php endforeach; ?>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                <input class="form-control" placeholder="留空则为0前提已选属性" name="num[]" type="text">
+                            </font></font></td>
+                            <td>
+                                <a class="btn btn-default btn-xs shiny icon-only blue" name="addThis" href="javascript:void(0);"><i class="fa fa-plus"></i></a>
+                            </td>
+                        </tr>
+                        <?php endif; ?>
+                        <tr class="mypage">
+                            <td>
+                                <div class="form-group">
+                                    <div class="col-lg-8 col-lg-offset-4">
+                                        <button type="submit" class="btn btn-azure">提交</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+   $(function () {
+       colspan();
+       $("a[name=addThis]").each(function (k, v) {
+           $(v).on('click',function () {
+               addNewTr(v);
+           });
+       });
+       function addNewTr(flag) {
+           var tr = $(flag).parent().parent();
+           if(tr.find("i").hasClass("fa-plus")) {
+               var newtr = tr.clone();
+               newtr.find("i").removeClass("fa-plus").addClass("fa-minus");
+               newtr.find("input").val("");
+               newtr.find("select").val($("option:first").val());
+               $("tr[class=mypage]").before(newtr);
+               newtr.find("a").on('click',function () {
+                   $(this).parent().parent().remove();
+               });
+           }else{
+               tr.remove();
+           }
+       }
+       $("#sidebar-menu a[href*=goods" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

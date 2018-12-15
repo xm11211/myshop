@@ -1,0 +1,205 @@
+<div id="container" class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-header  with-footer">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">链接列表</font></font></span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="buttons-preview">
+                    <button class="btn btn-info btn-xs " id="linkAdd"><i class="fa fa-plus"></i> 添加品牌</button>
+                    <button class="btn btn-warning btn-xs" id="upSort"><i class="fa fa-sort-numeric-asc"></i>升序</button>
+                    <button class="btn btn-warning btn-xs" id="downSort"><i class="fa fa-sort-numeric-desc"></i>降序</button>
+                </div>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content bordered-palegreen">
+                        <tr>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                排序
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                id
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                品牌名称
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                品牌logo
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                网址
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                状态切换
+                            </font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                相关操作
+                            </font></font></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td class="numeric">
+                                <input type="text" style="width:35px;" flag="sort" name="{$vo.id}" value="{$vo.sort}">
+                            </td>
+                            <td class="numeric"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.id}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.brandName}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo.pic eq ''"}暂无
+                                {else}
+                                {$vo.pic|showImage=###,56,56}
+                                {/if}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {$vo.url}
+                            </font></font></td>
+                            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                {if condition="$vo['status'] eq 1"}
+                                <a class="btn btn-darkorange btn-sm" value="0" brandId="{$vo.id}" name="off" href="javascript:void(0);">点击禁用</a>
+                                <a class="btn btn-success btn-sm" style="display:none" value="1" brandId="{$vo.id}" name="on" href="javascript:void(0);">点击启用</a>
+                                {else /}
+                                <a class="btn btn-success btn-sm" value="1" brandId="{$vo.id}" name="on" href="javascript:void(0);">点击启用</a>
+                                <a class="btn btn-darkorange btn-sm" style="display:none" value="0" brandId="{$vo.id}" name="off" href="javascript:void(0);">点击禁用</a>
+                                {/if}
+                            </font></font></td>
+                            <td>
+                                <a href="{:url('edit',array('id' => $vo.id))}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i> 修改</a>
+                                <button value="{$vo.id}" flag="del" name="bootbox-confirm" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        {if condition="$list->render() neq ''"}
+                        <tr class="mypage" style="background:#fff;">
+                            <td colspan="">{$list->render()}</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="secMsg" style="display: none;"></button>
+<script>
+   $(function () {
+       //为按钮添加链接
+       addBind('#linkAdd','{:url('add')}');
+       // //表格数据行数
+       var rowsLen = $("tr").length - 2;
+       //列合并最后一列
+       if($("tr[class=mypage]").length != 0){
+           colspan();
+       }
+       //单个删除
+       delUrl = "{:url('del')}";
+       ajaxDelete('button[flag=del]',delUrl,'#secMsg');
+       //更新排序
+       function getValues(){
+           var inputArr = $("input[flag=sort]");
+           var arrValue = [];
+           inputArr.each(function(k,v){
+               var name = $(v).attr("name");
+               var value = $(v).val();
+               arrValue[name] = value;
+           });
+           return arrValue;
+       }
+       //升序
+       $("#upSort").on('click',function (e) {
+           e.preventDefault();
+           var arrValue = getValues();
+           $.ajax({
+               url:"{:url('sort')}",
+               method:"post",
+               data:{'arrValue':arrValue},
+               success:function (data) {
+                   if(data.code != 0){
+                       location.href = "{:url('lst',array('sort' => 'asc'))}";
+                   }else{
+                       judgeEvents('#secMsg','click',data.msg,'danger','fa-bolt');
+                   }
+               }
+           });
+       });
+       //降序
+       $("#downSort").on('click',function (e) {
+           e.preventDefault();
+           var arrValue = getValues();
+           $.ajax({
+               url:"{:url('sort')}",
+               method:"post",
+               data:{'arrValue':arrValue},
+               success:function (data) {
+                   if(data.code != 0){
+                       location.href = "{:url('lst',array('sort' => 'desc'))}";
+                   }else{
+                       judgeEvents('#secMsg','click',data.msg,'danger','fa-bolt');
+                   }
+
+               }
+           });
+       });
+       $("a[name=off]").each(function (k,v) {
+           $(v).on('click',function () {
+               var val = $(this).attr('value');
+               var brandId = $(this).attr('brandId');
+               var that = $(this);
+               $.ajax({
+                   method:'post',
+                   url:"{:url('status')}",
+                   data:{value:"" + val +"",brandId:"" + brandId + ""},
+                   success:function (data) {
+                       if(data.msg == undefined) {
+                           $par = that.parent();
+                           that.css("display","none");
+                           $par.children("a[name=on]").css("display","inline-block");
+                           judgeEvents("#secMsg",'click','操作成功！','success','fa-check');
+                       }else{
+                           judgeEvents("#secMsg",'click',data.msg,'danger','fa-bolt');
+                       }
+                   }
+               });
+           })
+       });
+       $("a[name=on]").each(function (k,v) {
+           $(v).on('click',function () {
+               var val = $(this).attr('value');
+               var brandId = $(this).attr('brandId');
+               var that = $(this);
+               $.ajax({
+                   method:'post',
+                   url:"{:url('status')}",
+                   data:{value:"" + val +"",brandId:"" + brandId + ""},
+                   success:function (data) {
+                       if(data.msg == undefined) {
+                           $par = that.parent();
+                           that.css("display","none");
+                           $par.children("a[name=off]").css("display","inline-block");
+                           judgeEvents("#secMsg",'click','操作成功！','success','fa-check');
+                       }else{
+                           judgeEvents("#secMsg",'click',data.msg,'danger','fa-bolt');
+                       }
+                   }
+               });
+           })
+       });
+       $("#sidebar-menu a[href*=brand" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+   });
+</script>
+

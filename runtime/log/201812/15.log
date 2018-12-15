@@ -1,0 +1,1749 @@
+---------------------------------------------------------------
+[ 2018-12-15T06:28:44+08:00 ] 127.0.0.1 GET /
+[ info ] www.myshop.com:8080/ [运行时间：0.193368s][吞吐率：5.17req/s] [内存消耗：7,168.12kb] [文件加载：67]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\day\myshop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\day\myshop\public/../application/index\view\index\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001716s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_nav` [ RunTime:0.001840s ]
+[ sql ] [ SQL ] SELECT * FROM `php_nav` ORDER BY sort desc [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.001007s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 8 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_conf` [ RunTime:0.000971s ]
+[ sql ] [ SQL ] SELECT `enName`,`value` FROM `php_conf` [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 0 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 4 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 27 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 33 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_rec_item` [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 1  AND `recposId` = 8 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002548s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` IN (49,50,52,51,53,55) ORDER BY id desc LIMIT 20 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 5 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 1  AND `pid` = 0 LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 35  AND `pid` = 0 LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 33  AND `pid` = 0 LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 0 LIMIT 1 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 27  AND `pid` = 0 LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 34  AND `pid` = 0 LIMIT 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 0 LIMIT 1 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (2,12,13,14,15,10,16,17,18,11,19,20,21,1) [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002445s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (2,12,13,14,15,10,16,17,18,11,19,20,21,1) [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (50,51,49,52)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (51,50,49) ORDER BY id desc LIMIT 6 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 1 LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (16,17,18,19,20,21,22,23,24,25) [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_ad` [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 35  AND `pid` = 1 LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 1 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 1 LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 34  AND `pid` = 1 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 1 LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 4  AND `pid` = 1 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 36  AND `pid` = 1 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 28  AND `pid` = 1 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (16,17,18,10) [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (16,17,18,10) [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (0)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (19,20,21,11) [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (19,20,21,11) [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (0)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (34,35,33) [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (34,35,33) [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (49,52,55)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (49,55) ORDER BY id desc LIMIT 6 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 33 LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (8,7,18,19) [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 33  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 33  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 33  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 35  AND `pid` = 33 LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 33 LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 33 LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 34  AND `pid` = 33 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 33 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 4  AND `pid` = 33 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 36  AND `pid` = 33 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 28  AND `pid` = 33 LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35,34) [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35,34) [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (49,52,55)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (49,52,55) ORDER BY id desc LIMIT 6 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (28,29,36,27) [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (28,29,36,27) [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (53,54)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (53) ORDER BY id desc LIMIT 6 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 27 LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (43,44,50) [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 35  AND `pid` = 27 LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 27 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 27 LIMIT 1 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 34  AND `pid` = 27 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 27 LIMIT 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 4  AND `pid` = 27 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 36  AND `pid` = 27 LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 28  AND `pid` = 27 LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (36) [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (36) [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (0)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (29,28) [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (29,28) [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (53,54)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (53) ORDER BY id desc LIMIT 6 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 33 LIMIT 3 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 34 LIMIT 3 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000289s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:28:44+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com:8080/getCartNum.html [运行时间：0.055696s][吞吐率：17.95req/s] [内存消耗：5,802.25kb] [文件加载：60]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ F:\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:28:44+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com:8080/checkLogin.html [运行时间：0.076840s][吞吐率：13.01req/s] [内存消耗：5,934.30kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ F:\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001061s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_99ntosdqnmlfpebc55hips56s7' AND session_expire > '1544826524' [ RunTime:0.004315s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:28:45+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=4
+[ info ] www.myshop.com:8080/getGoodsCates.html?act=getCategoryCallback&cat_id=4 [运行时间：0.058731s][吞吐率：17.03req/s] [内存消耗：5,933.88kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '4',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000840s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_words` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_words` WHERE  `cateId` = 4 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 4 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (1,8,7,9,10,11,12,13,14,15) [ RunTime:0.000420s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:28:46+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=27
+[ info ] www.myshop.com:8080/getGoodsCates.html?act=getCategoryCallback&cat_id=27 [运行时间：0.050209s][吞吐率：19.92req/s] [内存消耗：5,998.76kb] [文件加载：64]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '27',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009779s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000605s ]
+[ error ] [8]未定义数组索引: children[F:\day\myshop\application\index\controller\Category.php:144]
+---------------------------------------------------------------
+[ 2018-12-15T06:28:47+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=1
+[ info ] www.myshop.com:8080/getGoodsCates.html?act=getCategoryCallback&cat_id=1 [运行时间：0.053079s][吞吐率：18.84req/s] [内存消耗：5,933.95kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010615s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_words` [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_words` WHERE  `cateId` = 1 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (16,17,18,19,20,21,22,23,24,25) [ RunTime:0.000389s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:28:52+08:00 ] 127.0.0.1 GET /getGoodsCates.html?act=getCategoryCallback&cat_id=33
+[ info ] www.myshop.com:8080/getGoodsCates.html?act=getCategoryCallback&cat_id=33 [运行时间：0.063145s][吞吐率：15.84req/s] [内存消耗：5,924.45kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getGoodsCates',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategoryCallback',
+  'cat_id' => '33',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getGoodsCates[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_words` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_words` WHERE  `cateId` = 33 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 33 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (8,7,18,19) [ RunTime:0.000393s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:03+08:00 ] 127.0.0.1 GET /category/id/27.html
+[ info ] www.myshop.com:8080/category/id/27.html [运行时间：0.096828s][吞吐率：10.33req/s] [内存消耗：6,629.18kb] [文件加载：67]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '27',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] F:\day\myshop\public/../application/index\view\category\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'attrData',
+  6 => 'brandData',
+  7 => 'priceSection',
+  8 => 'categoryId',
+  9 => 'ob',
+  10 => 'ow',
+  11 => 'goodsRes',
+  12 => 'filters',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009801s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002684s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (28,29,36,27) [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002411s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (28,29,36,27) [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT DISTINCT brandId FROM `php_goods` WHERE  `id` IN (53,54) [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (28,29,36,27) [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (28,29,36,27) [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (53,54) LIMIT 1 [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 208 AND 227  AND `id` IN (53,54)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 228 AND 247  AND `id` IN (53,54)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 248 AND 267  AND `id` IN (53,54)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (28,29,36,27) [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (28,29,36,27) [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (53,54) GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.004306s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`goodsName`,`a`.`shopPrice`,`a`.`mdPic`,IFNULL(SUM(b.goodsNum),0) xl,(SELECT COUNT(id) FROM php_comment c WHERE a.id = c.goodsId) pl,(SELECT GROUP_CONCAT(mdPhoto SEPARATOR ",") FROM php_goods_photos d WHERE a.id = d.goodsId) photos,(SELECT GROUP_CONCAT(recName SEPARATOR ",") FROM php_rec_pos WHERE id 
+        IN(SELECT recposId FROM php_rec_item e WHERE e.valType = 1 AND e.valId = a.id)) recName FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (53,54) GROUP BY `a`.`id` ORDER BY xl desc LIMIT 0,12 [ RunTime:0.001392s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:03+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.029840s][吞吐率：33.51req/s] [内存消耗：2,788.95kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/27.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:03+08:00 ] 127.0.0.1 GET /category/id/js/perfect-scrollbar/perfect-scrollbar.min.css
+[ info ] www.myshop.com:8080/category/id/js/perfect-scrollbar/perfect-scrollbar.min.css [运行时间：0.096585s][吞吐率：10.35req/s] [内存消耗：6,199.03kb] [文件加载：65]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.myshop.com:8080/category/id/27.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'js',
+  'scrollbar' => 'perfect-scrollbar.min.css',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000801s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000911s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.003283s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002416s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT DISTINCT brandId FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) LIMIT 1 [ RunTime:0.000340s ]
+[ error ] [2]Division by zero[F:\day\myshop\application\index\controller\Category.php:66]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:03+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com:8080/getCartNum.html [运行时间：0.038071s][吞吐率：26.27req/s] [内存消耗：5,802.81kb] [文件加载：60]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/27.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ F:\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:03+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.028558s][吞吐率：35.02req/s] [内存消耗：2,788.95kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/27.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:03+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com:8080/checkLogin.html [运行时间：0.054038s][吞吐率：18.51req/s] [内存消耗：5,934.45kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/27.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ F:\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011164s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_99ntosdqnmlfpebc55hips56s7' AND session_expire > '1544826543' [ RunTime:0.002732s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:22+08:00 ] 127.0.0.1 GET /category/id/35.html
+[ info ] www.myshop.com:8080/category/id/35.html [运行时间：0.157729s][吞吐率：6.34req/s] [内存消耗：6,805.18kb] [文件加载：67]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com:8080/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '35',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] F:\day\myshop\public/../application/index\view\category\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'attrData',
+  6 => 'brandData',
+  7 => 'priceSection',
+  8 => 'categoryId',
+  9 => 'ob',
+  10 => 'ow',
+  11 => 'goodsRes',
+  12 => 'filters',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009570s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.001312s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_attr` [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002537s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '酷睿i7'  AND `attrId` = 4 LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '酷睿i5'  AND `attrId` = 4 LIMIT 1 [ RunTime:0.011433s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '酷睿i3'  AND `attrId` = 4 LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX660'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.002335s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX680'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX760'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX780'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX1080'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 24 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '500GB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '1TB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.002224s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '2TB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '4TB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 23 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '红色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '黄色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002174s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '蓝色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002272s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '黑色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002172s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '白色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002203s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '紫色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '4GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '8GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.002212s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '16GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.002323s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '32GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002739s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002455s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT DISTINCT brandId FROM `php_goods` WHERE  `id` IN (49,52,55) [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (49,52,55) LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 1400 AND 2799  AND `id` IN (49,52,55)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 2800 AND 4199  AND `id` IN (49,52,55)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 4200 AND 5599  AND `id` IN (49,52,55)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,52,55) GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.004446s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`goodsName`,`a`.`shopPrice`,`a`.`mdPic`,IFNULL(SUM(b.goodsNum),0) xl,(SELECT COUNT(id) FROM php_comment c WHERE a.id = c.goodsId) pl,(SELECT GROUP_CONCAT(mdPhoto SEPARATOR ",") FROM php_goods_photos d WHERE a.id = d.goodsId) photos,(SELECT GROUP_CONCAT(recName SEPARATOR ",") FROM php_rec_pos WHERE id 
+        IN(SELECT recposId FROM php_rec_item e WHERE e.valType = 1 AND e.valId = a.id)) recName FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,52,55) GROUP BY `a`.`id` ORDER BY xl desc LIMIT 0,12 [ RunTime:0.001396s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:22+08:00 ] 127.0.0.1 GET /category/id/js/perfect-scrollbar/perfect-scrollbar.min.css
+[ info ] www.myshop.com:8080/category/id/js/perfect-scrollbar/perfect-scrollbar.min.css [运行时间：0.094454s][吞吐率：10.59req/s] [内存消耗：6,164.59kb] [文件加载：65]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.myshop.com:8080/category/id/35.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'js',
+  'scrollbar' => 'perfect-scrollbar.min.css',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011396s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002636s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.003669s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) LIMIT 1 [ RunTime:0.000323s ]
+[ error ] [2]Division by zero[F:\day\myshop\application\index\controller\Category.php:66]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:22+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.041283s][吞吐率：24.22req/s] [内存消耗：2,788.95kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:22+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com:8080/checkLogin.html [运行时间：0.042969s][吞吐率：23.27req/s] [内存消耗：5,934.45kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ F:\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_99ntosdqnmlfpebc55hips56s7' AND session_expire > '1544826562' [ RunTime:0.002945s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:22+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.035883s][吞吐率：27.87req/s] [内存消耗：2,788.81kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:22+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com:8080/getCartNum.html [运行时间：0.053460s][吞吐率：18.71req/s] [内存消耗：5,802.81kb] [文件加载：60]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ F:\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:24+08:00 ] 127.0.0.1 GET /category/id/35?filterAttr=0.0.1TB-24.0.0
+[ info ] www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0 [运行时间：0.091753s][吞吐率：10.90req/s] [内存消耗：6,600.43kb] [文件加载：67]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com:8080/category/id/35.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'filterAttr' => '0.0.1TB-24.0.0',
+  'id' => '35',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] F:\day\myshop\public/../application/index\view\category\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'attrData',
+  6 => 'brandData',
+  7 => 'priceSection',
+  8 => 'categoryId',
+  9 => 'ob',
+  10 => 'ow',
+  11 => 'goodsRes',
+  12 => 'filters',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000763s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002519s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002359s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002387s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId FROM `php_goods_attr` WHERE  `attrId` = 24  AND `attrVal` = '1TB' [ RunTime:0.003870s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,52,55) GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.004205s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`goodsName`,`a`.`shopPrice`,`a`.`mdPic`,IFNULL(SUM(b.goodsNum),0) xl,(SELECT COUNT(id) FROM php_comment c WHERE a.id = c.goodsId) pl,(SELECT GROUP_CONCAT(mdPhoto SEPARATOR ",") FROM php_goods_photos d WHERE a.id = d.goodsId) photos,(SELECT GROUP_CONCAT(recName SEPARATOR ",") FROM php_rec_pos WHERE id 
+        IN(SELECT recposId FROM php_rec_item e WHERE e.valType = 1 AND e.valId = a.id)) recName FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,52,55) GROUP BY `a`.`id` ORDER BY xl desc LIMIT 0,12 [ RunTime:0.001477s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:24+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.028806s][吞吐率：34.72req/s] [内存消耗：2,788.84kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:24+08:00 ] 127.0.0.1 GET /category/id/js/perfect-scrollbar/perfect-scrollbar.min.css
+[ info ] www.myshop.com:8080/category/id/js/perfect-scrollbar/perfect-scrollbar.min.css [运行时间：0.065280s][吞吐率：15.32req/s] [内存消耗：6,164.37kb] [文件加载：65]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'js',
+  'scrollbar' => 'perfect-scrollbar.min.css',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000739s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000850s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002502s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002524s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) LIMIT 1 [ RunTime:0.000299s ]
+[ error ] [2]Division by zero[F:\day\myshop\application\index\controller\Category.php:66]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:24+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com:8080/checkLogin.html [运行时间：0.051310s][吞吐率：19.49req/s] [内存消耗：5,934.66kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ F:\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000974s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_99ntosdqnmlfpebc55hips56s7' AND session_expire > '1544826564' [ RunTime:0.000384s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:24+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.038742s][吞吐率：25.81req/s] [内存消耗：2,788.84kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:24+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com:8080/getCartNum.html [运行时间：0.049087s][吞吐率：20.37req/s] [内存消耗：5,802.94kb] [文件加载：60]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ F:\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:27+08:00 ] 127.0.0.1 GET /category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0
+[ info ] www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0 [运行时间：0.087665s][吞吐率：11.41req/s] [内存消耗：6,601.95kb] [文件加载：67]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'filterAttr' => '0.GTX660-22.1TB-24.0.0',
+  'id' => '35',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] F:\day\myshop\public/../application/index\view\category\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'attrData',
+  6 => 'brandData',
+  7 => 'priceSection',
+  8 => 'categoryId',
+  9 => 'ob',
+  10 => 'ow',
+  11 => 'goodsRes',
+  12 => 'filters',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010238s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId FROM `php_goods_attr` WHERE  `attrId` = 22  AND `attrVal` = 'GTX660' [ RunTime:0.004040s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId FROM `php_goods_attr` WHERE  `attrId` = 24  AND `attrVal` = '1TB' [ RunTime:0.003945s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,55) GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`goodsName`,`a`.`shopPrice`,`a`.`mdPic`,IFNULL(SUM(b.goodsNum),0) xl,(SELECT COUNT(id) FROM php_comment c WHERE a.id = c.goodsId) pl,(SELECT GROUP_CONCAT(mdPhoto SEPARATOR ",") FROM php_goods_photos d WHERE a.id = d.goodsId) photos,(SELECT GROUP_CONCAT(recName SEPARATOR ",") FROM php_rec_pos WHERE id 
+        IN(SELECT recposId FROM php_rec_item e WHERE e.valType = 1 AND e.valId = a.id)) recName FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,55) GROUP BY `a`.`id` ORDER BY xl desc LIMIT 0,12 [ RunTime:0.000791s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:27+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.029378s][吞吐率：34.04req/s] [内存消耗：2,789.16kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:27+08:00 ] 127.0.0.1 GET /category/id/js/perfect-scrollbar/perfect-scrollbar.min.css
+[ info ] www.myshop.com:8080/category/id/js/perfect-scrollbar/perfect-scrollbar.min.css [运行时间：0.068955s][吞吐率：14.50req/s] [内存消耗：6,164.69kb] [文件加载：65]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'js',
+  'scrollbar' => 'perfect-scrollbar.min.css',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010841s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) LIMIT 1 [ RunTime:0.000374s ]
+[ error ] [2]Division by zero[F:\day\myshop\application\index\controller\Category.php:66]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:27+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.034376s][吞吐率：29.09req/s] [内存消耗：2,789.16kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T06:29:27+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com:8080/checkLogin.html [运行时间：0.050852s][吞吐率：19.66req/s] [内存消耗：5,934.41kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ F:\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001136s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_99ntosdqnmlfpebc55hips56s7' AND session_expire > '1544826567' [ RunTime:0.000747s ]
+---------------------------------------------------------------
+[ 2018-12-15T06:29:27+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com:8080/getCartNum.html [运行时间：0.044984s][吞吐率：22.23req/s] [内存消耗：5,802.94kb] [文件加载：60]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ F:\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T08:05:11+08:00 ] 127.0.0.1 GET /category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0
+[ info ] www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0 [运行时间：0.139287s][吞吐率：7.18req/s] [内存消耗：6,812.72kb] [文件加载：67]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.0.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'filterAttr' => '0.GTX660-22.1TB-24.0.0',
+  'id' => '35',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] F:\day\myshop\public/../application/index\view\category\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'attrData',
+  6 => 'brandData',
+  7 => 'priceSection',
+  8 => 'categoryId',
+  9 => 'ob',
+  10 => 'ow',
+  11 => 'goodsRes',
+  12 => 'filters',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001005s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_attr` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_attr` [ RunTime:0.002709s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '酷睿i7'  AND `attrId` = 4 LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '酷睿i5'  AND `attrId` = 4 LIMIT 1 [ RunTime:0.002189s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '酷睿i3'  AND `attrId` = 4 LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX660'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.002278s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX680'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX760'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX780'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = 'GTX1080'  AND `attrId` = 22 LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 24 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '500GB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '1TB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.002217s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '2TB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '4TB'  AND `attrId` = 24 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 23 LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '红色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '黄色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002237s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '蓝色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002196s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '黑色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002234s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '白色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.002182s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '紫色'  AND `attrId` = 23 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `attrName`,`attrValues`,`id` FROM `php_attr` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '4GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '8GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.002201s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '16GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.002191s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods_attr` WHERE  `attrVal` = '32GB'  AND `attrId` = 7 LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002388s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT DISTINCT brandId FROM `php_goods` WHERE  `id` IN (49,52,55) [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (49,52,55) LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 1400 AND 2799  AND `id` IN (49,52,55)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 2800 AND 4199  AND `id` IN (49,52,55)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_goods` WHERE  `shopPrice` BETWEEN 4200 AND 5599  AND `id` IN (49,52,55)  AND `onSale` = 1 LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (35) [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (35) [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId FROM `php_goods_attr` WHERE  `attrId` = 22  AND `attrVal` = 'GTX660' [ RunTime:0.004083s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId FROM `php_goods_attr` WHERE  `attrId` = 24  AND `attrVal` = '1TB' [ RunTime:0.003929s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,55) GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.004341s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`goodsName`,`a`.`shopPrice`,`a`.`mdPic`,IFNULL(SUM(b.goodsNum),0) xl,(SELECT COUNT(id) FROM php_comment c WHERE a.id = c.goodsId) pl,(SELECT GROUP_CONCAT(mdPhoto SEPARATOR ",") FROM php_goods_photos d WHERE a.id = d.goodsId) photos,(SELECT GROUP_CONCAT(recName SEPARATOR ",") FROM php_rec_pos WHERE id 
+        IN(SELECT recposId FROM php_rec_item e WHERE e.valType = 1 AND e.valId = a.id)) recName FROM `php_goods` `a` LEFT JOIN `php_order_goods` `b` ON `a`.`id`=b.goodsId AND b.orderId 
+            IN(SELECT id FROM php_order WHERE payStatus = 1) WHERE  `a`.`onSale` = 1  AND `a`.`id` IN (49,55) GROUP BY `a`.`id` ORDER BY xl desc LIMIT 0,12 [ RunTime:0.001350s ]
+---------------------------------------------------------------
+[ 2018-12-15T08:05:11+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.036205s][吞吐率：27.62req/s] [内存消耗：2,789.16kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T08:05:11+08:00 ] 127.0.0.1 GET /category/id/js/perfect-scrollbar/perfect-scrollbar.min.css
+[ info ] www.myshop.com:8080/category/id/js/perfect-scrollbar/perfect-scrollbar.min.css [运行时间：0.073215s][吞吐率：13.66req/s] [内存消耗：6,199.58kb] [文件加载：65]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'js',
+  'scrollbar' => 'perfect-scrollbar.min.css',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ F:\day\myshop\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000926s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002829s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002461s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT DISTINCT brandId FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `brandName`,`id` FROM `php_brand` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT DISTINCT id FROM `php_goods` WHERE  `cateId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (1,2,12,13,14,15,10,16,17,18,11,19,20,21,4,7,24,25,26,27,28,29,36,33,34,35,0) [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT MIN(shopPrice) minPrice,MAX(shopPrice) maxPrice FROM `php_goods` WHERE  `id` IN (50,51,53,54,49,52,55) LIMIT 1 [ RunTime:0.000347s ]
+[ error ] [2]Division by zero[F:\day\myshop\application\index\controller\Category.php:66]
+---------------------------------------------------------------
+[ 2018-12-15T08:05:11+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop.com:8080/getCartNum.html [运行时间：0.042942s][吞吐率：23.29req/s] [内存消耗：5,802.94kb] [文件加载：60]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ F:\day\myshop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-15T08:05:11+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop.com:8080/checkLogin.html [运行时间：0.056265s][吞吐率：17.77req/s] [内存消耗：5,934.38kb] [文件加载：61]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ F:\day\myshop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000945s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_99ntosdqnmlfpebc55hips56s7' AND session_expire > '1544832311' [ RunTime:0.004103s ]
+---------------------------------------------------------------
+[ 2018-12-15T08:05:11+08:00 ] 127.0.0.1 GET /static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] www.myshop.com:8080/static/Home/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.040540s][吞吐率：24.67req/s] [内存消耗：2,789.16kb] [文件加载：43]
+[ info ] [ LANG ] F:\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.myshop.com:8080/category/id/35?filterAttr=0.GTX660-22.1TB-24.0.0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uslk_e=MWM2Mzc0OWItYTgxZi0xZDIzLTZlNjAtMDQzMDhkODVjMjcz~~~~~~~1~; cart=a%3A1%3A%7Bs%3A22%3A%2255-152%2C153%2C154%2C155%2C156%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=99ntosdqnmlfpebc55hips56s7; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File

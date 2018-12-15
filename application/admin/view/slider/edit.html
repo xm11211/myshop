@@ -1,0 +1,107 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">轮播图</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$sliderData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">轮播图名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="title"  value="{$sliderData.title}" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">轮播图名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">是否显示</label>
+                                    <div class="col-xs-4">
+                                        <label>
+                                            <input class="checkbox-slider slider-icon yesno" name="status" value="1" {if condition="$sliderData['status'] == 1"}checked{/if} type="checkbox">
+                                            <span class="text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">网址</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="url" value="{$sliderData.url}" data-bv-field="url"><i class="form-control-feedback" data-bv-icon-for="url" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="stringLength" data-bv-for="url" data-bv-result="NOT_VALIDATED" style="display: none;">网址不要超过60位字符！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">缩略图</label>
+                                    <div class="col-lg-1">
+                                        <span class="file-input btn btn-azure btn-file">
+                                            选择文件<input type="file" name="pic">
+                                        </span>
+                                    </div>
+                                    {if condition="$sliderData['pic'] neq ''"}
+                                    <div class="col-lg-2 col-md-2 col-sm-2" >
+                                        {$sliderData.pic|showImage=###,65,65}
+                                    </div>
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8 col-lg-offset-4">
+                                    <button type="submit" class="btn btn-azure">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                title: {
+                    validators: {
+                        notEmpty: {
+                            message: '轮播图名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 150,
+                            message: '轮播图名称不要超过150位字符！'
+                        }
+                    }
+                },
+                url: {
+                    validators: {
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '网址不要超过60位字符！'
+                        }
+                    }
+                },
+            }
+        });
+        $("#sidebar-menu a[href*=slider" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

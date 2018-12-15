@@ -1,0 +1,2192 @@
+---------------------------------------------------------------
+[ 2018-03-01T13:02:17+08:00 ] 127.0.0.1 GET /cate/5
+[ info ] www.myshop.com/cate/5 [运行时间：0.057509s][吞吐率：17.39req/s] [内存消耗：5,353.26kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/11',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (8,4,11,12,22,21,23,5) [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000184s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:02:38+08:00 ] 127.0.0.1 GET /cate/5
+[ info ] www.myshop.com/cate/5 [运行时间：0.063655s][吞吐率：15.71req/s] [内存消耗：5,651.77kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/11',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000622s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000722s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (8,4,11,12,22,21,23,5) [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000198s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:02:42+08:00 ] 127.0.0.1 GET /cate/5
+[ info ] www.myshop.com/cate/5 [运行时间：0.053025s][吞吐率：18.86req/s] [内存消耗：5,352.91kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/5',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000757s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (8,4,11,12,22,21,23,5) [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000189s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:02:43+08:00 ] 127.0.0.1 GET /cate/5
+[ info ] www.myshop.com/cate/5 [运行时间：0.054295s][吞吐率：18.42req/s] [内存消耗：5,352.91kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/5',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000695s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (8,4,11,12,22,21,23,5) [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000211s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:02:48+08:00 ] 127.0.0.1 GET /cate/12
+[ info ] www.myshop.com/cate/12 [运行时间：0.053323s][吞吐率：18.75req/s] [内存消耗：5,326.01kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/5',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000792s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (12) [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000180s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:02:49+08:00 ] 127.0.0.1 GET /cate/21
+[ info ] www.myshop.com/cate/21 [运行时间：0.053347s][吞吐率：18.75req/s] [内存消耗：5,325.90kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/12',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '21',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000710s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (21) [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000184s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:04:45+08:00 ] 127.0.0.1 GET /article/20
+[ info ] www.myshop.com/article/20 [运行时间：0.066395s][吞吐率：15.06req/s] [内存消耗：5,608.34kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/21',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '20',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000768s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000181s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:04:48+08:00 ] 127.0.0.1 GET /cate/12
+[ info ] www.myshop.com/cate/12 [运行时间：0.054786s][吞吐率：18.25req/s] [内存消耗：5,326.02kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/20',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000828s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (12) [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000212s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:04:51+08:00 ] 127.0.0.1 GET /cate/18
+[ info ] www.myshop.com/cate/18 [运行时间：0.052811s][吞吐率：18.94req/s] [内存消耗：5,312.86kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/12',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '18',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (18) [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000188s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:04:53+08:00 ] 127.0.0.1 GET /article/29
+[ info ] www.myshop.com/article/29 [运行时间：0.052976s][吞吐率：18.88req/s] [内存消耗：5,307.73kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/18',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '29',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000620s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000185s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:05:05+08:00 ] 127.0.0.1 GET /cate/31
+[ info ] www.myshop.com/cate/31 [运行时间：0.053933s][吞吐率：18.54req/s] [内存消耗：5,319.06kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/29',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '31',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000648s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (31) [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000184s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:05:07+08:00 ] 127.0.0.1 GET /article/30
+[ info ] www.myshop.com/article/30 [运行时间：0.052112s][吞吐率：19.19req/s] [内存消耗：5,309.71kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/31',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '30',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000616s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000184s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:05+08:00 ] 127.0.0.1 GET /cate/24
+[ info ] www.myshop.com/cate/24 [运行时间：0.047631s][吞吐率：20.99req/s] [内存消耗：5,251.13kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/30',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '24',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000764s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (24) [ RunTime:0.000224s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:12+08:00 ] 127.0.0.1 GET /cate/4
+[ info ] www.myshop.com/cate/4 [运行时间：0.063329s][吞吐率：15.79req/s] [内存消耗：5,354.76kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cate',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/30',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'cateId' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Cate->index[ K:\AMP\day\myshop\application\index\controller\Cate.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\cate\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'arts',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000644s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` IN (11,12,22,21,23,4) [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000189s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:24+08:00 ] 127.0.0.1 GET /article/4
+[ info ] www.myshop.com/article/4 [运行时间：0.057563s][吞吐率：17.37req/s] [内存消耗：5,311.63kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/4',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000644s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000201s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:40+08:00 ] 127.0.0.1 GET /article/4
+[ info ] www.myshop.com/article/4 [运行时间：0.066075s][吞吐率：15.13req/s] [内存消耗：5,608.96kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/cate/4',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000185s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:43+08:00 ] 127.0.0.1 GET /article/4
+[ info ] www.myshop.com/article/4 [运行时间：0.057965s][吞吐率：17.25req/s] [内存消耗：5,311.74kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/4',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000660s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000184s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:51+08:00 ] 127.0.0.1 GET /article/19
+[ info ] www.myshop.com/article/19 [运行时间：0.058571s][吞吐率：17.07req/s] [内存消耗：5,311.46kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/4',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000644s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000185s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:06:55+08:00 ] 127.0.0.1 GET /article/22
+[ info ] www.myshop.com/article/22 [运行时间：0.053879s][吞吐率：18.56req/s] [内存消耗：5,311.93kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/19',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '22',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000198s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:07:03+08:00 ] 127.0.0.1 GET /article/26
+[ info ] www.myshop.com/article/26 [运行时间：0.054347s][吞吐率：18.40req/s] [内存消耗：5,311.86kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/22',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '26',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000669s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 23 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000182s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:07:06+08:00 ] 127.0.0.1 GET /article/28
+[ info ] www.myshop.com/article/28 [运行时间：0.054555s][吞吐率：18.33req/s] [内存消耗：5,311.91kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/26',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '28',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000714s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 23 LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000220s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:07:09+08:00 ] 127.0.0.1 GET /article/24
+[ info ] www.myshop.com/article/24 [运行时间：0.054561s][吞吐率：18.33req/s] [内存消耗：5,311.86kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/28',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '24',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000807s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 24 LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000183s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:07:12+08:00 ] 127.0.0.1 GET /article/17
+[ info ] www.myshop.com/article/17 [运行时间：0.055916s][吞吐率：17.88req/s] [内存消耗：5,311.85kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/24',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000799s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 17 LIMIT 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000188s ]
+---------------------------------------------------------------
+[ 2018-03-01T13:07:16+08:00 ] 127.0.0.1 GET /article/19
+[ info ] www.myshop.com/article/19 [运行时间：0.054170s][吞吐率：18.46req/s] [内存消耗：5,311.85kb] [文件加载：59]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/article/17',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'artId' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ K:\AMP\day\myshop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\article\index.html [ array (
+  0 => 'helpCateArr',
+  1 => 'title',
+  2 => 'cateNum',
+  3 => 'currCate',
+  4 => 'cateBread',
+  5 => 'activeCate',
+  6 => 'showRight',
+  7 => 'helpCates',
+  8 => 'comCates',
+  9 => 'artData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000689s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000711s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3  AND `pid` = 4 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 5  AND `pid` = 0 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 18 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 26 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 27 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 28 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 29 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 30 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 32 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 33 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 34 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `pid` = 35 [ RunTime:0.000222s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:16+08:00 ] 127.0.0.1 GET /Admin/Index/index
+[ info ] www.myshop.com/Admin/Index/index [运行时间：0.041765s][吞吐率：23.94req/s] [内存消耗：3,668.34kb] [文件加载：57]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/admin/cate/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000860s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_dj4k9oerl6vo798sm3leqjgce0' AND session_expire > '1519889296' [ RunTime:0.000393s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:23+08:00 ] 127.0.0.1 GET /xm112111528
+[ info ] www.myshop.com/xm112111528 [运行时间：0.033245s][吞吐率：30.08req/s] [内存消耗：3,798.27kb] [文件加载：56]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'check' => '1528',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\login\index.html [ array (
+  0 => 'validate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000695s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_dj4k9oerl6vo798sm3leqjgce0' AND session_expire > '1519889303' [ RunTime:0.000333s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:23+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.myshop.com/captcha.html [运行时间：0.046447s][吞吐率：21.53req/s] [内存消耗：3,635.30kb] [文件加载：52]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'captcha',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/captcha.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->captcha[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001116s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_dj4k9oerl6vo798sm3leqjgce0' AND session_expire > '1519889303' [ RunTime:0.000462s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:28+08:00 ] 127.0.0.1 POST /xm11211.html
+[ info ] www.myshop.com/xm11211.html [运行时间：0.041482s][吞吐率：24.11req/s] [内存消耗：5,400.84kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '466',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryn74P8jaZNF3mnmfa',
+  'referer' => 'http://www.myshop.com/xm112111528',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+  'validate' => 'VntYKjmusROciGf5a97ab977f7bb',
+  'adminName' => 'root',
+  'password' => 'hu.12580a',
+  'code' => 'px7p',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ K:\AMP\day\myshop\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000688s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_dj4k9oerl6vo798sm3leqjgce0' AND session_expire > '1519889308' [ RunTime:0.000323s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_admin` [ RunTime:0.002479s ]
+[ sql ] [ SQL ] SELECT * FROM `php_admin` WHERE  `adminName` = 'root' LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000157s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:28+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.myshop.com/admin/index/index.html [运行时间：0.609443s][吞吐率：1.64req/s] [内存消耗：3,860.24kb] [文件加载：57]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/xm112111528',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ K:\AMP\day\myshop\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\index\index.html [ array (
+  0 => 'serverTime',
+  1 => 'date',
+  2 => 'rtWeather',
+  3 => 'weaSk',
+  4 => 'weaFu',
+  5 => 'weaTo',
+  6 => 'plName',
+  7 => 'slName',
+  8 => 'plUrl',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000586s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_dj4k9oerl6vo798sm3leqjgce0' AND session_expire > '1519889308' [ RunTime:0.000305s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:32+08:00 ] 127.0.0.1 GET /admin/goods/lst.html
+[ info ] www.myshop.com/admin/goods/lst.html [运行时间：0.057995s][吞吐率：17.24req/s] [内存消耗：5,946.27kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'mybike',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->lst[ K:\AMP\day\myshop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/admin\view\goods\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'bdData',
+  2 => 'catData',
+  3 => 'list',
+  4 => 'plName',
+  5 => 'plUrl',
+  6 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000642s ] mysql:host=127.0.0.1;port=3306;dbname=mybike;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_dj4k9oerl6vo798sm3leqjgce0' AND session_expire > '1519889312' [ RunTime:0.000309s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_brand` `b` ON `a`.`brandId`=`b`.`id` LEFT JOIN `php_category` `c` ON `a`.`cateId`=`c`.`id` LEFT JOIN `php_goods_cat` `d` ON `a`.`id`=`d`.`goodsId` LEFT JOIN `php_category` `e` ON `d`.`catId`=`e`.`id` LEFT JOIN `php_type` `f` ON `a`.`typeId`=`f`.`id` LEFT JOIN `php_goods_num` `g` ON `a`.`id`=`g`.`goodsId` GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`brandName`,`c`.`cateName`,`f`.`typeName`,GROUP_CONCAT(DISTINCT e.cateName SEPARATOR "<br>") extCates,SUM(g.num) goodsNum FROM `php_goods` `a` LEFT JOIN `php_brand` `b` ON `a`.`brandId`=`b`.`id` LEFT JOIN `php_category` `c` ON `a`.`cateId`=`c`.`id` LEFT JOIN `php_goods_cat` `d` ON `a`.`id`=`d`.`goodsId` LEFT JOIN `php_category` `e` ON `d`.`catId`=`e`.`id` LEFT JOIN `php_type` `f` ON `a`.`typeId`=`f`.`id` LEFT JOIN `php_goods_num` `g` ON `a`.`id`=`g`.`goodsId` GROUP BY `a`.`id` ORDER BY a.id desc LIMIT 0,10 [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT `id`,`brandName` FROM `php_brand` [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` ORDER BY sort asc [ RunTime:0.000251s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:53+08:00 ] 127.0.0.1 GET /
+[ info ] www.myshop.com/ [运行时间：0.056979s][吞吐率：17.55req/s] [内存消耗：5,681.58kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ K:\AMP\day\myshop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop\public/../application/index\view\index\index.html [ array (
+  0 => 'helpCateArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;port=3306;dbname=myshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000212s ]
+---------------------------------------------------------------
+[ 2018-03-01T15:28:53+08:00 ] 127.0.0.1 GET /static/Home/img/0_thumb_G_1490174241651.jpg
+[ info ] www.myshop.com/static/Home/img/0_thumb_G_1490174241651.jpg [运行时间：0.032203s][吞吐率：31.05req/s] [内存消耗：2,626.36kb] [文件加载：43]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'Home',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.myshop.com/static/Home/img/0_thumb_G_1490174241651.jpg',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-01T15:28:53+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop.com/get_ajax_content.php [运行时间：0.022853s][吞吐率：43.76req/s] [内存消耗：2,549.61kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-01T15:29:05+08:00 ] 127.0.0.1 GET /get_ajax_content.php?act=getCategotyParentTree&cat_id=347&defa=
+[ info ] www.myshop.com/get_ajax_content.php?act=getCategotyParentTree&cat_id=347&defa= [运行时间：0.032431s][吞吐率：30.83req/s] [内存消耗：2,549.16kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategotyParentTree',
+  'cat_id' => '347',
+  'defa' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-01T15:40:41+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop.com/get_ajax_content.php [运行时间：0.026134s][吞吐率：38.26req/s] [内存消耗：2,548.77kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-01T15:41:37+08:00 ] 127.0.0.1 GET /get_ajax_content.php?act=getCategotyParentTree&cat_id=1442&defa=
+[ info ] www.myshop.com/get_ajax_content.php?act=getCategotyParentTree&cat_id=1442&defa= [运行时间：0.042310s][吞吐率：23.64req/s] [内存消耗：2,549.20kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'getCategotyParentTree',
+  'cat_id' => '1442',
+  'defa' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-01T15:45:50+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop.com/get_ajax_content.php [运行时间：0.023733s][吞吐率：42.14req/s] [内存消耗：2,548.77kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-01T16:07:26+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] www.myshop.com/get_ajax_content.php [运行时间：0.022227s][吞吐率：44.99req/s] [内存消耗：2,548.77kb] [文件加载：40]
+[ info ] [ LANG ] K:\AMP\day\myshop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.myshop.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dj4k9oerl6vo798sm3leqjgce0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File

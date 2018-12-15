@@ -1,0 +1,217 @@
+<!--快捷操作-->
+<div class="row">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-sky">
+                <span class="widget-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快捷操作</font></font></span>
+            </div><!--Widget Header-->
+            <div class="widget-body">
+                <button href="{:url('admin/edit',array('id'=>$Request.session.aid))}" type="button" class="btn btn-default"><i class="fa fa-user"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 修改密码</font>
+                    </font>
+                </button>
+                <button href="{:url('conf/conf')}" type="button" class="btn btn-default"><i class="fa fa-gear"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 网站配置</font>
+                    </font>
+                </button>
+                <button href="{:url('cate/add')}" type="button" class="btn btn-default"><i class="fa fa-folder"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增栏目</font>
+                    </font>
+                </button>
+                <button href="{:url('article/add')}" type="button" class="btn btn-default"><i class="fa fa-file-text"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 新增文章</font>
+                    </font>
+                </button>
+                <button href="{:url('admin/clear')}" id="clearCache2" type="button" class="btn btn-default"><i class="fa fa-trash-o"></i>
+                    <font style="vertical-align: center;"><font style="vertical-align: center;"> 清空缓存</font>
+                    </font>
+                </button>
+            </div><!--Widget Body-->
+        </div><!--Widget-->
+    </div>
+    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <div class="well with-header  with-footer">
+            <div class="header mybg-sky">
+                系统信息
+            </div>
+            <table class="table table-hover table-striped table-bordered table-condensed">
+                <tbody>
+                <tr>
+                    <td>
+                        网站域名
+                    </td>
+                    <td>
+                        {$Request.session.pc}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        操作系统
+                    </td>
+                    <td>
+                        {$Request.session.osname}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        运行环境
+                    </td>
+                    <td>
+                       {$Request.session.apacheVer}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        端口
+                    </td>
+                    <td>
+                        {$Request.session.port}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        数据库版本
+                    </td>
+                    <td>
+                        {$Request.session.mysql_version}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        服务器时间
+                    </td>
+                    <td>
+                        {$serverTime}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="myweather col-lg-4 col-md-12 col-sm-12 col-xs-12">
+        <div class="databox databox-vertical databox-xxxlg radius-bordered databox-shadowed" style="height:700px;">
+            <div class="databox-top bg-orange text-align-left padding-left-30">
+                <span class="databox-header"><i class="glyphicon glyphicon-map-marker"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" id="city"> {$weaTo['city']}</font></font></span>
+            </div>
+            <div class="databox-bottom no-padding bg-sky" style="height:650px;">
+                <div class="databox-row row-5 bg-yellow padding-20 text-align-left">
+                    <span class="databox-text padding-bottom-5" style="font-size:25px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" id="time"> {$date}</font></font></span>
+                    <span class="databox-number" style="font-size:38px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" id="weaText">{$rtWeather['text']}&nbsp;&nbsp;{$rtWeather['temperature']}°&nbsp;&nbsp;</font></font><i id='weaCate' class="wi {$rtWeather['cate']}"></i> <span style="font-size:17px;">(实时)</span></span>
+                    <span class="mytext databox-text padding-bottom-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">穿衣指数：{$weaTo['dressing_index']},{$weaTo['dressing_advice']}</font></font></span>
+                    <span class="mytext databox-text padding-bottom-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">紫外线强度：{$weaTo['uv_index']}</font></font></span>
+                </div>
+                {volist name="weaFu" id="vo" key="k"}
+                    {switch name="k"}
+                        {case value="7"}
+                            <div class="databox-row row-1 padding-5 padding-left-30 text-align-left">
+                                <div class="databox-cell cell-4">
+                                    <span class="databox-title margin-top-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="mytext2">{$vo.week}</font></font></span>
+                                </div>
+                                <div class="databox-cell cell-4">
+                                    <span class="databox-title margin-top-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="mytext2">{$vo.weather}</font></font></span>
+                                </div>
+                                <div class="databox-cell cell-4">
+                                    <span class="databox-number margin-top-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="mytext2">{$vo.temperature}</font></font></span>
+                                </div>
+                            </div>
+                        {/case}
+                        {default /}
+                        <div class="databox-row row-1 padding-5 padding-left-30 text-align-left bordered-bottom bordered-whitesmoke mytext2">
+                            <div class="databox-cell cell-4">
+                                <span class="databox-title margin-top-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="mytext2">{$vo.week}</font></font></span>
+                            </div>
+                            <div class="databox-cell cell-4">
+                                <span class="databox-title margin-top-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="mytext2">{$vo.weather}</font></font></span>
+                            </div>
+                            <div class="databox-cell cell-4">
+                                <span class="databox-number margin-top-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="mytext2">{$vo.temperature}</font></font></span>
+                            </div>
+                        </div>
+                    {/switch}
+
+                {/volist}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    setInterval("time.innerText=fn();",990);
+    var fn = function(){
+        var now = new Date;
+        var y = now.getFullYear();
+        var m = now.getMonth() + 1;
+        var d = now.getDate();
+        var h = now.getHours();
+        var mm = now.getMinutes();
+        var s = now.getSeconds();
+        var w = now.getDay();
+        var str;
+        if(h == 12) {
+            str = " 下午";
+        }else if(h > 12) {
+            h -= 12;
+            str = " 下午";
+        }
+        else{
+            str = " 上午";
+        }
+        h = h < 10 ? "0" + h : h;
+        d = d < 10 ? "0" + d : d;
+        m = m < 10 ? "0" + m : m;
+        mm = mm < 10 ? "0" + mm : mm;
+        s = s < 10 ? "0" + s : s;
+        arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        w = " " + arr[w];
+        var xy = y + "/" + m + "/" + d + w + str + h + ":" + mm + ":" + s;
+        return xy;
+    };
+    setInterval("updateRealWeather()",60000);
+    function updateRealWeather() {
+        var str = /myflag1/;
+        var cookie = document.cookie;
+        if(str.test(cookie)) {
+            return false;
+        }else{
+            $.ajax({
+                url:"{:url('updateRealWea')}",
+                type:'get',
+                success:function (data) {
+                    var weaData = JSON.parse(data);
+                    var weaText = weaData.text + "&nbsp;&nbsp;" + weaData.temperature + '°'+ "&nbsp;&nbsp;";
+                    var weaCate = 'wi ' + weaData.cate;
+                    $("#weaText").html(weaText);
+                    $("#weaCate").removeClass().addClass(weaCate);
+                },
+                error:function(){
+                    alert('请求天气数据失败,请调试！');
+                }
+            });
+        }
+    }
+    $(function () {
+        $(".widget-body button").each(function (k, v) {
+            $id = $(v).attr('id');
+            if($id && $id == 'clearCache2') {
+                $(v).on('click',function () {
+                    $.ajax({
+                        method:'post',
+                        url:"{:url('admin/clear')}",
+                        success:function (data) {
+                            if(data == 1) {
+                                judgeEvents("#clearMsg",'click','清除缓存成功！','success','fa-check');
+                            }else{
+                                judgeEvents("#clearMsg",'click','清除缓存失败！','danger','fa-bolt');
+                            }
+                        }
+                    });
+                });
+              return;
+            }
+            var url = $(v).attr("href");
+            addBind($(v),url);
+        });
+        $("#sidebar-menu a[href*=Index" + "\\/"+ "index]").parent().addClass('active');
+    });
+</script>

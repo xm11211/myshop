@@ -1,0 +1,140 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">订单管理</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">订单商品修改</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$goodsData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$goodsData.goodsName}" class="form-control" name="goodsName" data-bv-field="goodsName"><i class="form-control-feedback" data-bv-icon-for="goodsName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsName" data-bv-result="NOT_VALIDATED" style="display: none;">商品名称不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品会员价</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$goodsData.goodsMemberPrice}" class="form-control" name="goodsMemberPrice" data-bv-field="goodsMemberPrice"><i class="form-control-feedback" data-bv-icon-for="goodsMemberPrice" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsMemberPrice" data-bv-result="NOT_VALIDATED" style="display: none;">商品会员价不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品市场价</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$goodsData.goodsMarketPrice}" class="form-control" name="goodsMarketPrice" data-bv-field="goodsMarketPrice"><i class="form-control-feedback" data-bv-icon-for="goodsMarketPrice" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsMarketPrice" data-bv-result="NOT_VALIDATED" style="display: none;">商品市场价不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品本店价</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$goodsData.goodsShopPrice}" class="form-control" name="goodsShopPrice" data-bv-field="goodsShopPrice"><i class="form-control-feedback" data-bv-icon-for="goodsShopPrice" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsShopPrice" data-bv-result="NOT_VALIDATED" style="display: none;">商品本店价不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品属性</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$goodsData.goodsAttrStr}" class="form-control" name="goodsAttrStr" data-bv-field="goodsAttrStr"><i class="form-control-feedback" data-bv-icon-for="goodsAttrStr" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsAttrStr" data-bv-result="NOT_VALIDATED" style="display: none;">商品属性不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">商品数量</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$goodsData.goodsNum}" class="form-control" name="goodsNum" data-bv-field="goodsNum"><i class="form-control-feedback" data-bv-icon-for="goodsNum" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="goodsNum" data-bv-result="NOT_VALIDATED" style="display: none;">商品数量不能为空！</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-8 col-lg-offset-4">
+                                        <button type="submit" class="btn btn-azure">提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                goodsName: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 150,
+                            message: '商品名称不要超过150位字符！'
+                        }
+                    }
+                },
+                goodsMemberPrice: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品会员价不能为空！'
+                        }
+                    }
+                },
+                goodsMarketPrice: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品市场价不能为空！'
+                        }
+                    }
+                },
+                goodsShopPrice: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品本店价不能为空！'
+                        }
+                    }
+                },
+                goodsAttrStr: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品属性不能为空！'
+                        }
+                    }
+                },
+                goodsNum: {
+                    validators: {
+                        notEmpty: {
+                            message: '商品数量不能为空！'
+                        }
+                    }
+                }
+            }
+        });
+        $("#sidebar-menu a[href*=order" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

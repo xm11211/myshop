@@ -1,0 +1,118 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">添加管理员</span>
+            </div>
+            <div class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">昵称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" name="adminName" data-bv-field="adminName"><i class="form-control-feedback" data-bv-icon-for="adminName" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="adminName" data-bv-result="NOT_VALIDATED" style="display: none;">昵称不能为空！</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">密码</label>
+                                    <div class="col-lg-8">
+                                        <input type="password" class="form-control" name="password" data-bv-field="password"><i class="form-control-feedback" data-bv-icon-for="password" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">密码不能为空！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">头像</label>
+                                    <div class="col-lg-1">
+                                        <span class="file-input btn btn-azure btn-file">
+                                            选择文件<input type="file" name="pic">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">
+                                        角色勾选
+                                    </label>
+                                    <div class="flip-scroll col-lg-8">
+                                        <table class="table table-bordered table-striped table-condensed flip-content">
+                                            <tbody>
+                                            {volist name="agData" id="vo"}
+                                                <tr>
+                                                    {volist name="vo" id="vo1"}
+                                                        <td class="col-lg-3">
+                                                            <label>
+                                                                <input type="checkbox" name="agId[]" value="{$vo1.id}" class="colored-blue">
+                                                                <span class="text">{$vo1.title}</span>
+                                                            </label>
+                                                        </td>
+                                                    {/volist}
+                                                </tr>
+                                            {/volist}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <button type="submit" class="btn btn-azure">提交</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                adminName: {
+                    validators: {
+                        notEmpty: {
+                            message: '管理员昵称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '昵称不要超过30位字符！'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '管理员密码不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 40,
+                            message: '密码不要超过40位字符！'
+                        }
+                    }
+                },
+            }
+        });
+        //设置当前页面的菜单高亮显示 开始
+        $("#sidebar-menu a[href*=admin" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>

@@ -1,0 +1,2917 @@
+---------------------------------------------------------------
+[ 2018-08-27T13:58:38+08:00 ] 127.0.0.1 GET /
+[ info ] www.myshop2.com/ [运行时间：0.210336s][吞吐率：4.75req/s] [内存消耗：7,082.73kb] [文件加载：67]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ K:\AMP\day\myshop2\application\index\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/index\view\index\index.html [ array (
+  0 => 'navArr',
+  1 => 'helpCateArr',
+  2 => 'shopArtArr',
+  3 => 'confArr',
+  4 => 'foreCateArr',
+  5 => 'showRight',
+  6 => 'siteMast',
+  7 => 'indexGoods',
+  8 => 'recposCate',
+  9 => 'notArts',
+  10 => 'proArts',
+  11 => 'brands',
+  12 => 'sliders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003215s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_nav` [ RunTime:0.005571s ]
+[ sql ] [ SQL ] SELECT * FROM `php_nav` ORDER BY sort desc [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_cate` [ RunTime:0.001232s ]
+[ sql ] [ SQL ] SELECT * FROM `php_cate` WHERE  `type` = 3 ORDER BY sort desc [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_article` [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 11  AND `showStatus` = 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 12  AND `showStatus` = 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 22  AND `showStatus` = 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 21  AND `showStatus` = 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `php_article` WHERE  `cateId` = 23  AND `showStatus` = 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 8 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_conf` [ RunTime:0.001135s ]
+[ sql ] [ SQL ] SELECT `enName`,`value` FROM `php_conf` [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000923s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 0 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 4 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` WHERE  `pid` = 27 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_rec_item` [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 1  AND `recposId` = 8 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.003837s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mdPic`,`shopPrice`,`marketPrice` FROM `php_goods` WHERE  `id` IN (40,39,38,37,36,35,34,33,32,31,17,24,25,26,28,29,30,41,42,44,45) ORDER BY id desc LIMIT 20 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 5 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 1  AND `pid` = 0 LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 0 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 0 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 27  AND `pid` = 0 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 1 [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods_cat` [ RunTime:0.002706s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (2,12,13,14,15,10,16,17,18,11,19,20,21,1) [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (17,26,27,28,29,31,32,34,35,36,37,41,44)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (26,17,28,29,31,32,34,35,36,37,41,44) ORDER BY id desc LIMIT 6 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_brands` [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 1 LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (16,17,18,19,20,21,22,23,24,25) [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category_ad` [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 1  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 1 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 1 LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 1 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 1 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 10 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (16,17,18,10) [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (17,27,29,31,37)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (17,29,31,37) ORDER BY id desc LIMIT 6 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 2 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (12,13,14,15,2) [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (17,28,31,32,34,44)  AND `recposId` = 7  AND `valType` = 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (17,28,31,32,34,44) ORDER BY id desc LIMIT 6 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT `id` FROM `php_goods` WHERE  `cateId` = 27 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT DISTINCT goodsId id FROM `php_goods_cat` WHERE  `catId` IN (28,29,27) [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `valId` FROM `php_rec_item` WHERE  `valId` IN (45,46)  AND `recposId` = 4  AND `valType` = 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `php_goods` WHERE  `onSale` = 1  AND `id` IN (45,46) ORDER BY id desc LIMIT 6 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_brands` WHERE  `cateId` = 27 LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` WHERE  `id` IN (43,44,50) [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 1 ORDER BY id desc LIMIT 3 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 2 ORDER BY id desc LIMIT 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category_ad` WHERE  `cateId` = 27  AND `position` = 3 ORDER BY id desc LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `php_rec_item` WHERE  `valType` = 2  AND `recposId` = 6 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 10  AND `pid` = 27 LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 7  AND `pid` = 27 LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 2  AND `pid` = 27 LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 11  AND `pid` = 27 LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT `id`,`cateName`,`pid` FROM `php_category` WHERE  `id` = 4  AND `pid` = 27 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 33 LIMIT 3 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `php_article` WHERE  `cateId` = 34 LIMIT 3 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `php_brand` ORDER BY id desc LIMIT 17 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_slider` [ RunTime:0.001004s ]
+[ sql ] [ SQL ] SELECT * FROM `php_slider` WHERE  `status` = 1 ORDER BY sort desc [ RunTime:0.000298s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:58:38+08:00 ] 127.0.0.1 POST /getCartNum.html
+[ info ] www.myshop2.com/getCartNum.html [运行时间：0.088711s][吞吐率：11.27req/s] [内存消耗：5,758.88kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'getCartNum',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Flow->getCartNum[ K:\AMP\day\myshop2\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T13:58:38+08:00 ] 127.0.0.1 POST /checkLogin.html
+[ info ] www.myshop2.com/checkLogin.html [运行时间：0.108716s][吞吐率：9.20req/s] [内存消耗：5,891.02kb] [文件加载：61]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checkLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://www.myshop2.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ K:\AMP\day\myshop2\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010912s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349518' [ RunTime:0.005510s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:58:44+08:00 ] 127.0.0.1 GET /xm112111358
+[ info ] www.myshop2.com/xm112111358 [运行时间：0.044568s][吞吐率：22.44req/s] [内存消耗：3,951.93kb] [文件加载：56]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'check' => '1358',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ K:\AMP\day\myshop2\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\login\index.html [ array (
+  0 => 'validate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000702s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349524' [ RunTime:0.002201s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:58:44+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.myshop2.com/captcha.html [运行时间：0.050225s][吞吐率：19.91req/s] [内存消耗：3,788.34kb] [文件加载：52]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'captcha',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/xm112111358',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->captcha[ K:\AMP\day\myshop2\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000809s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349524' [ RunTime:0.002312s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:58:50+08:00 ] 127.0.0.1 POST /xm11211.html
+[ info ] www.myshop2.com/xm11211.html [运行时间：0.064205s][吞吐率：15.58req/s] [内存消耗：5,553.34kb] [文件加载：60]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '466',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAZmtST8FUXoXXApi',
+  'referer' => 'http://www.myshop2.com/xm112111358',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'validate' => 'XXUBxjVuuITrzSS5b839314d98f2',
+  'adminName' => 'root',
+  'password' => 'hu.12580a',
+  'code' => 'rrxt',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ K:\AMP\day\myshop2\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000699s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349530' [ RunTime:0.002194s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000808s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_admin` [ RunTime:0.004310s ]
+[ sql ] [ SQL ] SELECT * FROM `php_admin` WHERE  `adminName` = 'root' LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000195s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:58:52+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.myshop2.com/admin/index/index.html [运行时间：1.562970s][吞吐率：0.64req/s] [内存消耗：4,038.23kb] [文件加载：58]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/xm112111358',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ K:\AMP\day\myshop2\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\index\index.html [ array (
+  0 => 'serverTime',
+  1 => 'date',
+  2 => 'rtWeather',
+  3 => 'weaSk',
+  4 => 'weaFu',
+  5 => 'weaTo',
+  6 => 'plName',
+  7 => 'slName',
+  8 => 'plUrl',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349531' [ RunTime:0.002442s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:58:55+08:00 ] 127.0.0.1 GET /admin/goods/lst.html
+[ info ] www.myshop2.com/admin/goods/lst.html [运行时间：0.102532s][吞吐率：9.75req/s] [内存消耗：6,327.97kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->lst[ K:\AMP\day\myshop2\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\goods\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'bdData',
+  2 => 'catData',
+  3 => 'list',
+  4 => 'plName',
+  5 => 'plUrl',
+  6 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000926s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349535' [ RunTime:0.002815s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_goods` [ RunTime:0.002492s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `php_goods` `a` LEFT JOIN `php_brand` `b` ON `a`.`brandId`=`b`.`id` LEFT JOIN `php_category` `c` ON `a`.`cateId`=`c`.`id` LEFT JOIN `php_goods_cat` `d` ON `a`.`id`=`d`.`goodsId` LEFT JOIN `php_category` `e` ON `d`.`catId`=`e`.`id` LEFT JOIN `php_type` `f` ON `a`.`typeId`=`f`.`id` LEFT JOIN `php_goods_num` `g` ON `a`.`id`=`g`.`goodsId` GROUP BY `a`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.005130s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`brandName`,`c`.`cateName`,`f`.`typeName`,GROUP_CONCAT(DISTINCT e.cateName SEPARATOR "<br>") extCates,FLOOR(SUM(g.num)/COUNT(e.cateName)) goodsNum FROM `php_goods` `a` LEFT JOIN `php_brand` `b` ON `a`.`brandId`=`b`.`id` LEFT JOIN `php_category` `c` ON `a`.`cateId`=`c`.`id` LEFT JOIN `php_goods_cat` `d` ON `a`.`id`=`d`.`goodsId` LEFT JOIN `php_category` `e` ON `d`.`catId`=`e`.`id` LEFT JOIN `php_type` `f` ON `a`.`typeId`=`f`.`id` LEFT JOIN `php_goods_num` `g` ON `a`.`id`=`g`.`goodsId` GROUP BY `a`.`id` ORDER BY a.id desc LIMIT 0,10 [ RunTime:0.002159s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_brand` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT `id`,`brandName` FROM `php_brand` [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` ORDER BY sort asc [ RunTime:0.000338s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:59:04+08:00 ] 127.0.0.1 GET /admin/order/lst.html
+[ info ] www.myshop2.com/admin/order/lst.html [运行时间：0.091722s][吞吐率：10.90req/s] [内存消耗：5,894.53kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/goods/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349544' [ RunTime:0.002124s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000769s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.003943s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000810s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000345s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:59:08+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0 [运行时间：0.060956s][吞吐率：16.41req/s] [内存消耗：5,884.78kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '1',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000666s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349548' [ RunTime:0.002263s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000810s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.002512s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 0 LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 0 LIMIT 0,10 [ RunTime:0.000347s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:59:11+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.062550s][吞吐率：15.99req/s] [内存消耗：5,884.84kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000710s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349551' [ RunTime:0.002375s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.002549s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000362s ]
+---------------------------------------------------------------
+[ 2018-08-27T13:59:12+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=0&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=0 [运行时间：0.066732s][吞吐率：14.99req/s] [内存消耗：5,895.48kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '0',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349552' [ RunTime:0.002220s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.002733s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000355s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:06:18+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=0&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=0 [运行时间：0.088986s][吞吐率：11.24req/s] [内存消耗：5,896.73kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '0',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000989s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349978' [ RunTime:0.000425s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.002435s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:06:20+08:00 ] 127.0.0.1 GET /admin/order/lst.html
+[ info ] www.myshop2.com/admin/order/lst.html [运行时间：0.060551s][吞吐率：16.52req/s] [内存消耗：5,895.29kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000656s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349980' [ RunTime:0.002424s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.002519s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000335s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:06:22+08:00 ] 127.0.0.1 GET /admin/order/exportorders.html
+[ info ] www.myshop2.com/admin/order/exportorders.html [运行时间：0.239597s][吞吐率：4.17req/s] [内存消耗：11,798.63kb] [文件加载：120]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000620s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535349981' [ RunTime:0.000300s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.002474s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` [ RunTime:0.000881s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:07:04+08:00 ] 127.0.0.1 GET /admin/order/lst.html
+[ info ] www.myshop2.com/admin/order/lst.html [运行时间：0.109729s][吞吐率：9.11req/s] [内存消耗：5,895.31kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000759s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350024' [ RunTime:0.000332s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:07:05+08:00 ] 127.0.0.1 GET /admin/order/exportorders.html
+[ info ] www.myshop2.com/admin/order/exportorders.html [运行时间：0.243466s][吞吐率：4.11req/s] [内存消耗：11,798.63kb] [文件加载：120]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000704s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350025' [ RunTime:0.000330s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000659s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:17:19+08:00 ] 127.0.0.1 GET /admin/order/lst.html
+[ info ] www.myshop2.com/admin/order/lst.html [运行时间：0.061269s][吞吐率：16.32req/s] [内存消耗：5,897.77kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000818s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350639' [ RunTime:0.000424s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000362s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:17:21+08:00 ] 127.0.0.1 POST /admin/order/detail.html
+[ info ] www.myshop2.com/admin/order/detail.html [运行时间：0.042004s][吞吐率：23.81req/s] [内存消耗：4,831.09kb] [文件加载：55]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '4',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->detail[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000881s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350641' [ RunTime:0.000435s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000755s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000368s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:17:23+08:00 ] 127.0.0.1 POST /admin/order/detail.html
+[ info ] www.myshop2.com/admin/order/detail.html [运行时间：0.038611s][吞吐率：25.90req/s] [内存消耗：4,831.09kb] [文件加载：55]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '4',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->detail[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350643' [ RunTime:0.000317s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000587s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`id` = '2' LIMIT 1 [ RunTime:0.000364s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:17:29+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.061535s][吞吐率：16.25req/s] [内存消耗：5,887.23kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350649' [ RunTime:0.000299s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000355s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:17:42+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.097779s][吞吐率：10.23req/s] [内存消耗：8,897.86kb] [文件加载：96]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350662' [ RunTime:0.000335s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000390s ]
+[ error ] [2]date() expects parameter 2 to be long, string given[K:\AMP\day\myshop2\application\admin\controller\Order.php:134]
+---------------------------------------------------------------
+[ 2018-08-27T14:18:30+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.063637s][吞吐率：15.71req/s] [内存消耗：5,887.23kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000656s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350710' [ RunTime:0.000318s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000616s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000336s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:18:32+08:00 ] 127.0.0.1 POST /admin/order/detail.html
+[ info ] www.myshop2.com/admin/order/detail.html [运行时间：0.039140s][吞吐率：25.55req/s] [内存消耗：4,831.17kb] [文件加载：55]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '4',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->detail[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000610s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350712' [ RunTime:0.000295s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000716s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000376s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:19:02+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.093773s][吞吐率：10.66req/s] [内存消耗：8,897.98kb] [文件加载：96]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000649s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350742' [ RunTime:0.000436s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000653s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000379s ]
+[ error ] [2]date() expects parameter 2 to be long, string given[K:\AMP\day\myshop2\application\admin\controller\Order.php:134]
+---------------------------------------------------------------
+[ 2018-08-27T14:20:01+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.059975s][吞吐率：16.67req/s] [内存消耗：5,888.29kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350801' [ RunTime:0.000378s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000626s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000695s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000312s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:20:02+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.085088s][吞吐率：11.75req/s] [内存消耗：8,677.97kb] [文件加载：88]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000865s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350802' [ RunTime:0.000442s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000821s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000911s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000497s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:21:04+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.075569s][吞吐率：13.23req/s] [内存消耗：5,887.70kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000690s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350864' [ RunTime:0.000299s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000608s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:21:06+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.086189s][吞吐率：11.60req/s] [内存消耗：8,678.05kb] [文件加载：88]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000640s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350866' [ RunTime:0.000315s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000631s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000440s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:21:43+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.091128s][吞吐率：10.97req/s] [内存消耗：8,891.38kb] [文件加载：96]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350903' [ RunTime:0.000314s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000455s ]
+[ error ] [2]date() expects parameter 2 to be long, string given[K:\AMP\day\myshop2\application\admin\controller\Order.php:136]
+---------------------------------------------------------------
+[ 2018-08-27T14:21:45+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.062328s][吞吐率：16.04req/s] [内存消耗：5,879.64kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000659s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350905' [ RunTime:0.000311s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000604s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000317s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:21:47+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.083177s][吞吐率：12.02req/s] [内存消耗：8,890.64kb] [文件加载：96]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000828s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350907' [ RunTime:0.000334s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000369s ]
+[ error ] [2]date() expects parameter 2 to be long, string given[K:\AMP\day\myshop2\application\admin\controller\Order.php:136]
+---------------------------------------------------------------
+[ 2018-08-27T14:22:02+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.076074s][吞吐率：13.15req/s] [内存消耗：8,670.26kb] [文件加载：88]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000623s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350922' [ RunTime:0.000310s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000643s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:22:40+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.073858s][吞吐率：13.54req/s] [内存消耗：5,880.38kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350960' [ RunTime:0.000297s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000623s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:22:42+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.070545s][吞吐率：14.18req/s] [内存消耗：8,670.20kb] [文件加载：88]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535350962' [ RunTime:0.000338s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000392s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:24:40+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.061067s][吞吐率：16.38req/s] [内存消耗：5,888.34kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351080' [ RunTime:0.000431s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000616s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000424s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:24:42+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.086620s][吞吐率：11.54req/s] [内存消耗：8,900.77kb] [文件加载：92]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351082' [ RunTime:0.000283s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011065s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000397s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:24:58+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0 [运行时间：0.103216s][吞吐率：9.69req/s] [内存消耗：5,887.45kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '2',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351098' [ RunTime:0.000294s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000725s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 LIMIT 0,10 [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:25:00+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D2%26dg%3D0.html [运行时间：0.167263s][吞吐率：5.98req/s] [内存消耗：11,795.18kb] [文件加载：120]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=2&dg=0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000636s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351100' [ RunTime:0.000288s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000661s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 1 [ RunTime:0.000363s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:25:38+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0 [运行时间：0.078978s][吞吐率：12.66req/s] [内存消耗：5,887.66kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '1',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000804s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351138' [ RunTime:0.000425s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000784s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 0 LIMIT 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 0 LIMIT 0,10 [ RunTime:0.000362s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:29:43+08:00 ] 127.0.0.1 POST /admin/order/detail.html
+[ info ] www.myshop2.com/admin/order/detail.html [运行时间：0.055148s][吞吐率：18.13req/s] [内存消耗：4,831.48kb] [文件加载：55]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'content-length' => '4',
+  'accept' => '*/*',
+  'origin' => 'http://www.myshop2.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->detail[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000683s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351383' [ RunTime:0.000311s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`id` = '2' LIMIT 1 [ RunTime:0.000417s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:29:45+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0 [运行时间：0.071428s][吞吐率：14.00req/s] [内存消耗：5,887.91kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=2&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '1',
+  'dg' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000733s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351385' [ RunTime:0.000345s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000630s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 0 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`payStatus` = 0 LIMIT 0,10 [ RunTime:0.000359s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:29:46+08:00 ] 127.0.0.1 GET /admin/order/lst.html
+[ info ] www.myshop2.com/admin/order/lst.html [运行时间：0.063034s][吞吐率：15.86req/s] [内存消耗：5,897.82kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000622s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351385' [ RunTime:0.000412s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000746s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000357s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:30:21+08:00 ] 127.0.0.1 GET /admin/order/lst.html
+[ info ] www.myshop2.com/admin/order/lst.html [运行时间：0.095814s][吞吐率：10.44req/s] [内存消耗：5,898.09kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=1&dg=0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351421' [ RunTime:0.000311s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000619s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` LIMIT 0,10 [ RunTime:0.000347s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:30:25+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3 [运行时间：0.063736s][吞吐率：15.69req/s] [内存消耗：5,878.68kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '0',
+  'dg' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000648s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351425' [ RunTime:0.000303s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 LIMIT 0,10 [ RunTime:0.000320s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:30:26+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D0%26dg%3D3.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D0%26dg%3D3.html [运行时间：0.047502s][吞吐率：21.05req/s] [内存消耗：5,864.59kb] [文件加载：62]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=0&dg=3',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000649s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351426' [ RunTime:0.000314s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 [ RunTime:0.000401s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:34:02+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3 [运行时间：0.062882s][吞吐率：15.90req/s] [内存消耗：5,878.68kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '0',
+  'dg' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000841s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351642' [ RunTime:0.000445s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 LIMIT 0,10 [ RunTime:0.000335s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:36:17+08:00 ] 127.0.0.1 GET /admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3
+[ info ] www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3 [运行时间：0.066139s][吞吐率：15.12req/s] [内存消耗：5,878.98kb] [文件加载：64]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'outTradeNo' => '',
+  'user' => '',
+  'ps' => '0',
+  'dg' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lst[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] K:\AMP\day\myshop2\public/../application/admin\view\order\lst.html [ array (
+  0 => 'serverTime',
+  1 => 'list',
+  2 => 'plName',
+  3 => 'plUrl',
+  4 => 'slName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000828s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351777' [ RunTime:0.000321s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000603s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 LIMIT 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 LIMIT 0,10 [ RunTime:0.000326s ]
+---------------------------------------------------------------
+[ 2018-08-27T14:36:19+08:00 ] 127.0.0.1 GET /admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D0%26dg%3D3.html
+[ info ] www.myshop2.com/admin/order/exportorders/query/outTradeNo%3D%26user%3D%26ps%3D0%26dg%3D3.html [运行时间：0.143551s][吞吐率：6.97req/s] [内存消耗：11,785.90kb] [文件加载：120]
+[ info ] [ LANG ] K:\AMP\day\myshop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.myshop2.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.myshop2.com/admin/order/lst.html?outTradeNo=&user=&ps=0&dg=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; cart=a%3A3%3A%7Bs%3A8%3A%2246-71%2C70%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%2245-46%2C42%22%3Bi%3A2%3Bs%3A8%3A%2242-30%2C26%22%3Bi%3A1%3B%7D; PHPSESSID=mqv7ofo0po9lvh9ef60ft5p140; thinkphp_show_page_trace=0|0; myflag2=1; myflag1=1',
+)
+[ info ] [ PARAM ] array (
+  'query' => 'outTradeNo=&user=&ps=0&dg=3',
+)
+[ info ] [ SESSION ] INIT array (
+  'type' => 'Mysql',
+  'auto_start' => true,
+  'session_expire' => 3600,
+  'session_prefix' => 'php_',
+  'table_name' => 'session',
+  'database' => 
+  array (
+    'hostname' => '127.0.0.1',
+    'database' => 'myshop2',
+    'username' => 'root',
+    'password' => '123',
+    'hostport' => '3306',
+    'prefix' => 'php_',
+    'charset' => 'utf8',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ K:\AMP\day\myshop2\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000716s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SELECT session_data FROM php_session WHERE session_id = 'php_mqv7ofo0po9lvh9ef60ft5p140' AND session_expire > '1535351779' [ RunTime:0.000331s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;port=3306;dbname=myshop2;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_order` [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`userName` FROM `php_order` `a` LEFT JOIN `php_user` `b` ON `a`.`userId`=`b`.`id` WHERE  `a`.`postStatus` = 2 [ RunTime:0.000366s ]

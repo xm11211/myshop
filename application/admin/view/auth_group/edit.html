@@ -1,0 +1,177 @@
+<div id="container" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget  radius-bordered">
+            <div class="widget-header bg-themeprimary">
+                <span class="widget-caption">添加链接</span>
+            </div>
+            <div id="details" class="widget-body">
+                <div class="docs-example">
+                    <ul class="nav nav-tabs tabs-flat">
+                        <li class="active"><a href="#info-tab" data-toggle="tab">信息填写</a></li>
+                    </ul>
+
+                    <form id="adminForm" method="post" enctype="multipart/form-data" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <input type="hidden" name="id" value="{$agData.id}">
+                        <div class="tab-content tabs-flat">
+                            <div class="tab-pane active" id="info-tab">
+                                <div class="form-group has-feedback">
+                                    <label class="col-lg-2 control-label">用户组名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" value="{$agData.title}" class="form-control" name="title" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">用户组名称不能为空！</small></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status" class="col-sm-2 control-label no-padding-right">启用状态</label>
+                                    <div class="col-xs-4">
+                                        <label>
+                                            <input class="checkbox-slider slider-icon yesno" name="status" value="1" {if condition="$agData.status eq 1"}checked{/if} type="checkbox">
+                                            <span class="text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                {volist name="authData" id="vo" key="k"}
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">
+                                        {if condition="$k eq 1"}
+                                        权限勾选
+                                        {else /}
+
+                                        {/if}
+                                    </label>
+                                    <div class="col-lg-8">
+                                        <div class="mycollapsed widget collapsed" style="margin:0;">
+                                            <div class="widget-header" style="min-height:42px;">
+                                                <span class="widget-caption">
+                                                    <label>
+                                                        <input type="checkbox"  name="rules[]" {in name="vo.id" value="$agData['rules']"}checked{/in} parent="{$k}" level="{$vo.level}" value="{$vo.id}" class="colored-blue">
+                                                        <span class="text">{$vo.title}</span>
+                                                         <div class="widget-buttons">
+                                                            <a href="#" data-toggle="collapse">
+                                                                <i class="myflag fa fa-plus blue"></i>
+                                                            </a>
+                                                         </div>
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div class="widget-body">
+                                                <div class="flip-scroll">
+                                                    <table class="table table-bordered table-striped table-condensed flip-content">
+                                                        <tbody>
+                                                        {present name="vo['child']"}
+                                                        {volist name="vo['child']" id="vo1"}
+                                                        <tr>
+                                                            <td class="col-lg-2">
+                                                                <label>
+                                                                    <input type="checkbox" name="rules[]" {in name="vo1.id" value="$agData['rules']"}checked{/in} value="{$vo1.id}" parent="{$k}" level="{$vo1.level}" class="colored-blue">
+                                                                    <span class="text">{$vo1.title}</span>
+                                                                </label>
+                                                            </td>
+                                                            <td class="col-lg-10">
+                                                                {present name="vo1['child']"}
+                                                                {volist name="vo1['child']" id="vo2"}
+                                                                <div class="col-lg-3">
+                                                                    <label>
+                                                                        <input type="checkbox" name="rules[]" {in name="vo2.id" value="$agData['rules']"}checked{/in} value="{$vo2.id}" parent="{$k}" level="{$vo2.level}" class="colored-blue">
+                                                                        <span class="text">{$vo2.title}</span>
+                                                                    </label>
+                                                                </div>
+                                                                {/volist}
+                                                                {/present}
+                                                            </td>
+                                                        </tr>
+                                                        {/volist}
+                                                        {/present}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/volist}
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8 col-lg-offset-4">
+                                    <button type="submit" class="btn btn-azure">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Success Modal Templates-->
+<button id="secMsg" style="display: none;"></button>
+<!--bootstrap表单验证-->
+<script src="__JS__/validation/bootstrapValidator.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#adminForm').bootstrapValidator({
+            // Only disabled elements are excluded
+            // The invisible elements belonging to inactive tabs must be validated5
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                title: {
+                    validators: {
+                        notEmpty: {
+                            message: '用户组名称不能为空！'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 60,
+                            message: '用户组名称不要超过100位字符！'
+                        }
+                    }
+                },
+            }
+        });
+        //默认打开选项
+        $("#details .widget-body").eq(0).css("display","block");
+        $("#details .mycollapsed").eq(0).removeClass("collapsed");
+        $("#details .myflag").eq(0).removeClass("fa-plas").addClass("fa-minus");
+        //勾选逻辑
+        $(":checkbox").on('click',function(){
+            var parent = $(this).attr("parent");
+            // 先获取点击的这个level
+            level = $(this).attr("level");
+            // 判断是选中还是取消
+            if($(this).prop("checked")) {
+                if(level == 1){
+                    $("[parent="+parent+"]:checkbox").prop("checked", "checked");
+                }else if(level == 2) {
+                    $("[parent="+parent+"][level=1]:checkbox").prop("checked", "checked");
+                    $(this).parent().parent().parent().find("[level=3]:checkbox").prop("checked", "checked");
+                }else if(level == 3) {
+                    $("[parent="+parent+"][level=1]:checkbox").prop("checked", "checked");
+                    $(this).parent().parent().parent().parent().find("[level=2]:checkbox").prop("checked", "checked");
+                }
+            }else{
+                if(level == 1){
+                    $("[parent="+parent+"]:checkbox").prop("checked", false);
+                }else if(level == 2) {
+                    $(this).parent().parent().parent().find("[level=3]:checkbox").prop("checked", false);
+                    if(!$("[parent="+parent+"][level=3]:checkbox:checked").length){
+                        $("[parent="+parent+"][level=1]:checkbox").prop("checked", false);
+                    }
+
+                }else if(level == 3) {
+                    if(!$(this).parent().parent().parent().find(":checkbox:checked").length){
+                        $(this).parent().parent().parent().parent().find("[level=2]:checkbox").prop("checked", false);
+                    }
+                    if(!$("[parent="+parent+"][level=3]:checkbox:checked").length){
+                        $("[parent="+parent+"][level=1]:checkbox").prop("checked", false);
+                    }
+                }
+            }
+        });
+        $("#sidebar-menu a[href*=auth_group" + "\\/"+ "lst]").parent().addClass('active').parent().parent().addClass('open');
+    });
+</script>
