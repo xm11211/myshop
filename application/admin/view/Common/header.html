@@ -509,7 +509,7 @@
                     </ul>
                 </li>
                 {/if}
-                {if condition="authCheck('goods/lst', session('aid')) or authCheck('authRule/lst', session('aid')) or authCheck('authGroup/lst', session('aid'))"}
+                {if condition="authCheck('goods/lst', session('aid')) or authCheck('authRule/lst', session('aid')) or authCheck('coupons/lst', session('aid'))"}
                 <li>
                     <a href="#" class="menu-dropdown">
                         <i class="menu-icon fa fa-money"></i>
@@ -528,7 +528,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{:url('coupons/lst')}">
                                 <span class="menu-text">优惠券</span>
                             </a>
                         </li>

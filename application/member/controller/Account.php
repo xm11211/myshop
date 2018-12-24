@@ -5,6 +5,10 @@ use think\Loader;
 use extend\String;
 class Account extends Base {
     public function reg() {
+	    $uid = session('uid');
+	    if($uid) {
+		    $this->redirect('/user/'.$uid.'.html');
+	    }
         if(request()->isPost()) {
            $validate = Loader::validate('User');
            $data = input('post.');
@@ -281,7 +285,7 @@ class Account extends Base {
     public function login() {
         $uid = session('uid');
         if($uid) {
-            $this->redirect('/user/'.$uid);
+            $this->redirect('/user/'.$uid.'.html');
         }
         if(request()->isPost()) {
             $data = input('post.');

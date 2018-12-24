@@ -24,84 +24,7 @@
 <body>
 {include file="index@common/header"}
 <div class="user-content clearfix">
-    <div class="user-side" ectype="userSide">
-        <div class="user-mod user-perinfo">
-            <div class="profile clearfix">
-                <div class="avatar">
-                    <a href="#" class="u-pic">
-                        <img src="__IMG__/touxiang.jpg" alt="">
-                    </a>
-                </div>
-                <div class="name">
-                    <h2>70769833-218428</h2>
-                    <div class="user-rank user-rank-1">铜牌</div>
-                </div>
-            </div>
-            <div class="account">
-                <div class="item clearfix">
-                    <div class="item-name">账户资料：</div>
-                    <div class="item-main">
-                        <b class="integrity"><em style="width: 45%;"></em></b><span>45%</span>
-                    </div>
-                </div>
-                <div class="item clearfix">
-                    <div class="item-name">账户安全：</div>
-                    <div class="item-main safe">
-                        <a href="#" class="iconfont icon-email "><span class="tip">邮箱未验证</span></a>
-                        <a href="#" class="iconfont icon-see "><span class="tip">实名认证未完成</span></a>
-                        <a href="#" class="iconfont icon-password active"><span class="tip">密码已设置</span></a>
-                        <a href="#" class="iconfont icon-mobile-phone active"><span class="tip">手机已验证</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="user-mod">
-            <div class="side-menu">
-                <dl>
-                    <dt><i class="square"></i><span>订单中心</span></dt>
-                    <dd>
-                        <p><a href="#" target="_self">我的订单</a></p>
-                        <p><a href="#" target="_self">收货地址</a></p>
-                        <p><a href="#" target="_self">缺货登记</a></p>
-                        <p><a href="#" target="_self">退换货订单</a></p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><i class="square"></i><span>会员中心</span></dt>
-                    <dd>
-                        <p><a href="#" target="_self">用户信息</a></p>
-                        <p><a href="#" target="_self">账户安全</a></p>
-                        <p><a href="#" target="_self">账号绑定</a></p>
-                        <p><a href="#" target="_self">我的众筹</a></p>
-                        <p><a href="#" target="_self">收藏/关注</a></p>
-                        <!--<p><a href="#" target="_self">关注品牌</a></p>-->
-                        <p><a href="#" target="_self">我的留言</a></p>
-                        <p><a href="#" target="_self">我的推荐</a></p>
-                        <p><a href="#" target="_self">评论/晒单</a></p>
-                        <p><a href="#"> 我的提货</a></p>
-                        <p><a href="#"> 交易纠纷</a></p>
-                        <p><a href="#"> 我的发票</a></p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><i class="square"></i><span>账户中心</span></dt>
-                    <dd>
-                        <p><a href="#" target="_self">我的红包</a></p>
-                        <p><a href="#" target="_self">我的优惠券</a></p>
-                        <p><a href="#" target="_self">跟踪包裹</a></p>
-                        <p><a href="#" target="_self">资金管理</a></p>
-                        <p><a href="#" target="_self">我的白条</a></p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><i class="square"></i><span>活动中心</span></dt>
-                    <dd>
-                        <p><a href="#" target="_self">拍卖活动</a></p>
-                        <p><a href="#" target="_self">夺宝奇兵</a></p>
-                    </dd>
-                </dl>
-            </div></div>
-    </div>
+    {include file="common/left"}
     <div class="user-main" ectype="userMain" data-action="noDefault">
         <div class="user-crumbs hide">
             <span><a href=".">首页</a></span><span class="arrow">&gt;</span> <span class="finish">进入会员中心</span>        </div>
@@ -109,21 +32,21 @@
             <div class="user-title">
                 <h2>我的订单</h2>
                 <ul class="tabs">
-                    <li class="active"><a href="user.php?act=order_list">全部订单({$ordersNum})</a></li>
-                    <li class="user-count3 " onclick="get_OrderSearch('to_unconfirmed', 'order_list', 'toBe_unconfirmed','','.user-count3')">
-                        <a href="javascript:void(0);">待确认(1)</a>
+                    <li {if condition="$orderStatus eq 1"}class="active"{/if}><a href="{:url('member/order/orderList',array('orderStatus' => 1))}">全部订单({$ordersNum})</a></li>
+                    <li class="user-count3 {if condition="$orderStatus eq 2"}active{/if}" >
+                        <a href="{:url('member/order/orderList',array('orderStatus' => 2))}">待确认({$notConfirmOrdersNum})</a>
                         <input name="to_unconfirmed" id="to_unconfirmed" type="hidden" value="0">
                     </li>
-                    <li class="user-count1 " onclick="get_OrderSearch('payId', 'order_list', 'toBe_pay','','.user-count1')">
-                        <a href="javascript:void(0);">待付款(0)</a>
+                    <li class="user-count1 {if condition="$orderStatus eq 3"}active{/if}">
+                        <a href="{:url('member/order/orderList',array('orderStatus' => 3))}">待付款({$notPayOrdersNum})</a>
                         <input name="toBe_pay" id="payId" type="hidden" value="100">
                     </li>
-                    <li class="user-count2 " onclick="get_OrderSearch('to_confirm_order', 'order_list', 'toBe_confirmed','','.user-count2')">
-                        <a href="javascript:void(0);">待收货(0)</a>
+                    <li class="user-count2 {if condition="$orderStatus eq 4"}active{/if}">
+                        <a href="{:url('member/order/orderList',array('orderStatus' => 4))}">待收货({$notReceiveOrdersNum})</a>
                         <input name="to_confirm_order" id="to_confirm_order" type="hidden" value="103">
                     </li>
-                    <li class="user-count4 " onclick="get_OrderSearch('to_finished', 'order_list', 'toBe_finished','','.user-count4')">
-                        <a href="javascript:void(0);">已完成(0)</a>
+                    <li class="user-count4 {if condition="$orderStatus eq 5"}active{/if}">
+                        <a href="{:url('member/order/orderList',array('orderStatus' => 5))}">已完成({$finishOrdersNum})</a>
                         <input name="to_finished" id="to_finished" type="hidden" value="102">
                     </li>
                 </ul>
@@ -184,16 +107,16 @@
                                     {case value="1"}已支付,{/case}
                                     {/switch}
                                     {switch name="vo.postStatus"}
-                                    {case value="0"}未发货,{/case}
-                                    {case value="1"}已发货,{/case}
-                                    {case value="2"}已收货,{/case}
+                                    {case value="0"}未发货{/case}
+                                    {case value="1"}已发货{/case}
+                                    {case value="2"}已收货{/case}
                                     {/switch}
                                 </div>
                             </div>
                             <div class="t-info">
                                 <span class="info-item">订单号：{$vo['outTradeNo']}</span>
                                 <span class="info-item"> {$vo.orderTime|date="y-m-d",###}</span>
-                                <span class="info-item"> {$Request.session.username}</span>
+                                <span class="info-item"> {$vo.name}</span>
                             </div>
                             <div class="t-price"><em>¥</em>{$vo.orderTotalPrice}</div>
                         </dt>
@@ -202,10 +125,10 @@
                             <div class="c-left">
                                 {volist name="$vo['orderGoods']" id="vo1"}
                                 <div class="c-goods" ectype="c-goods">
-                                    <div class="c-img"><a href="goods.php?id=843">{$vo1.smPic|showImage=###,56,56}</a></div>
+                                    <div class="c-img"><a href="/goods/{$vo1.goodsId}.html">{$vo1.smPic|showImage=###,56,56}</a></div>
                                     <div class="c-info">
                                         <div class="o-info-lm">
-                                            <a href="{:url('index/goods/index',array('id' => $vo1.goodsId))}" class="info-name" target="_blank" title="{$vo1.goodsName}">{$vo1.goodsName}</a>
+                                            <a href="/goods/{$vo1.goodsId}.html" class="info-name" target="_blank" title="{$vo1.goodsName}">{$vo1.goodsName}</a>
                                         </div>
                                         <div class="fl">
                                             <div class="info-price mr10" style="width: auto;"><b><em>¥</em>{$vo1.goodsMemberPrice}</b><i>×</i><span>{$vo1.goodsNum}</span></div>
@@ -215,10 +138,8 @@
                                 {/volist}
                             </div>
                             <div class="c-handle" id="ss_msg_1">
-                                <a href="user.php?act=order_detail&amp;order_id=1" class="sc-btn">订单详情</a>
-                                <a href="javascript:get_order_delete_restore('delete', 1);" class="sc-btn">删除订单</a>
-                                <a href="user.php?act=cancel_order&amp;order_id=1" onclick="if (!confirm('您确认要取消该订单吗？取消后此订单将视为无效订单')) return false;" class="sc-btn">取消订单</a>
-
+                                <a href="{:url('member/order/orderDetail',array('id' => $vo.id))}" class="sc-btn">订单详情</a>
+                                <a onclick="if(!confirm('您确定要删除该订单吗？')) return false;" href="{:url('member/order/orderDelete',array('id' => $vo.id))}" class="sc-btn">删除订单</a>
                             </div>
                         </dd>
                     </dl>

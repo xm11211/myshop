@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:67:"K:\AMP\day\myshop\public/../application/admin\view\index\index.html";i:1521181560;s:52:"K:\AMP\day\myshop\application\admin\view\layout.html";i:1515386558;s:59:"K:\AMP\day\myshop\application\admin\view\Common\header.html";i:1535520342;s:59:"K:\AMP\day\myshop\application\admin\view\Common\footer.html";i:1515571090;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:67:"K:\AMP\day\myshop\public/../application/admin\view\index\index.html";i:1544835140;s:52:"K:\AMP\day\myshop\application\admin\view\layout.html";i:1544835140;s:59:"K:\AMP\day\myshop\application\admin\view\Common\header.html";i:1544835140;s:59:"K:\AMP\day\myshop\application\admin\view\Common\footer.html";i:1544835140;}*/ ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Head -->

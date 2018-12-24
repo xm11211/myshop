@@ -136,7 +136,7 @@ class Flow extends Base {
                     $ret['bestTime'] = $data['bestTime'];
                     $num = db('address')->where('userId','eq',$data['userId'])->count();
                     if($num) {
-                        if(db('address')->where('id','eq',$data['userId'])->update($ret) === false) {
+                        if(db('address')->where('userId','eq',$data['userId'])->update($ret) === false) {
                             return view('common/tip_info',['errorMsg' => "抱歉，收货地址更新失败！请稍后重试或联系客服",'showRight' => 1200]);
                         }
                     }else {
@@ -208,6 +208,8 @@ class Flow extends Base {
             $payBtn = "<a class='paybtn'  href='" . url('index/flow/wxPay',array('oid' => $orderId)) . "'>微信支付</a>";
         }else if($orderData['payment'] == 3 && $orderData['payStatus'] == 0) {
             $payBtn = "<a class='paybtn'  href='" . url('index/flow/wxThreePay',array('oid' => $orderId)) . "'>微信第三方</a>";
+        }else {
+	        return view('common/tip_info',['errorMsg' => "订单已支付！",'showRight' => 1200]);
         }
         $this->assign(array(
             'payBtn' => $payBtn,

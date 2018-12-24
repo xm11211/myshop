@@ -50,6 +50,7 @@ return [
     'checkFindPhoneCode' => 'member/account/checkFindPhoneCode',
     'user$' => 'member/user/index',
     'user/:userId$' => 'member/user/index',
+	'userInfo' => 'member/user/userInfo',
     'logout$' => 'member/user/logout',
     'checkLogin' => 'member/account/checkLogin',        //ajax检测用户登录状态
     'getpassword' => 'member/account/getPassword',      //找回密码界面
@@ -72,5 +73,8 @@ return [
     'wxPay/:oid$' => 'index/flow/wxPay',      //微信支付
     'wxStatus' => 'index/flow/wxStatus',  //检测微信扫码支付状态
     'paySuccess' => 'index/flow/paySuccess',      //支付成功页面
-    'orderList' => 'member/order/orderList'  //订单列表
+    'orderList' => 'member/order/orderList',  //订单列表
+    'orderDetail' => 'member/order/orderDetail',  //订单详情
+	'orderDelete' => 'member/order/orderDelete',  //前台订单软删除
+	'address' => 'member/address/address'  //前台订单软删除
 ];

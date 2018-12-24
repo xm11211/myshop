@@ -3,15 +3,15 @@
 
  Source Server         : xm11211
  Source Server Type    : MySQL
- Source Server Version : 50723
+ Source Server Version : 50719
  Source Host           : localhost:3306
  Source Schema         : myshop
 
  Target Server Type    : MySQL
- Target Server Version : 50723
+ Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 15/12/2018 06:24:36
+ Date: 24/12/2018 13:20:57
 */
 
 SET NAMES utf8mb4;
@@ -37,13 +37,13 @@ CREATE TABLE `php_address`  (
   `email` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '邮箱',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `userId`(`userId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户收货地址表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户收货地址表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of php_address
 -- ----------------------------
-INSERT INTO `php_address` VALUES (2, 6, 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '88361834', '', '', '', 'xiaoming6351@gmail.com');
 INSERT INTO `php_address` VALUES (3, 8, 'ming xiao', '山西省', '朔州市', '平鲁区', '北京', '15161699059', '88361834', '', '', '', 'xiaoming6351@gmail.com');
+INSERT INTO `php_address` VALUES (4, 6, 'ming xiao', '重庆市', '重庆市', '大渡口区', 'dfs ', '18710244796', '88361834', '232313', '北京', '', 'summer@yousails.com');
 
 -- ----------------------------
 -- Table structure for php_admin
@@ -614,6 +614,23 @@ INSERT INTO `php_conf` VALUES (22, '底部版权信息', 'copyright', 2, '© 201
 INSERT INTO `php_conf` VALUES (23, '缓存有效期', 'cacheTime', 1, '86400', '', 50, 1);
 
 -- ----------------------------
+-- Table structure for php_coupons
+-- ----------------------------
+DROP TABLE IF EXISTS `php_coupons`;
+CREATE TABLE `php_coupons`  (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `cpName` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '优惠券名称',
+  `cpDesc` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '优惠券描述',
+  `startDate` int(10) UNSIGNED NOT NULL COMMENT '开始日期',
+  `endDate` int(10) UNSIGNED NOT NULL COMMENT '结束日期',
+  `cpNum` int(10) UNSIGNED NOT NULL COMMENT '发放数量',
+  `goodsTotalPrice` decimal(10, 2) NOT NULL DEFAULT 0.00 COMMENT '满多少价格可用',
+  `minusPrice` decimal(10, 2) NOT NULL DEFAULT 1.00 COMMENT '减去的价格',
+  `addTime` int(10) UNSIGNED NOT NULL COMMENT '添加时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '优惠券' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
 -- Table structure for php_frlink
 -- ----------------------------
 DROP TABLE IF EXISTS `php_frlink`;
@@ -923,7 +940,7 @@ DROP TABLE IF EXISTS `php_nav`;
 CREATE TABLE `php_nav`  (
   `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT,
   `navName` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '导航名称',
-  `navUrl` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '导航地址',
+  `navUrl` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '导航地址',
   `open` tinyint(1) NOT NULL DEFAULT 1 COMMENT '打开方式 1：新标签 2：当前页',
   `pos` tinyint(1) NOT NULL DEFAULT 1 COMMENT '显示位置：1：顶部 2：中间 3：底部',
   `sort` smallint(6) NOT NULL DEFAULT 50 COMMENT '排序',
@@ -933,7 +950,7 @@ CREATE TABLE `php_nav`  (
 -- ----------------------------
 -- Records of php_nav
 -- ----------------------------
-INSERT INTO `php_nav` VALUES (1, '我的订单', 'http://tongpankt.com', 2, 1, 50);
+INSERT INTO `php_nav` VALUES (1, '我的订单', 'http://www.myshop.com:8080/orderList', 2, 1, 50);
 INSERT INTO `php_nav` VALUES (2, '我的浏览', 'http://tongpankt.com', 1, 1, 50);
 INSERT INTO `php_nav` VALUES (3, '我的收藏', 'http://tongpankt.com', 1, 1, 50);
 INSERT INTO `php_nav` VALUES (4, '客户服务', 'http://tongpankt.com', 1, 1, 50);
@@ -967,26 +984,31 @@ CREATE TABLE `php_order`  (
   `address` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '具体地址',
   `phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '手机号',
   `orderTime` char(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '1531291609' COMMENT '下单时间',
+  `delStatus` tinyint(1) NOT NULL DEFAULT 0 COMMENT '删除状态0未删除1已删除',
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `userId`(`userId`) USING BTREE
+  INDEX `userId`(`userId`) USING BTREE,
+  INDEX `delStatus`(`delStatus`) USING BTREE,
+  INDEX `orderStatus`(`orderStatus`) USING BTREE,
+  INDEX `payStatus`(`payStatus`) USING BTREE,
+  INDEX `postStatus`(`postStatus`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of php_order
 -- ----------------------------
-INSERT INTO `php_order` VALUES (1, '1539924981795979', 6, 952.00, 952.00, 1, '顺丰', 0, 1, 0, 0.00, '666', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539924981');
-INSERT INTO `php_order` VALUES (2, '1539925243318522', 6, 18500.00, 18500.00, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539925243');
-INSERT INTO `php_order` VALUES (3, '1539925392463894', 6, 43708.00, 43708.00, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539925392');
-INSERT INTO `php_order` VALUES (4, '1539925642192681', 6, 10160.00, 10160.00, 1, '顺丰', 0, 1, 0, 0.00, '78787', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539925642');
-INSERT INTO `php_order` VALUES (5, '1540950885124825', 6, 0.01, 0.01, 3, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540950885');
-INSERT INTO `php_order` VALUES (6, '1540950943286452', 6, 0.01, 0.01, 2, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540950943');
-INSERT INTO `php_order` VALUES (7, '1540951241878365', 6, 0.01, 0.01, 2, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951241');
-INSERT INTO `php_order` VALUES (8, '1540951360313703', 6, 0.01, 0.01, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951360');
-INSERT INTO `php_order` VALUES (9, '1540951442190230', 6, 0.01, 0.01, 2, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951442');
-INSERT INTO `php_order` VALUES (10, '1540951663389570', 6, 0.01, 0.01, 2, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951663');
-INSERT INTO `php_order` VALUES (11, '1540980467223002', 6, 0.01, 0.01, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540980467');
-INSERT INTO `php_order` VALUES (12, '1542503053569552', 6, 0.01, 0.01, 1, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1542503053');
-INSERT INTO `php_order` VALUES (13, '1542504250867404', 6, 0.01, 0.01, 1, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1542504250');
+INSERT INTO `php_order` VALUES (1, '1539924981795979', 6, 952.00, 952.00, 1, '顺丰', 0, 1, 0, 0.00, '666', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539924981', 0);
+INSERT INTO `php_order` VALUES (2, '1539925243318522', 6, 18500.00, 18500.00, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539925243', 0);
+INSERT INTO `php_order` VALUES (3, '1539925392463894', 6, 43708.00, 43708.00, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539925392', 0);
+INSERT INTO `php_order` VALUES (4, '1539925642192681', 6, 10160.00, 10160.00, 1, '顺丰', 0, 1, 0, 0.00, '78787', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1539925642', 0);
+INSERT INTO `php_order` VALUES (5, '1540950885124825', 6, 0.01, 0.01, 3, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540950885', 0);
+INSERT INTO `php_order` VALUES (6, '1540950943286452', 6, 0.01, 0.01, 2, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540950943', 0);
+INSERT INTO `php_order` VALUES (7, '1540951241878365', 6, 0.01, 0.01, 2, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951241', 0);
+INSERT INTO `php_order` VALUES (8, '1540951360313703', 6, 0.01, 0.01, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951360', 0);
+INSERT INTO `php_order` VALUES (9, '1540951442190230', 6, 0.01, 0.01, 2, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951442', 0);
+INSERT INTO `php_order` VALUES (10, '1540951663389570', 6, 0.01, 0.01, 2, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540951663', 0);
+INSERT INTO `php_order` VALUES (11, '1540980467223002', 6, 0.01, 0.01, 1, '顺丰', 0, 1, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1540980467', 0);
+INSERT INTO `php_order` VALUES (12, '1542503053569552', 6, 0.01, 0.01, 1, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1542503053', 0);
+INSERT INTO `php_order` VALUES (13, '1542504250867404', 6, 0.01, 0.01, 1, '顺丰', 0, 0, 0, 0.00, '', 'ming xiao', '河北省', '张家口市', '宣化区', '北京', '15161699059', '1542504250', 0);
 
 -- ----------------------------
 -- Table structure for php_order_goods
@@ -1122,7 +1144,7 @@ CREATE TABLE `php_session`  (
 -- ----------------------------
 -- Records of php_session
 -- ----------------------------
-INSERT INTO `php_session` VALUES ('php_v9mprd2fbjeg16mabev7luanf4', 1543734496, 0x6473635F746F6B656E7C733A33323A223265303431336463306462616566376330373636666662623266396165646566223B7569647C693A363B757365726E616D657C733A343A22726F6F74223B6C6576656C49647C693A333B726174657C693A3130303B);
+INSERT INTO `php_session` VALUES ('php_dteeqr9tatuidcfpgsjmh5t472', 1545632192, 0x76616C69646174657C733A32383A224E755964596D52726948625154627335633230363766303236306637223B61646D696E4E616D657C733A343A22726F6F74223B6169647C693A353B61646D696E5069637C733A35343A2261646D696E5069635C32303138303130395C35313133653961366331653338653934633063646162336261646533373631382E6A7067223B6973526F6F747C693A313B76657273696F6E7C733A363A22352E362E3331223B70637C733A31343A227777772E6D7973686F702E636F6D223B6F736E616D657C733A36323A2257696E646F7773204E54204445534B544F502D383533333735352031302E30206275696C64203137313334202857696E646F77732031302920414D443634223B706F72747C733A343A2238303830223B6D7973716C5F76657273696F6E7C733A363A22352E372E3139223B);
 
 -- ----------------------------
 -- Table structure for php_slider
@@ -1191,10 +1213,29 @@ CREATE TABLE `php_user`  (
 -- ----------------------------
 -- Records of php_user
 -- ----------------------------
-INSERT INTO `php_user` VALUES (6, 'root', 'bd26110e29d6efa9de86221849cd12744cd734d3', '', 0, '15161699059', 1, 'MqCWgeawHAFmJAc', 1, 1521237483, 0, '');
+INSERT INTO `php_user` VALUES (6, 'root', 'bd26110e29d6efa9de86221849cd12744cd734d3', '', 0, '15161699059', 1, 'MqCWgeawHAFmJAc', 1, 1521237483, 0, 'userPic\\20181220\\b843e22c36a8690690f61d997b65e489.jpg');
 INSERT INTO `php_user` VALUES (8, 'xm11211', '', '980172892@qq.com', 1, '', 0, 'NDgCaBvhFDlsnvb', 0, 1536211023, 0, '');
 INSERT INTO `php_user` VALUES (9, 'xm11212', '9a6a42082dfa3618c53fc59e57214a2b877808f0', '', 0, '18012496756', 1, 'zKMDXovWQmizfqT', 1, 1535866876, 0, '');
 INSERT INTO `php_user` VALUES (10, 'xm11213', '8d11509a75589d8b979e4cf49ea472add1070aef', 'xiaoming6351@gmail.com', 0, '13915348602', 1, 'AVURWyWFylAblOO', 1, 1536211836, 25000, 'userPic\\20180906\\691ebdfea07ce60423dc0b4748e59afd.jpg');
+
+-- ----------------------------
+-- Table structure for php_user_info
+-- ----------------------------
+DROP TABLE IF EXISTS `php_user_info`;
+CREATE TABLE `php_user_info`  (
+  `userId` mediumint(9) NOT NULL COMMENT '用户id',
+  `nickName` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '用户昵称',
+  `year` smallint(4) UNSIGNED NOT NULL DEFAULT 2018 COMMENT '年',
+  `month` tinyint(2) UNSIGNED NOT NULL DEFAULT 1 COMMENT '月',
+  `day` tinyint(2) UNSIGNED NOT NULL DEFAULT 1 COMMENT '日',
+  `sex` tinyint(1) NOT NULL DEFAULT 1 COMMENT '性别：1：男 2：女 3：保密',
+  INDEX `userId`(`userId`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of php_user_info
+-- ----------------------------
+INSERT INTO `php_user_info` VALUES (6, '777', 1994, 1, 10, 3);
 
 -- ----------------------------
 -- Table structure for php_wea

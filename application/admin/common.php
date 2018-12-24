@@ -42,63 +42,7 @@ function uploadFile($fileName, $dirName) {
         return $ret;
     }
 }
-//上传单张图片
-function uploadOne($imgName, $dirName, $thumb = array()) {
-    // 上传LOGO
-    $ic = config('IMAGE_CONFIG');
-    $file = request()->file($imgName);
-    $savePath = $dirName; // 自定义的图片目录名称
-    // 上传文件
-    $info = $file->validate(['size' => $ic['maxSize'],'ext' => $ic['exts']])->move($ic['rootPath'] . $savePath);
-    if(!$info) {
-        return array(
-            'ok' => 0,
-            'error' => $file->getError(),
-        );
-    }
-    else {
-        $ret['ok'] = 1;
-        $saveArr = explode('/',$info->getSaveName());
-        $saveArrLen = count($saveArr);
-        if($saveArrLen == 2){
-            $timeDir = $saveArr[0];
-            $saveName = $saveArr[1];
-        }elseif($saveArrLen == 1){
-            $saveArr = explode('\\',$info->getSaveName());
-            $timeDir = $saveArr[0];
-            $saveName = $saveArr[1];
-        }
-        $ret['images'][0] = $logoName = $savePath . DS . $timeDir . DS .$saveName;
 
-        // 判断是否生成缩略图
-        if($thumb)
-        {
-            // 循环生成缩略图
-            foreach ($thumb as $k => $v)
-            {
-                $ret['images'][$k+1] = $savePath . DS . $timeDir . DS .'thumb_'.$k.'_' .$saveName;
-                // 打开要处理的图片
-                $image = \think\Image::open($ic['rootPath'].$logoName);
-                $image->thumb($v[0], $v[1],\think\Image::THUMB_FIXED)->save($ic['rootPath'].$ret['images'][$k+1]);
-            }
-        }
-        return $ret;
-    }
-}
-//循环删除单个商品的图片
-function deleteImage($image) {
-    $ic = config('IMAGE_CONFIG');
-    if(is_string($image)) {
-        @unlink($ic['rootPath'].$image);
-    }else if(is_array($image)) {
-        foreach($image as $v) {
-            if($v == '') {
-                continue;
-            }
-            @unlink($ic['rootPath'].$v);
-        }
-    }
-}
 function buildSelect($table,$select,$valueField,$textField,$selected = '',$num = 8,$where = array(),$flag = false) {
     $model = db($table);
     $data = $model->field("$valueField,$textField")->where($where)->select();

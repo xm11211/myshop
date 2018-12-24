@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"K:\AMP\day\myshop\public/../application/admin\view\brand\lst.html";i:1520546788;s:52:"K:\AMP\day\myshop\application\admin\view\layout.html";i:1515386558;s:59:"K:\AMP\day\myshop\application\admin\view\Common\header.html";i:1535520342;s:59:"K:\AMP\day\myshop\application\admin\view\Common\footer.html";i:1515571090;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"K:\AMP\day\myshop\public/../application/admin\view\brand\lst.html";i:1544835140;s:52:"K:\AMP\day\myshop\application\admin\view\layout.html";i:1544835140;s:59:"K:\AMP\day\myshop\application\admin\view\Common\header.html";i:1545628316;s:59:"K:\AMP\day\myshop\application\admin\view\Common\footer.html";i:1544835140;}*/ ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Head -->
@@ -505,7 +505,7 @@
                         </li>
                     </ul>
                 </li>
-                <?php endif; if(authCheck('goods/lst', session('aid')) or authCheck('authRule/lst', session('aid')) or authCheck('authGroup/lst', session('aid'))): ?>
+                <?php endif; if(authCheck('goods/lst', session('aid')) or authCheck('authRule/lst', session('aid')) or authCheck('coupons/lst', session('aid'))): ?>
                 <li>
                     <a href="#" class="menu-dropdown">
                         <i class="menu-icon fa fa-money"></i>
@@ -524,7 +524,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="<?php echo url('coupons/lst'); ?>">
                                 <span class="menu-text">优惠券</span>
                             </a>
                         </li>

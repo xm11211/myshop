@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"K:\AMP\day\myshop\public/../application/member\view\account\login.html";i:1527896026;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"K:\AMP\day\myshop\public/../application/member\view\account\login.html";i:1544835140;}*/ ?>
 <!doctype html>
 <html>
 <head>

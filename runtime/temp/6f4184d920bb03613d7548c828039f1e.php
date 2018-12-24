@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"K:\AMP\day\myshop\public/../application/index\view\category\index.html";i:1541818799;s:59:"K:\AMP\day\myshop\application\index\view\common\header.html";i:1541134761;s:58:"K:\AMP\day\myshop\application\index\view\common\right.html";i:1519852424;s:59:"K:\AMP\day\myshop\application\index\view\common\footer.html";i:1540963004;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"K:\AMP\day\myshop\public/../application/index\view\category\index.html";i:1544836558;s:59:"K:\AMP\day\myshop\application\index\view\common\header.html";i:1544835140;s:58:"K:\AMP\day\myshop\application\index\view\common\right.html";i:1544835140;s:59:"K:\AMP\day\myshop\application\index\view\common\footer.html";i:1544835140;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -463,7 +463,8 @@ var load_icon = '<img src="/static/Home/img/load.gif" width="200" height="200">'
                     </div>
                 </dl>
             </li>
-            <?php endif;             $attrCount = count($attrData);
+            <?php endif; 
+            $attrCount = count($attrData);
             if(!$attrCount) {
                $attrCount = 1;
             }
@@ -595,8 +596,7 @@ var load_icon = '<img src="/static/Home/img/load.gif" width="200" height="200">'
                                             <a href="http://wpa.qq.com/msgrd?v=3&uin=980172892&site=qq&menu=yes" class="p-kefu p-c-violet"><i class="iconfont icon-kefu"></i></a>
                                         </div>
                                         <div class="p-activity">
-                                            <?php if(is_array($vo['recName']) || $vo['recName'] instanceof \think\Collection || $vo['recName'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['recName'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;switch($vo1): case "热卖商品": ?><span class="tag tac-mh"><i class="i-left"></i>热卖<i class="i-right"></i></span><?php break; case "新品推荐": ?><span class="tag tac-mn"><i class="i-left"></i>新品<i class="i-right"></i></span><?php break; case "精品推荐": ?><span class="tag tac-mb"><i class="i-left"></i>精品<i class="i-right"></i></span><?php break; case "限时抢购": ?><span class="tag tac-sr"><i class="i-left"></i>限时<i class="i-right"></i></span><?php break; default: ?><span class="tag tac-mn"><i class="i-left"></i>精品<i class="i-right"></i></span>
-                                                <?php endswitch; endforeach; endif; else: echo "" ;endif; ?>
+                                            <?php if(is_array($vo['recName']) || $vo['recName'] instanceof \think\Collection || $vo['recName'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['recName'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;switch($vo1): case "热卖商品": ?><span class="tag tac-mh"><i class="i-left"></i>热卖<i class="i-right"></i></span><?php break; case "新品推荐": ?><span class="tag tac-mn"><i class="i-left"></i>新品<i class="i-right"></i></span><?php break; case "精品推荐": ?><span class="tag tac-mb"><i class="i-left"></i>精品<i class="i-right"></i></span><?php break; case "限时抢购": ?><span class="tag tac-sr"><i class="i-left"></i>限时<i class="i-right"></i></span><?php break; endswitch; endforeach; endif; else: echo "" ;endif; ?>
                                         </div>
                                     </div>
                                 </li>
